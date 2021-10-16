@@ -6,6 +6,9 @@
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "paths": {
+      "@polkadot/types/augment": ["./interfaces/augment-types.ts"]
+    }
   }
 }
