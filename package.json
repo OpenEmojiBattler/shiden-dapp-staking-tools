@@ -1,5 +1,8 @@
 {
   "private": true,
+  "scripts": {
+    "generate:defs": "ts-node --skip-project node_modules/.bin/polkadot-types-from-defs --package . --input ./interfaces"
+  },
   "dependencies": {
     "@polkadot/typegen": "6.3.1",
     "ts-node": "10.3.0",
