@@ -17,8 +17,9 @@ const secondEraBlockNumber = 504001;
 
 const main = async () => {
   const api = await getApi();
-  const currentBlock = await api.rpc.chain.getBlock();
-  const currentBlockNumber = currentBlock.block.header.number
+  const currentBlockNumber = (
+    await api.rpc.chain.getBlock()
+  ).block.header.number
     .unwrap()
     .toNumber();
 
