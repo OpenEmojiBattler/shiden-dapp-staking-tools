@@ -5,6 +5,10 @@ import * as definitions from "./interfaces/definitions";
 import "./interfaces/augment-api";
 import "./interfaces/augment-types";
 
+import type { u32 } from "@polkadot/types/primitive";
+
+const firstEraBlockNumber = 499296;
+
 const main = async () => {
   const api = await ApiPromise.create({
     provider: new WsProvider("wss://shiden.api.onfinality.io/public-ws"),
@@ -20,12 +24,34 @@ const main = async () => {
     },
   });
 
-  const result = await api.query.dappsStaking.contractEraStake(
-    { Evm: "0xE0F41a9626aDe6c2bfAaDe6E497Dc584bC3e9Dc5" },
-    1
-  );
+  const blockHash = await api.rpc.chain.getBlockHash(firstEraBlockNumber);
+  const atApi = await api.at(blockHash);
+  const eventRecords = await atApi.query.system.events();
 
-  console.log(result.unwrap().stakers.size);
+  const eras = eventRecords
+    .filter(
+      ({ phase, event }) =>
+        phase.isInitialization &&
+        event.section === "dappsStaking" &&
+        event.method === "NewDappStakingEra"
+    )
+    .map(({ event }) => {
+      if (event.data.length !== 1) {
+        throw new Error(`invalid event.data: ${event.data.toHuman()}`);
+      }
+      return (event.data[0] as u32).toNumber();
+    });
+
+  if (eras.length !== 1) {
+    throw new Error(`invalid eras len: ${eras}`);
+  }
+
+  const era = eras[0];
+
+  console.log(era);
+
+  // const currentBlock = await api.rpc.chain.getBlock();
+  // const currentBlockNumber = currentBlock.block.header.number.unwrap().toNumber()
 };
 
 main().catch(console.error).finally(process.exit);
