@@ -1,3 +1,6 @@
+# Prerequisite
+- claim all rewards
+
 # Install
 
 ```
