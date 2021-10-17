@@ -136,10 +136,16 @@ const main = async () => {
     });
   }
 
-  console.log(records.map((r) => buildEraRecordString(api, r)).join("\n"));
+  console.log(
+    records.map((r) => buildEraRecordString(api, r, false)).join("\n")
+  );
 };
 
-const buildEraRecordString = (api: ApiPromise, r: EraRecord) => {
+const buildEraRecordString = (
+  api: ApiPromise,
+  r: EraRecord,
+  showStakers: boolean
+) => {
   const contractStake = api.createType(
     "Balance",
     r.contract.stakers
@@ -154,6 +160,24 @@ const buildEraRecordString = (api: ApiPromise, r: EraRecord) => {
     "Balance",
     contractReward.muln(4).divn(5)
   );
+  const contractStakersReward = api.createType(
+    "Balance",
+    contractReward.sub(contractDevReward)
+  );
+
+  let stakers = "";
+  if (showStakers) {
+    stakers = r.contract.stakers
+      .map((staker) =>
+        api
+          .createType(
+            "Balance",
+            contractStakersReward.mul(staker.staked).divRound(contractStake)
+          )
+          .toHuman()
+      )
+      .join(",");
+  }
 
   return `era ${r.era}
   total
@@ -163,9 +187,8 @@ const buildEraRecordString = (api: ApiPromise, r: EraRecord) => {
     stake ${contractStake.toHuman()}
     reward ${contractReward.toHuman()}
       dev ${contractDevReward.toHuman()}
-      stakers ${api
-        .createType("Balance", contractReward.sub(contractDevReward))
-        .toHuman()}`;
+      stakers ${contractStakersReward.toHuman()}
+        ${stakers}`;
 };
 
 const getApi = () => {
