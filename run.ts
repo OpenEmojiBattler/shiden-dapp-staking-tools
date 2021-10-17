@@ -24,7 +24,7 @@ const main = async () => {
     .unwrap()
     .toNumber();
 
-  let eraBlockArray = [
+  const eraBlockArray = [
     {
       era: await checkAndGetEraByBlockNumber(api, firstForceEraBlockNumber),
       block: firstForceEraBlockNumber,
@@ -39,7 +39,7 @@ const main = async () => {
   }
 
   const currentEra = (await api.query.dappsStaking.currentEra()).toNumber();
-  eraBlockArray = eraBlockArray.filter(({ era }) => {
+  const compEraBlockArray = eraBlockArray.filter(({ era }) => {
     if (era < currentEra) {
       return true;
     }
@@ -51,10 +51,11 @@ const main = async () => {
 
   const completedEras: {
     era: number;
+    block: number;
     rewards: Balance;
     staked: Balance;
   }[] = [];
-  for (const { era } of eraBlockArray) {
+  for (const { era, block } of compEraBlockArray) {
     const rewardAndStake = (
       await api.query.dappsStaking.eraRewardsAndStakes(era)
     ).unwrap();
@@ -63,13 +64,85 @@ const main = async () => {
     }
     completedEras.push({
       era,
+      block,
       rewards: rewardAndStake.rewards,
       staked: rewardAndStake.staked,
     });
   }
 
+  const records: {
+    era: number;
+    total: {
+      rewards: Balance;
+      staked: Balance;
+    };
+    contract: {
+      stakers: { address: string; staked: Balance }[];
+    };
+  }[] = [];
+  for (const eraRecord of completedEras) {
+    const nextEraStartBlock = eraBlockArray.find(
+      (a) => a.era === eraRecord.era + 1
+    )?.block;
+    if (!nextEraStartBlock) {
+      throw new Error("nextEraStartBlock not found");
+    }
+    const eraEndBlockApi = await api.at(
+      await api.rpc.chain.getBlockHash(nextEraStartBlock - 1)
+    );
+    if (
+      (await eraEndBlockApi.query.dappsStaking.currentEra()).toNumber() !==
+      eraRecord.era
+    ) {
+      throw new Error("invalid era block");
+    }
+
+    const eraStakingPoints = (
+      await eraEndBlockApi.query.dappsStaking.contractEraStake(
+        { Evm: "0xE0F41a9626aDe6c2bfAaDe6E497Dc584bC3e9Dc5" },
+        eraRecord.era
+      )
+    ).unwrap();
+
+    if (
+      !eraStakingPoints.total.toBn().eq(
+        Array.from(eraStakingPoints.stakers.values())
+          .map((b) => b.toBn())
+          .reduce((prev, cur) => prev.add(cur))
+      )
+    ) {
+      throw new Error(
+        `invalid eraStakingPoints total: ${eraStakingPoints.toHuman()}`
+      );
+    }
+
+    if (eraStakingPoints.claimedRewards.isZero()) {
+      throw new Error(
+        `invalid eraStakingPoints, maybe unclaimed: ${eraStakingPoints.toHuman()}`
+      );
+    }
+
+    const stakers: { address: string; staked: Balance }[] = [];
+    for (const [addr, b] of eraStakingPoints.stakers) {
+      stakers.push({ address: addr.toString(), staked: b });
+    }
+
+    records.push({
+      era: eraRecord.era,
+      total: { rewards: eraRecord.rewards, staked: eraRecord.staked },
+      contract: { stakers },
+    });
+  }
+
   console.log(
-    completedEras.map((e) => [e.era, e.rewards.toHuman(), e.staked.toHuman()])
+    records.map((r) => [
+      r.era,
+      r.total.rewards.toHuman(),
+      r.total.staked.toHuman(),
+      r.contract.stakers.map(({ address, staked }) =>
+        [address, staked.toHuman()].join(":")
+      ),
+    ])
   );
 };
 
