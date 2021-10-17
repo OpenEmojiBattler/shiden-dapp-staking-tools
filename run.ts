@@ -6,6 +6,7 @@ import "./interfaces/augment-api";
 import "./interfaces/augment-types";
 
 import type { u32 } from "@polkadot/types/primitive";
+import type { Balance } from "@polkadot/types/interfaces";
 
 const MILLISECS_PER_BLOCK = 12000;
 const MINUTES = 60000 / MILLISECS_PER_BLOCK;
@@ -48,7 +49,28 @@ const main = async () => {
     throw new Error(`invalid era: ${era} ${currentEra}`);
   });
 
-  console.log(eraBlockArray);
+  const completedEras: {
+    era: number;
+    rewards: Balance;
+    staked: Balance;
+  }[] = [];
+  for (const { era } of eraBlockArray) {
+    const rewardAndStake = (
+      await api.query.dappsStaking.eraRewardsAndStakes(era)
+    ).unwrap();
+    if (rewardAndStake.rewards.isZero()) {
+      throw new Error(`invalid era data ${rewardAndStake.toHuman()}`);
+    }
+    completedEras.push({
+      era,
+      rewards: rewardAndStake.rewards,
+      staked: rewardAndStake.staked,
+    });
+  }
+
+  console.log(
+    completedEras.map((e) => [e.era, e.rewards.toHuman(), e.staked.toHuman()])
+  );
 };
 
 const getApi = () => {
