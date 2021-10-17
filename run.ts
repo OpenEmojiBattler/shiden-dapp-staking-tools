@@ -6,7 +6,7 @@ import "./interfaces/augment-api";
 import "./interfaces/augment-types";
 
 import type { u32 } from "@polkadot/types/primitive";
-import type { Balance } from "@polkadot/types/interfaces";
+import { Balance } from "@polkadot/types/interfaces";
 
 const MILLISECS_PER_BLOCK = 12000;
 const MINUTES = 60000 / MILLISECS_PER_BLOCK;
@@ -15,6 +15,17 @@ const DAYS = HOURS * 24; // 7200 blocks
 
 const firstForceEraBlockNumber = 499296;
 const secondEraBlockNumber = 504001;
+
+interface EraRecord {
+  era: number;
+  total: {
+    rewards: Balance;
+    staked: Balance;
+  };
+  contract: {
+    stakers: { address: string; staked: Balance }[];
+  };
+}
 
 const main = async () => {
   const api = await getApi();
@@ -70,16 +81,7 @@ const main = async () => {
     });
   }
 
-  const records: {
-    era: number;
-    total: {
-      rewards: Balance;
-      staked: Balance;
-    };
-    contract: {
-      stakers: { address: string; staked: Balance }[];
-    };
-  }[] = [];
+  const records: EraRecord[] = [];
   for (const eraRecord of completedEras) {
     const nextEraStartBlock = eraBlockArray.find(
       (a) => a.era === eraRecord.era + 1
@@ -134,16 +136,36 @@ const main = async () => {
     });
   }
 
-  console.log(
-    records.map((r) => [
-      r.era,
-      r.total.rewards.toHuman(),
-      r.total.staked.toHuman(),
-      r.contract.stakers.map(({ address, staked }) =>
-        [address, staked.toHuman()].join(":")
-      ),
-    ])
+  console.log(records.map((r) => buildEraRecordString(api, r)).join("\n"));
+};
+
+const buildEraRecordString = (api: ApiPromise, r: EraRecord) => {
+  const contractStake = api.createType(
+    "Balance",
+    r.contract.stakers
+      .map(({ staked }) => staked.toBn())
+      .reduce((a, b) => a.add(b))
   );
+  const contractReward = api.createType(
+    "Balance",
+    contractStake.mul(r.total.rewards).div(r.total.staked)
+  );
+  const contractDevReward = api.createType(
+    "Balance",
+    contractReward.muln(4).divn(5)
+  );
+
+  return `era ${r.era}
+  total
+    stake ${r.total.staked.toHuman()}
+    reward ${r.total.rewards.toHuman()}
+  contract
+    stake ${contractStake.toHuman()}
+    reward ${contractReward.toHuman()}
+      dev ${contractDevReward.toHuman()}
+      stakers ${api
+        .createType("Balance", contractReward.sub(contractDevReward))
+        .toHuman()}`;
 };
 
 const getApi = () => {
