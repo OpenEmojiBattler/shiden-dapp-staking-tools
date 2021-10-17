@@ -23,7 +23,7 @@ const main = async () => {
     .unwrap()
     .toNumber();
 
-  const eraBlockArray = [
+  let eraBlockArray = [
     {
       era: await checkAndGetEraByBlockNumber(api, firstForceEraBlockNumber),
       block: firstForceEraBlockNumber,
@@ -36,6 +36,17 @@ const main = async () => {
       block: i,
     });
   }
+
+  const currentEra = (await api.query.dappsStaking.currentEra()).toNumber();
+  eraBlockArray = eraBlockArray.filter(({ era }) => {
+    if (era < currentEra) {
+      return true;
+    }
+    if (era === currentEra) {
+      return false;
+    }
+    throw new Error(`invalid era: ${era} ${currentEra}`);
+  });
 
   console.log(eraBlockArray);
 };
