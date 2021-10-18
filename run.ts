@@ -1,12 +1,12 @@
-import { ApiPromise, WsProvider } from "@polkadot/api";
-
-import * as definitions from "./interfaces/definitions";
+import { ApiPromise } from "@polkadot/api";
 
 import "./interfaces/augment-api";
 import "./interfaces/augment-types";
 
 import type { u32 } from "@polkadot/types/primitive";
 import { Balance } from "@polkadot/types/interfaces";
+
+import { getApi } from "./utils";
 
 const MILLISECS_PER_BLOCK = 12000;
 const MINUTES = 60000 / MILLISECS_PER_BLOCK;
@@ -189,22 +189,6 @@ const buildEraRecordString = (
       dev ${contractDevReward.toHuman()}
       stakers ${contractStakersReward.toHuman()}
         ${stakers}`;
-};
-
-const getApi = () => {
-  return ApiPromise.create({
-    provider: new WsProvider("wss://shiden.api.onfinality.io/public-ws"),
-    types: {
-      ...Object.values(definitions).reduce(
-        (res, { types }): object => ({ ...res, ...types }),
-        {}
-      ),
-      Keys: "AccountId",
-      Address: "MultiAddress",
-      LookupSource: "MultiAddress",
-      BlockV0: "u8", // FIXME: not correct, but we don't use this, just for supressing warning
-    },
-  });
 };
 
 const checkAndGetEraByBlockNumber = async (
