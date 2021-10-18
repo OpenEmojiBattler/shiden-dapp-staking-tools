@@ -1,31 +1,31 @@
 import { ApiPromise } from "@polkadot/api";
 
 import { getApi } from "./utils";
-import { getEraReports, EraRecord } from "./eraReport";
+import { getEraReports, EraReport } from "./eraReport";
 
 const main = async () => {
   const api = await getApi();
-  const records = await getEraReports(api);
+  const reports = await getEraReports(api);
 
   console.log(
-    records.map((r) => buildEraRecordString(api, r, false)).join("\n")
+    reports.map((r) => buildEraReportString(api, r, false)).join("\n")
   );
 };
 
-const buildEraRecordString = (
+const buildEraReportString = (
   api: ApiPromise,
-  r: EraRecord,
+  r: EraReport,
   showStakers: boolean
 ) => {
   const contractStake = api.createType(
     "Balance",
     r.contract.stakers
-      .map(({ staked }) => staked.toBn())
+      .map(({ stake: staked }) => staked.toBn())
       .reduce((a, b) => a.add(b))
   );
   const contractReward = api.createType(
     "Balance",
-    contractStake.mul(r.total.rewards).div(r.total.staked)
+    contractStake.mul(r.total.reward).div(r.total.stake)
   );
   const contractDevReward = api.createType(
     "Balance",
@@ -43,7 +43,7 @@ const buildEraRecordString = (
         api
           .createType(
             "Balance",
-            contractStakersReward.mul(staker.staked).divRound(contractStake)
+            contractStakersReward.mul(staker.stake).divRound(contractStake)
           )
           .toHuman()
       )
@@ -52,8 +52,8 @@ const buildEraRecordString = (
 
   return `era ${r.era}
   total
-    stake ${r.total.staked.toHuman()}
-    reward ${r.total.rewards.toHuman()}
+    stake ${r.total.stake.toHuman()}
+    reward ${r.total.reward.toHuman()}
   contract
     stake ${contractStake.toHuman()}
     reward ${contractReward.toHuman()}

@@ -11,14 +11,14 @@ const DAYS = HOURS * 24; // 7200 blocks
 const firstForceEraBlockNumber = 499296;
 const secondEraBlockNumber = 504001;
 
-export interface EraRecord {
+export interface EraReport {
   era: number;
   total: {
-    rewards: Balance;
-    staked: Balance;
+    reward: Balance;
+    stake: Balance;
   };
   contract: {
-    stakers: { address: string; staked: Balance }[];
+    stakers: { address: string; stake: Balance }[];
   };
 }
 
@@ -57,8 +57,8 @@ export const getEraReports = async (api: ApiPromise) => {
   const completedEras: {
     era: number;
     block: number;
-    rewards: Balance;
-    staked: Balance;
+    reward: Balance;
+    stake: Balance;
   }[] = [];
   for (const { era, block } of compEraBlockArray) {
     const rewardAndStake = (
@@ -70,15 +70,15 @@ export const getEraReports = async (api: ApiPromise) => {
     completedEras.push({
       era,
       block,
-      rewards: rewardAndStake.rewards,
-      staked: rewardAndStake.staked,
+      reward: rewardAndStake.rewards,
+      stake: rewardAndStake.staked,
     });
   }
 
-  const records: EraRecord[] = [];
-  for (const eraRecord of completedEras) {
+  const reports: EraReport[] = [];
+  for (const eraReport of completedEras) {
     const nextEraStartBlock = eraBlockArray.find(
-      (a) => a.era === eraRecord.era + 1
+      (a) => a.era === eraReport.era + 1
     )?.block;
     if (!nextEraStartBlock) {
       throw new Error("nextEraStartBlock not found");
@@ -88,7 +88,7 @@ export const getEraReports = async (api: ApiPromise) => {
     );
     if (
       (await eraEndBlockApi.query.dappsStaking.currentEra()).toNumber() !==
-      eraRecord.era
+      eraReport.era
     ) {
       throw new Error("invalid era block");
     }
@@ -96,7 +96,7 @@ export const getEraReports = async (api: ApiPromise) => {
     const eraStakingPoints = (
       await eraEndBlockApi.query.dappsStaking.contractEraStake(
         { Evm: "0xE0F41a9626aDe6c2bfAaDe6E497Dc584bC3e9Dc5" },
-        eraRecord.era
+        eraReport.era
       )
     ).unwrap();
 
@@ -119,19 +119,19 @@ export const getEraReports = async (api: ApiPromise) => {
     //   );
     // }
 
-    const stakers: { address: string; staked: Balance }[] = [];
+    const stakers: { address: string; stake: Balance }[] = [];
     for (const [addr, b] of eraStakingPoints.stakers) {
-      stakers.push({ address: addr.toString(), staked: b });
+      stakers.push({ address: addr.toString(), stake: b });
     }
 
-    records.push({
-      era: eraRecord.era,
-      total: { rewards: eraRecord.rewards, staked: eraRecord.staked },
+    reports.push({
+      era: eraReport.era,
+      total: { reward: eraReport.reward, stake: eraReport.stake },
       contract: { stakers },
     });
   }
 
-  return records;
+  return reports;
 };
 
 const checkAndGetEraByBlockNumber = async (
