@@ -1,3 +1,6 @@
+import "./interfaces/augment-api";
+import "./interfaces/augment-types";
+
 import { ApiPromise, WsProvider } from "@polkadot/api";
 
 import * as definitions from "./interfaces/definitions";

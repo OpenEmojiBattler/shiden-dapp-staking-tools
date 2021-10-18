@@ -1,12 +1,7 @@
 import { ApiPromise } from "@polkadot/api";
 
-import "./interfaces/augment-api";
-import "./interfaces/augment-types";
-
 import type { u32 } from "@polkadot/types/primitive";
 import { Balance } from "@polkadot/types/interfaces";
-
-import { getApi } from "./utils";
 
 const MILLISECS_PER_BLOCK = 12000;
 const MINUTES = 60000 / MILLISECS_PER_BLOCK;
@@ -16,7 +11,7 @@ const DAYS = HOURS * 24; // 7200 blocks
 const firstForceEraBlockNumber = 499296;
 const secondEraBlockNumber = 504001;
 
-interface EraRecord {
+export interface EraRecord {
   era: number;
   total: {
     rewards: Balance;
@@ -27,8 +22,7 @@ interface EraRecord {
   };
 }
 
-const main = async () => {
-  const api = await getApi();
+export const getEraReports = async (api: ApiPromise) => {
   const currentBlockNumber = (
     await api.rpc.chain.getBlock()
   ).block.header.number
@@ -136,59 +130,7 @@ const main = async () => {
     });
   }
 
-  console.log(
-    records.map((r) => buildEraRecordString(api, r, false)).join("\n")
-  );
-};
-
-const buildEraRecordString = (
-  api: ApiPromise,
-  r: EraRecord,
-  showStakers: boolean
-) => {
-  const contractStake = api.createType(
-    "Balance",
-    r.contract.stakers
-      .map(({ staked }) => staked.toBn())
-      .reduce((a, b) => a.add(b))
-  );
-  const contractReward = api.createType(
-    "Balance",
-    contractStake.mul(r.total.rewards).div(r.total.staked)
-  );
-  const contractDevReward = api.createType(
-    "Balance",
-    contractReward.muln(4).divn(5)
-  );
-  const contractStakersReward = api.createType(
-    "Balance",
-    contractReward.sub(contractDevReward)
-  );
-
-  let stakers = "";
-  if (showStakers) {
-    stakers = r.contract.stakers
-      .map((staker) =>
-        api
-          .createType(
-            "Balance",
-            contractStakersReward.mul(staker.staked).divRound(contractStake)
-          )
-          .toHuman()
-      )
-      .join(",");
-  }
-
-  return `era ${r.era}
-  total
-    stake ${r.total.staked.toHuman()}
-    reward ${r.total.rewards.toHuman()}
-  contract
-    stake ${contractStake.toHuman()}
-    reward ${contractReward.toHuman()}
-      dev ${contractDevReward.toHuman()}
-      stakers ${contractStakersReward.toHuman()}
-        ${stakers}`;
+  return records;
 };
 
 const checkAndGetEraByBlockNumber = async (
@@ -219,5 +161,3 @@ const checkAndGetEraByBlockNumber = async (
 
   return eras[0];
 };
-
-main().catch(console.error).finally(process.exit);
