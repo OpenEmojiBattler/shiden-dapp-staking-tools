@@ -112,11 +112,12 @@ export const getEraReports = async (api: ApiPromise) => {
       );
     }
 
-    if (eraStakingPoints.claimedRewards.isZero()) {
-      throw new Error(
-        `invalid eraStakingPoints, maybe unclaimed: ${eraStakingPoints.toHuman()}`
-      );
-    }
+    // TODO: uncommend
+    // if (eraStakingPoints.claimedRewards.isZero()) {
+    //   throw new Error(
+    //     `invalid eraStakingPoints, maybe unclaimed: ${eraStakingPoints.toHuman()}`
+    //   );
+    // }
 
     const stakers: { address: string; staked: Balance }[] = [];
     for (const [addr, b] of eraStakingPoints.stakers) {
