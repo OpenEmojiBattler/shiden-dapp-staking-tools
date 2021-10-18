@@ -5,7 +5,10 @@ import { getEraReports, EraReport } from "./eraReport";
 
 const main = async () => {
   const api = await getApi();
-  const reports = await getEraReports(api);
+  const reports = await getEraReports(
+    api,
+    "0xE0F41a9626aDe6c2bfAaDe6E497Dc584bC3e9Dc5"
+  );
 
   console.log(
     reports.map((r) => buildEraReportString(api, r, false)).join("\n")

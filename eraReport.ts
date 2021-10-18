@@ -22,7 +22,10 @@ export interface EraReport {
   };
 }
 
-export const getEraReports = async (api: ApiPromise) => {
+export const getEraReports = async (
+  api: ApiPromise,
+  contractAddress: string
+) => {
   const currentBlockNumber = (
     await api.rpc.chain.getBlock()
   ).block.header.number
@@ -95,7 +98,7 @@ export const getEraReports = async (api: ApiPromise) => {
 
     const eraStakingPoints = (
       await eraEndBlockApi.query.dappsStaking.contractEraStake(
-        { Evm: "0xE0F41a9626aDe6c2bfAaDe6E497Dc584bC3e9Dc5" },
+        { Evm: contractAddress },
         eraReport.era
       )
     ).unwrap();
