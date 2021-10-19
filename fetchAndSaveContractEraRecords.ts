@@ -1,4 +1,4 @@
-import { getApi } from "./utils";
+import { getApi, getContractAddress } from "./utils";
 import {
   EraRecord,
   ContractEraRecord,
@@ -9,10 +9,7 @@ import {
 import type { ApiPromise } from "@polkadot/api";
 
 const main = async () => {
-  const contractAddress = process.argv[2];
-  if (contractAddress === "") {
-    throw new Error("contractAddress none");
-  }
+  const contractAddress = getContractAddress(process.argv[2]);
 
   const api = await getApi();
 

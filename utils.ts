@@ -28,3 +28,13 @@ export const formatSDN = (balance: bigint) =>
     withSi: false,
     forceUnit: "-",
   });
+
+export const getContractAddress = (processargv: string | undefined) => {
+  if (!processargv) {
+    throw new Error("contractAddress none");
+  }
+  if (!processargv.startsWith("0x")) {
+    throw new Error(`invalid contractAddress format ${processargv}`);
+  }
+  return processargv;
+};
