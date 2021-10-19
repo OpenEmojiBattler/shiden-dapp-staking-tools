@@ -1,4 +1,4 @@
-import { writeFileSync, readFileSync } from "fs";
+import { writeFileSync, readFileSync, readdirSync } from "fs";
 
 (BigInt.prototype as any).toJSON = function () {
   return this.toString();
@@ -12,7 +12,15 @@ export interface EraRecord {
   stake: bigint;
 }
 
-const buildEraRecordFileName = (era: number) => `./eraRecords/${era}.json`;
+export interface ContractEraRecord {
+  contract: string;
+  era: number;
+  stakers: { address: string; stake: bigint }[];
+}
+
+const eraRecordsDir = "./eraRecords";
+
+const buildEraRecordFileName = (era: number) => `${eraRecordsDir}/${era}.json`;
 
 export const writeEraRecordFile = (eraRecord: EraRecord) => {
   writeFileSync(
@@ -30,4 +38,32 @@ export const readEraRecordFile = (era: number): EraRecord => {
     reward: BigInt(j.reward),
     stake: BigInt(j.stake),
   };
+};
+
+export const readEraRecordFiles = () => {
+  const eraRecords: EraRecord[] = [];
+
+  for (const file of readdirSync(eraRecordsDir)) {
+    const match = file.match(/^(\d+)\.json$/);
+    if (match) {
+      eraRecords.push(readEraRecordFile(parseInt(match[1])));
+    }
+  }
+
+  return eraRecords;
+};
+
+const buildContractEraRecordFileName = (contract: string, era: number) =>
+  `${eraRecordsDir}/contract-${contract}-${era}.json`;
+
+export const writeContractEraRecordFile = (
+  contractEraRecord: ContractEraRecord
+) => {
+  writeFileSync(
+    buildContractEraRecordFileName(
+      contractEraRecord.contract,
+      contractEraRecord.era
+    ),
+    `${JSON.stringify(contractEraRecord, null, 2)}\n`
+  );
 };
