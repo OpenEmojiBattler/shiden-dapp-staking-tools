@@ -101,7 +101,7 @@ export const readContractEraRecordFile = (
 export const readContractEraRecordFiles = (contract: string) => {
   const contractEraRecords: ContractEraRecord[] = [];
   const regex = new RegExp(
-    `^${buildContractEraRecordFileNamePrefix(contract)}(\d+)\.json$`
+    `^${buildContractEraRecordFileNamePrefix(contract)}(\\d+)\\.json$`
   );
 
   for (const file of readdirSync(eraRecordsDir)) {

@@ -35,7 +35,7 @@ const main = () => {
         )!.reward;
 
         stakeAndRewardArray.push(
-          `${formatSDN(staker.stake)},${formatSDN(reward)}`
+          `"${formatSDN(staker.stake)}","${formatSDN(reward)}"`
         );
 
         totalReward += reward;
@@ -45,7 +45,7 @@ const main = () => {
     }
 
     csvLines.push(
-      `${address},${stakeAndRewardArray.join(",")},${formatSDN(totalReward)}`
+      `${address},${stakeAndRewardArray.join(",")},"${formatSDN(totalReward)}"`
     );
   }
 
