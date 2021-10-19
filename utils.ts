@@ -8,7 +8,7 @@ import * as definitions from "./interfaces/definitions";
 
 export const getApi = () => {
   return ApiPromise.create({
-    provider: new WsProvider("wss://shiden.api.onfinality.io/public-ws"),
+    provider: new WsProvider("wss://shiden.api.onfinality.io/public-ws"), // archive node
     types: {
       ...Object.values(definitions).reduce(
         (res, { types }): object => ({ ...res, ...types }),
