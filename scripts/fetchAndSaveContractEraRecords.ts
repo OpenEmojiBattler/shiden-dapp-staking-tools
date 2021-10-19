@@ -1,10 +1,10 @@
-import { getApi, getContractAddress } from "../utils";
+import { getApi, getContractAddress } from "../common/utils";
 import {
   EraRecord,
   ContractEraRecord,
   readEraRecordFiles,
   writeContractEraRecordFile,
-} from "../eraRecord";
+} from "../common/eraRecord";
 
 import type { ApiPromise } from "@polkadot/api";
 

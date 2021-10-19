@@ -1,10 +1,10 @@
-import "./interfaces/augment-api";
-import "./interfaces/augment-types";
+import "../interfaces/augment-api";
+import "../interfaces/augment-types";
 
 import { ApiPromise, WsProvider } from "@polkadot/api";
 import { formatBalance } from "@polkadot/util";
 
-import * as definitions from "./interfaces/definitions";
+import * as definitions from "../interfaces/definitions";
 
 export const getApi = () => {
   return ApiPromise.create({

@@ -1,5 +1,5 @@
-import { getApi } from "../utils";
-import { EraRecord, writeEraRecordFile } from "../eraRecord";
+import { getApi } from "../common/utils";
+import { EraRecord, writeEraRecordFile } from "../common/eraRecord";
 
 import type { ApiPromise } from "@polkadot/api";
 import type { u32 } from "@polkadot/types/primitive";

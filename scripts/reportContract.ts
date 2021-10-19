@@ -1,8 +1,8 @@
 import {
   readEraRecordAndContractEraRecordFiles,
   calcContractStakeAndReward,
-} from "../eraRecord";
-import { formatSDN, getContractAddress } from "../utils";
+} from "../common/eraRecord";
+import { formatSDN, getContractAddress } from "../common/utils";
 
 const main = () => {
   const contractAddress = getContractAddress(process.argv[2]);

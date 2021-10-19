@@ -4,8 +4,8 @@ import {
   readEraRecordAndContractEraRecordFiles,
   EraRecordAndContractEraRecord,
   calcContractStakeAndReward,
-} from "../eraRecord";
-import { balanceToSdnNumber, getContractAddress } from "../utils";
+} from "../common/eraRecord";
+import { balanceToSdnNumber, getContractAddress } from "../common/utils";
 
 const main = () => {
   const contractAddress = getContractAddress(process.argv[2]);
