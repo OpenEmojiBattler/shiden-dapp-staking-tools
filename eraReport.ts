@@ -14,11 +14,11 @@ const secondEraBlockNumber = 504001;
 export interface EraReport {
   era: number;
   total: {
-    reward: Balance;
-    stake: Balance;
+    reward: bigint;
+    stake: bigint;
   };
   contract: {
-    stakers: { address: string; stake: Balance }[];
+    stakers: { address: string; stake: bigint }[];
   };
 }
 
@@ -122,14 +122,17 @@ export const getEraReports = async (
     //   );
     // }
 
-    const stakers: { address: string; stake: Balance }[] = [];
+    const stakers: { address: string; stake: bigint }[] = [];
     for (const [addr, b] of eraStakingPoints.stakers) {
-      stakers.push({ address: addr.toString(), stake: b });
+      stakers.push({ address: addr.toString(), stake: b.toBigInt() });
     }
 
     reports.push({
       era: eraReport.era,
-      total: { reward: eraReport.reward, stake: eraReport.stake },
+      total: {
+        reward: eraReport.reward.toBigInt(),
+        stake: eraReport.stake.toBigInt(),
+      },
       contract: { stakers },
     });
   }
