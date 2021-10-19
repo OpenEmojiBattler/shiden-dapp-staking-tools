@@ -2,6 +2,7 @@
   "private": true,
   "license": "Apache-2.0",
   "scripts": {
+    "test": "jest",
     "generate:defs": "ts-node --skip-project node_modules/.bin/polkadot-types-from-defs --package . --input ./interfaces",
     "generate:meta": "ts-node --skip-project node_modules/.bin/polkadot-types-from-chain --package . --endpoint wss://shiden.api.onfinality.io/public-ws --output ./interfaces"
   },
