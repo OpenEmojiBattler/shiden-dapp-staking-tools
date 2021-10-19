@@ -22,12 +22,35 @@ export const getApi = () => {
   });
 };
 
+const SDN_DECIMALS = 18;
+
 export const formatSDN = (balance: bigint) =>
   formatBalance(balance, {
-    decimals: 18,
+    decimals: SDN_DECIMALS,
     withSi: false,
     forceUnit: "-",
   });
+
+// for view
+export const balanceToSdnNumber = (balance: bigint) => {
+  const str = balance.toString();
+
+  let prefix = "";
+  let postfix = "";
+
+  if (str.length > SDN_DECIMALS) {
+    prefix = str.slice(0, str.length - SDN_DECIMALS);
+    postfix = str.slice(SDN_DECIMALS * -1);
+  } else {
+    prefix = "0";
+    const padding = SDN_DECIMALS - str.length;
+    postfix = `${new Array(padding + 1).join("0")}${str}`;
+  }
+
+  postfix = postfix.slice(0, 4);
+
+  return Number(`${prefix}.${postfix}`);
+};
 
 export const getContractAddress = (processargv: string | undefined) => {
   if (!processargv) {

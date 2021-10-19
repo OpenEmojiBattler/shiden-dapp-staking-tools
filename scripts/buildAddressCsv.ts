@@ -5,7 +5,7 @@ import {
   EraRecordAndContractEraRecord,
   calcContractStakeAndReward,
 } from "../eraRecord";
-import { formatSDN, getContractAddress } from "../utils";
+import { balanceToSdnNumber, getContractAddress } from "../utils";
 
 const main = () => {
   const contractAddress = getContractAddress(process.argv[2]);
@@ -35,7 +35,7 @@ const main = () => {
         )!.reward;
 
         stakeAndRewardArray.push(
-          `"${formatSDN(staker.stake)}","${formatSDN(reward)}"`
+          `${balanceToSdnNumber(staker.stake)},${balanceToSdnNumber(reward)}`
         );
 
         totalReward += reward;
@@ -45,7 +45,9 @@ const main = () => {
     }
 
     csvLines.push(
-      `${address},${stakeAndRewardArray.join(",")},"${formatSDN(totalReward)}"`
+      `${address},${stakeAndRewardArray.join(",")},${balanceToSdnNumber(
+        totalReward
+      )}`
     );
   }
 
