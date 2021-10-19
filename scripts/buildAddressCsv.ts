@@ -1,4 +1,5 @@
 import { writeFileSync } from "fs";
+import { encodeAddress } from "@polkadot/util-crypto";
 
 import {
   readEraRecordAndContractEraRecordFiles,
@@ -47,9 +48,9 @@ const main = () => {
     }
 
     csvLines.push(
-      `${address},${stakeAndRewardArray.join(",")},${balanceToSdnNumber(
-        totalReward
-      )}`
+      `${address},${encodeAddress(address)},${stakeAndRewardArray.join(
+        ","
+      )},${balanceToSdnNumber(totalReward)}`
     );
   }
 
