@@ -2,10 +2,13 @@ import { writeFileSync } from "fs";
 
 import {
   readEraRecordAndContractEraRecordFiles,
-  EraRecordAndContractEraRecord,
-  calcContractStakeAndReward,
+  calcContractStakerRewards,
 } from "../common/eraRecord";
-import { balanceToSdnNumber, getContractAddress } from "../common/utils";
+import {
+  balanceToSdnNumber,
+  getContractAddress,
+  uniqArray,
+} from "../common/utils";
 
 const main = () => {
   const contractAddress = getContractAddress(process.argv[2]);
@@ -14,10 +17,8 @@ const main = () => {
 
   const csvLines: string[] = [];
 
-  const addresses = Array.from(
-    new Set(
-      records.flatMap((r) => r.contractEraRecord.stakers.map((s) => s.address))
-    )
+  const addresses = uniqArray(
+    records.flatMap((r) => r.contractEraRecord.stakers.map((s) => s.address))
   ).sort();
 
   for (const address of addresses) {
@@ -40,6 +41,7 @@ const main = () => {
 
         totalReward += reward;
       } else {
+        // not staked in this era
         stakeAndRewardArray.push(",");
       }
     }
@@ -51,19 +53,10 @@ const main = () => {
     );
   }
 
-  writeFileSync(`./address-${contractAddress}.csv`, `${csvLines.join("\n")}\n`);
-};
-
-const calcContractStakerRewards = (record: EraRecordAndContractEraRecord) => {
-  const {
-    stake: contractStake,
-    stakersReward: contractStakersReward,
-  } = calcContractStakeAndReward(record);
-
-  return record.contractEraRecord.stakers.map((staker) => ({
-    address: staker.address,
-    reward: (contractStakersReward * staker.stake) / contractStake,
-  }));
+  writeFileSync(
+    `./dist/address-${contractAddress}.csv`,
+    `${csvLines.join("\n")}\n`
+  );
 };
 
 main();

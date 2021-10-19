@@ -155,3 +155,17 @@ export const calcContractStakeAndReward = (
 
   return { stake, devReward, stakersReward };
 };
+
+export const calcContractStakerRewards = (
+  record: EraRecordAndContractEraRecord
+) => {
+  const {
+    stake: contractStake,
+    stakersReward: contractStakersReward,
+  } = calcContractStakeAndReward(record);
+
+  return record.contractEraRecord.stakers.map((staker) => ({
+    address: staker.address,
+    reward: (contractStakersReward * staker.stake) / contractStake,
+  }));
+};

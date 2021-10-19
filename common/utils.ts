@@ -60,3 +60,5 @@ export const getContractAddress = (processargv: string | undefined) => {
   }
   return processargv;
 };
+
+export const uniqArray = <T>(a: T[]): T[] => Array.from(new Set(a));
