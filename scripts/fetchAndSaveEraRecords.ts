@@ -80,6 +80,15 @@ const getEraBlockArray = async (api: ApiPromise) => {
     });
   }
 
+  eraBlockArray.forEach((eraBlock, i) => {
+    const nextEraBlock = eraBlockArray[i + 1];
+    if (nextEraBlock) {
+      if (nextEraBlock.era !== eraBlock.era + 1) {
+        throw new Error("invalid eraBlockArray");
+      }
+    }
+  });
+
   return eraBlockArray;
 };
 
