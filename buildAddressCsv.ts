@@ -3,6 +3,7 @@ import { writeFileSync } from "fs";
 import {
   readEraRecordAndContractEraRecordFiles,
   EraRecordAndContractEraRecord,
+  calcContractStakeAndReward,
 } from "./eraRecord";
 import { formatSDN, getContractAddress } from "./utils";
 
@@ -49,18 +50,6 @@ const main = () => {
   }
 
   writeFileSync(`./address-${contractAddress}.csv`, `${csvLines.join("\n")}\n`);
-};
-
-const calcContractStakeAndReward = (record: EraRecordAndContractEraRecord) => {
-  const stake = record.contractEraRecord.stakers
-    .map(({ stake }) => stake)
-    .reduce((a, b) => a + b);
-  const reward = (stake * record.eraRecord.reward) / record.eraRecord.stake;
-
-  const devReward = (reward * 4n) / 5n;
-  const stakersReward = reward - devReward;
-
-  return { stake, devReward, stakersReward };
 };
 
 const calcContractStakerRewards = (record: EraRecordAndContractEraRecord) => {

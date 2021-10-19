@@ -141,3 +141,17 @@ export const readEraRecordAndContractEraRecordFiles = (
     return { era: eraRecord.era, eraRecord, contractEraRecord };
   });
 };
+
+export const calcContractStakeAndReward = (
+  record: EraRecordAndContractEraRecord
+) => {
+  const stake = record.contractEraRecord.stakers
+    .map(({ stake }) => stake)
+    .reduce((a, b) => a + b);
+  const reward = (stake * record.eraRecord.reward) / record.eraRecord.stake;
+
+  const devReward = (reward * 4n) / 5n;
+  const stakersReward = reward - devReward;
+
+  return { stake, devReward, stakersReward };
+};
