@@ -27,8 +27,7 @@ const SDN_DECIMALS = 18;
 export const formatSDN = (balance: bigint) =>
   formatBalance(balance, {
     decimals: SDN_DECIMALS,
-    withSi: false,
-    forceUnit: "-",
+    withUnit: "SDN",
   });
 
 // for view
