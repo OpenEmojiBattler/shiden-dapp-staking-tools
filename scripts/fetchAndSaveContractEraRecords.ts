@@ -72,16 +72,9 @@ const getEraStakingPoints = async (
     )
   ) {
     throw new Error(
-      `invalid eraStakingPoints total: ${eraStakingPoints.toHuman()}`
+      `eraStakingPoints.total and stakers' stake sum don't match: ${eraStakingPoints.toHuman()}`
     );
   }
-
-  // TODO: Uncommend after claim
-  // if (eraStakingPoints.claimedRewards.isZero()) {
-  //   throw new Error(
-  //     `invalid eraStakingPoints, maybe unclaimed: ${eraStakingPoints.toHuman()}`
-  //   );
-  // }
 
   return eraStakingPoints;
 };
