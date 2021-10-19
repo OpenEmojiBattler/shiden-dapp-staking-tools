@@ -23,11 +23,11 @@ const main = async () => {
   }
 };
 
-const getContractEraRecord = async (
+const getEraStakingPoints = async (
   api: ApiPromise,
   contract: string,
   eraRecord: EraRecord
-): Promise<ContractEraRecord> => {
+) => {
   const eraEndBlockApi = await api.at(
     await api.rpc.chain.getBlockHash(eraRecord.endBlock)
   );
@@ -35,7 +35,7 @@ const getContractEraRecord = async (
     (await eraEndBlockApi.query.dappsStaking.currentEra()).toNumber() !==
     eraRecord.era
   ) {
-    throw new Error("invalid era block");
+    throw new Error("different era block");
   }
 
   const eraStakingPoints = (
@@ -48,8 +48,8 @@ const getContractEraRecord = async (
   if (
     !eraStakingPoints.total.toBn().eq(
       Array.from(eraStakingPoints.stakers.values())
-        .map((b) => b.toBn())
-        .reduce((prev, cur) => prev.add(cur))
+        .map((balance) => balance.toBn())
+        .reduce((a, b) => a.add(b))
     )
   ) {
     throw new Error(
@@ -57,12 +57,22 @@ const getContractEraRecord = async (
     );
   }
 
-  // TODO: uncommend
+  // TODO: Uncommend after claim
   // if (eraStakingPoints.claimedRewards.isZero()) {
   //   throw new Error(
   //     `invalid eraStakingPoints, maybe unclaimed: ${eraStakingPoints.toHuman()}`
   //   );
   // }
+
+  return eraStakingPoints;
+};
+
+const getContractEraRecord = async (
+  api: ApiPromise,
+  contract: string,
+  eraRecord: EraRecord
+): Promise<ContractEraRecord> => {
+  const eraStakingPoints = await getEraStakingPoints(api, contract, eraRecord);
 
   const stakers: { address: string; stake: bigint }[] = [];
   for (const [addr, b] of eraStakingPoints.stakers) {
