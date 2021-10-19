@@ -10,10 +10,12 @@ yarn install
 # Run
 
 ```
-yarn ts-node run.ts
+yarn ts-node ./scripts/foo.ts
 ```
 
 # How to update `./interfaces/`
+
+Only Necessary when chain interface/types updated.
 
 ## types
 
@@ -22,7 +24,7 @@ yarn ts-node run.ts
 
 ## meta
 
-_Dirty workaround. This should be fixed._
+_Dirty hack. This should be fixed._
 
 1. Edit `./node_modules/@polkadot/typegen/util/derived.cjs`
 ```diff
