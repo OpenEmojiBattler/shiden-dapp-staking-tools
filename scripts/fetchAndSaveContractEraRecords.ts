@@ -23,6 +23,25 @@ const main = async () => {
   }
 };
 
+const getContractEraRecord = async (
+  api: ApiPromise,
+  contract: string,
+  eraRecord: EraRecord
+): Promise<ContractEraRecord> => {
+  const eraStakingPoints = await getEraStakingPoints(api, contract, eraRecord);
+
+  const stakers: { address: string; stake: bigint }[] = [];
+  for (const [addr, b] of eraStakingPoints.stakers) {
+    stakers.push({ address: addr.toString(), stake: b.toBigInt() });
+  }
+
+  return {
+    contract,
+    era: eraRecord.era,
+    stakers,
+  };
+};
+
 const getEraStakingPoints = async (
   api: ApiPromise,
   contract: string,
@@ -65,25 +84,6 @@ const getEraStakingPoints = async (
   // }
 
   return eraStakingPoints;
-};
-
-const getContractEraRecord = async (
-  api: ApiPromise,
-  contract: string,
-  eraRecord: EraRecord
-): Promise<ContractEraRecord> => {
-  const eraStakingPoints = await getEraStakingPoints(api, contract, eraRecord);
-
-  const stakers: { address: string; stake: bigint }[] = [];
-  for (const [addr, b] of eraStakingPoints.stakers) {
-    stakers.push({ address: addr.toString(), stake: b.toBigInt() });
-  }
-
-  return {
-    contract,
-    era: eraRecord.era,
-    stakers,
-  };
 };
 
 main().catch(console.error).finally(process.exit);
