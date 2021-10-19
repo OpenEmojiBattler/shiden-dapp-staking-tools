@@ -30,9 +30,9 @@ const getContractEraRecord = async (
 ): Promise<ContractEraRecord> => {
   const eraStakingPoints = await getEraStakingPoints(api, contract, eraRecord);
 
-  const stakers: { address: string; stake: bigint }[] = [];
-  for (const [addr, b] of eraStakingPoints.stakers) {
-    stakers.push({ address: addr.toString(), stake: b.toBigInt() });
+  const stakers: ContractEraRecord["stakers"] = [];
+  for (const [accountId, balance] of eraStakingPoints.stakers) {
+    stakers.push({ address: accountId.toString(), stake: balance.toBigInt() });
   }
 
   return {
