@@ -32,7 +32,7 @@ const getEraRecords = async (api: ApiPromise) => {
     if (era === currentEra) {
       return false;
     }
-    throw new Error(`invalid era: ${era} ${currentEra}`);
+    throw new Error(`future era: ${era} ${currentEra}`);
   });
 
   const eraRecords: EraRecord[] = [];
