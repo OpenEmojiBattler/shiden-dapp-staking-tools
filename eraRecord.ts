@@ -50,6 +50,8 @@ export const readEraRecordFiles = () => {
     }
   }
 
+  eraRecords.sort((a, b) => a.era - b.era);
+
   return eraRecords;
 };
 
