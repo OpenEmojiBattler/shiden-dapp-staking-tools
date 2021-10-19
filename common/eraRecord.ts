@@ -52,7 +52,7 @@ export const readEraRecordFiles = () => {
   for (const file of readdirSync(eraRecordsDir)) {
     const match = file.match(/^(\d+)\.json$/);
     if (match) {
-      eraRecords.push(readEraRecordFile(parseInt(match[1])));
+      eraRecords.push(readEraRecordFile(Number(match[1])));
     }
   }
 
@@ -108,7 +108,7 @@ export const readContractEraRecordFiles = (contract: string) => {
     const match = file.match(regex);
     if (match) {
       contractEraRecords.push(
-        readContractEraRecordFile(contract, parseInt(match[1]))
+        readContractEraRecordFile(contract, Number(match[1]))
       );
     }
   }
