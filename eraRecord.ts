@@ -18,6 +18,12 @@ export interface ContractEraRecord {
   stakers: { address: string; stake: bigint }[];
 }
 
+export interface EraRecordAndContractEraRecord {
+  era: number;
+  eraRecord: EraRecord;
+  contractEraRecord: ContractEraRecord;
+}
+
 const eraRecordsDir = "./eraRecords";
 
 const buildEraRecordFileName = (era: number) => `${eraRecordsDir}/${era}.json`;
@@ -56,7 +62,12 @@ export const readEraRecordFiles = () => {
 };
 
 const buildContractEraRecordFileName = (contract: string, era: number) =>
-  `${eraRecordsDir}/contract-${contract}-${era}.json`;
+  `${eraRecordsDir}/${buildContractEraRecordFileNamePrefix(
+    contract
+  )}${era}.json`;
+
+const buildContractEraRecordFileNamePrefix = (contract: string) =>
+  `contract-${contract}-`;
 
 export const writeContractEraRecordFile = (
   contractEraRecord: ContractEraRecord
@@ -68,4 +79,65 @@ export const writeContractEraRecordFile = (
     ),
     `${JSON.stringify(contractEraRecord, null, 2)}\n`
   );
+};
+
+export const readContractEraRecordFile = (
+  contract: string,
+  era: number
+): ContractEraRecord => {
+  const j = JSON.parse(
+    readFileSync(buildContractEraRecordFileName(contract, era), "utf8")
+  );
+  return {
+    contract: j.contract,
+    era: j.era,
+    stakers: j.stakers.map((s: { address: string; stake: string }) => ({
+      address: s.address,
+      stake: BigInt(s.stake),
+    })),
+  };
+};
+
+export const readContractEraRecordFiles = (contract: string) => {
+  const contractEraRecords: ContractEraRecord[] = [];
+  const regex = new RegExp(
+    `^${buildContractEraRecordFileNamePrefix(contract)}(\d+)\.json$`
+  );
+
+  for (const file of readdirSync(eraRecordsDir)) {
+    const match = file.match(regex);
+    if (match) {
+      contractEraRecords.push(
+        readContractEraRecordFile(contract, parseInt(match[1]))
+      );
+    }
+  }
+
+  contractEraRecords.sort((a, b) => a.era - b.era);
+
+  return contractEraRecords;
+};
+
+export const readEraRecordAndContractEraRecordFiles = (
+  contract: string
+): EraRecordAndContractEraRecord[] => {
+  const eraRecords = readEraRecordFiles();
+  const contractEraRecords = readContractEraRecordFiles(contract);
+
+  if (eraRecords.length !== contractEraRecords.length) {
+    throw new Error("invalid era and contract era pair");
+  }
+
+  return eraRecords.map((eraRecord) => {
+    const contractEraRecord = contractEraRecords.find(
+      (contractEraRecord) => contractEraRecord.era === eraRecord.era
+    );
+    if (!contractEraRecord) {
+      throw new Error(
+        `could not find par contract era record: ${eraRecord.era}`
+      );
+    }
+
+    return { era: eraRecord.era, eraRecord, contractEraRecord };
+  });
 };

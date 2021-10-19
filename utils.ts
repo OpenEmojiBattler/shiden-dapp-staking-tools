@@ -2,6 +2,7 @@ import "./interfaces/augment-api";
 import "./interfaces/augment-types";
 
 import { ApiPromise, WsProvider } from "@polkadot/api";
+import { formatBalance } from "@polkadot/util";
 
 import * as definitions from "./interfaces/definitions";
 
@@ -20,3 +21,10 @@ export const getApi = () => {
     },
   });
 };
+
+export const formatSDN = (balance: bigint) =>
+  formatBalance(balance, {
+    decimals: 18,
+    withSi: false,
+    forceUnit: "-",
+  });

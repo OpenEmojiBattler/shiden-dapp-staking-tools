@@ -1,59 +1,64 @@
 import { writeFileSync } from "fs";
-import { formatBalance } from "@polkadot/util";
 
-import { getApi } from "./utils";
-import { getEraReports, EraReport } from "./eraReport";
+import {
+  readEraRecordAndContractEraRecordFiles,
+  EraRecordAndContractEraRecord,
+} from "./eraRecord";
+import { formatSDN } from "./utils";
 
-const main = async () => {
-  const contractAddress = "0xE0F41a9626aDe6c2bfAaDe6E497Dc584bC3e9Dc5";
-  const api = await getApi();
-  const eraReports = await getEraReports(api, contractAddress);
+const main = () => {
+  const contractAddress = process.argv[2];
+  if (contractAddress === "") {
+    throw new Error("contractAddress none");
+  }
+
+  const records = readEraRecordAndContractEraRecordFiles(contractAddress);
 
   const csvLines: string[] = [];
 
   const addresses = Array.from(
-    new Set(eraReports.flatMap((r) => r.contract.stakers.map((s) => s.address)))
+    new Set(
+      records.flatMap((r) => r.contractEraRecord.stakers.map((s) => s.address))
+    )
   ).sort();
 
   for (const address of addresses) {
     let totalReward = 0n;
     const stakeAndRewardArray: string[] = [];
-    for (const eraReport of eraReports) {
-      const staker = eraReport.contract.stakers.find(
+
+    for (const record of records) {
+      const staker = record.contractEraRecord.stakers.find(
         (s) => s.address === address
       );
+
       if (staker) {
-        const reward = calcContractStakerRewards(eraReport).find(
+        const reward = calcContractStakerRewards(record).find(
           (x) => x.address === address
         )!.reward;
+
         stakeAndRewardArray.push(
-          `${api
-            .createType("Balance", staker.stake)
-            .toHuman()},${api.createType("Balance", reward).toHuman()}`
+          `${formatSDN(staker.stake)},${formatSDN(reward)}`
         );
+
         totalReward += reward;
       } else {
         stakeAndRewardArray.push(",");
       }
     }
-    const totalRewardStr = formatBalance(totalReward, {
-      decimals: api.registry.chainDecimals[0],
-      withSi: false,
-      forceUnit: "-",
-    });
+
     csvLines.push(
-      `${address},${stakeAndRewardArray.join(",")},${totalRewardStr}`
+      `${address},${stakeAndRewardArray.join(",")},${formatSDN(totalReward)}`
     );
   }
 
   writeFileSync(`./address-${contractAddress}.csv`, `${csvLines.join("\n")}\n`);
 };
 
-const calcContractStakeAndReward = (eraReport: EraReport) => {
-  const stake = eraReport.contract.stakers
+const calcContractStakeAndReward = (record: EraRecordAndContractEraRecord) => {
+  const stake = record.contractEraRecord.stakers
     .map(({ stake }) => stake)
     .reduce((a, b) => a + b);
-  const reward = (stake * eraReport.total.reward) / eraReport.total.stake;
+  const reward = (stake * record.eraRecord.reward) / record.eraRecord.stake;
 
   const devReward = (reward * 4n) / 5n;
   const stakersReward = reward - devReward;
@@ -61,16 +66,16 @@ const calcContractStakeAndReward = (eraReport: EraReport) => {
   return { stake, devReward, stakersReward };
 };
 
-const calcContractStakerRewards = (eraReport: EraReport) => {
+const calcContractStakerRewards = (record: EraRecordAndContractEraRecord) => {
   const {
     stake: contractStake,
     stakersReward: contractStakersReward,
-  } = calcContractStakeAndReward(eraReport);
+  } = calcContractStakeAndReward(record);
 
-  return eraReport.contract.stakers.map((staker) => ({
+  return record.contractEraRecord.stakers.map((staker) => ({
     address: staker.address,
     reward: (contractStakersReward * staker.stake) / contractStake,
   }));
 };
 
-main().catch(console.error).finally(process.exit);
+main();
