@@ -92,15 +92,6 @@ declare module '@polkadot/api/types/submittable' {
        * Make sure to claim all the contract rewards prior to unregistering it.
        **/
       unregister: AugmentedSubmittable<(contractId: SmartContract | { Evm: any } | { Wasm: any } | string | Uint8Array) => SubmittableExtrinsic<ApiType>, [SmartContract]>;
-      /**
-       * Generic tx
-       **/
-      [key: string]: SubmittableExtrinsicFunction<ApiType>;
     };
-  }
-
-  export interface SubmittableExtrinsics<ApiType extends ApiTypes> extends AugmentedSubmittables<ApiType> {
-    (extrinsic: Call | Extrinsic | Uint8Array | string): SubmittableExtrinsic<ApiType>;
-    [key: string]: SubmittableModuleExtrinsics<ApiType>;
   }
 }

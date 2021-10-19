@@ -42,14 +42,6 @@ declare module '@polkadot/api/types/events' {
        * Account has unbonded, unstaked and withdrawn funds.
        **/
       UnbondUnstakeAndWithdraw: AugmentedEvent<ApiType, [AccountId, SmartContract, Balance]>;
-      /**
-       * Generic event
-       **/
-      [key: string]: AugmentedEvent<ApiType>;
     };
-  }
-
-  export interface DecoratedEvents<ApiType extends ApiTypes> extends AugmentedEvents<ApiType> {
-    [key: string]: ModuleEvents<ApiType>;
   }
 }

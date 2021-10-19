@@ -74,14 +74,6 @@ declare module '@polkadot/api/types/storage' {
        * Reward counter for individual stakers and the developer
        **/
       rewardsClaimed: AugmentedQuery<ApiType, (arg1: SmartContract | { Evm: any } | { Wasm: any } | string | Uint8Array, arg2: AccountId | string | Uint8Array) => Observable<BalanceOf>, [SmartContract, AccountId]> & QueryableStorageEntry<ApiType, [SmartContract, AccountId]>;
-      /**
-       * Generic query
-       **/
-      [key: string]: QueryableStorageEntry<ApiType>;
     };
-  }
-
-  export interface QueryableStorage<ApiType extends ApiTypes> extends AugmentedQueries<ApiType> {
-    [key: string]: QueryableModuleStorage<ApiType>;
   }
 }

@@ -47,14 +47,6 @@ declare module '@polkadot/api/types/consts' {
        * Treasury pallet Id
        **/
       treasuryPalletId: PalletId & AugmentedConst<ApiType>;
-      /**
-       * Generic const
-       **/
-      [key: string]: Codec;
     };
-  }
-
-  export interface QueryableConsts<ApiType extends ApiTypes> extends AugmentedConsts<ApiType> {
-    [key: string]: QueryableModuleConsts;
   }
 }

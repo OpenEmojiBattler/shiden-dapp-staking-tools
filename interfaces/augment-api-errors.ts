@@ -82,14 +82,6 @@ declare module '@polkadot/api/types/errors' {
        * Unstaking a contract with zero value
        **/
       UnstakingWithNoValue: AugmentedError<ApiType>;
-      /**
-       * Generic error
-       **/
-      [key: string]: AugmentedError<ApiType>;
     };
-  }
-
-  export interface DecoratedErrors<ApiType extends ApiTypes> extends AugmentedErrors<ApiType> {
-    [key: string]: ModuleErrors<ApiType>;
   }
 }
