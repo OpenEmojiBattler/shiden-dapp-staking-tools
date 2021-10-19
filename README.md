@@ -15,7 +15,7 @@ yarn ts-node ./scripts/foo.ts
 
 # How to update `./interfaces/`
 
-Only Necessary when chain interface/types updated.
+Only necessary when chain interface/types updated.
 
 ## types
 
