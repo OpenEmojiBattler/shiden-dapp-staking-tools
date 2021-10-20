@@ -145,9 +145,7 @@ export const readEraRecordAndContractEraRecordFiles = (
 export const calcContractStakeAndReward = (
   record: EraRecordAndContractEraRecord
 ) => {
-  const stake = record.contractEraRecord.stakers
-    .map(({ stake }) => stake)
-    .reduce((a, b) => a + b);
+  const stake = calcContractStake(record.contractEraRecord.stakers);
   const reward = (stake * record.eraRecord.reward) / record.eraRecord.stake;
 
   const devReward = (reward * 4n) / 5n;
@@ -157,15 +155,16 @@ export const calcContractStakeAndReward = (
 };
 
 export const calcContractStakerRewards = (
-  record: EraRecordAndContractEraRecord
+  stakersReward: bigint,
+  stakers: ContractEraRecord["stakers"]
 ) => {
-  const {
-    stake: contractStake,
-    stakersReward: contractStakersReward,
-  } = calcContractStakeAndReward(record);
+  const contractStake = calcContractStake(stakers);
 
-  return record.contractEraRecord.stakers.map((staker) => ({
+  return stakers.map((staker) => ({
     address: staker.address,
-    reward: (contractStakersReward * staker.stake) / contractStake,
+    reward: (stakersReward * staker.stake) / contractStake,
   }));
 };
+
+const calcContractStake = (stakers: ContractEraRecord["stakers"]) =>
+  stakers.map(({ stake }) => stake).reduce((a, b) => a + b);

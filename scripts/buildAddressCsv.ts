@@ -4,6 +4,7 @@ import { encodeAddress } from "@polkadot/util-crypto";
 import {
   readEraRecordAndContractEraRecordFiles,
   calcContractStakerRewards,
+  calcContractStakeAndReward,
 } from "../common/eraRecord";
 import {
   balanceToSdnNumber,
@@ -32,9 +33,10 @@ const main = () => {
       );
 
       if (staker) {
-        const reward = calcContractStakerRewards(record).find(
-          (x) => x.address === address
-        )!.reward;
+        const reward = calcContractStakerRewards(
+          calcContractStakeAndReward(record).stakersReward,
+          record.contractEraRecord.stakers
+        ).find((x) => x.address === address)!.reward;
 
         stakeAndRewardArray.push(
           `${balanceToSdnNumber(staker.stake)},${balanceToSdnNumber(reward)}`
