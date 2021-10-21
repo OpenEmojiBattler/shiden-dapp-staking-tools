@@ -23,9 +23,9 @@ declare module '@polkadot/api/types/events' {
        **/
       BondAndStake: AugmentedEvent<ApiType, [AccountId, SmartContract, Balance]>;
       /**
-       * The contract's reward have been claimed, by an account, from era, until era.
+       * The contract's reward have been claimed for era.
        **/
-      ContractClaimed: AugmentedEvent<ApiType, [SmartContract, AccountId, EraIndex, EraIndex]>;
+      ContractClaimed: AugmentedEvent<ApiType, [SmartContract, EraIndex, Balance]>;
       /**
        * Contract removed from dapps staking.
        **/
@@ -38,6 +38,10 @@ declare module '@polkadot/api/types/events' {
        * New dapps staking era. Distribute era rewards to contracts.
        **/
       NewDappStakingEra: AugmentedEvent<ApiType, [EraIndex]>;
+      /**
+       * Reward paid to staker.
+       **/
+      Reward: AugmentedEvent<ApiType, [AccountId, Balance]>;
       /**
        * Account has unbonded, unstaked and withdrawn funds.
        **/

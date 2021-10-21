@@ -15,7 +15,7 @@ const types: RegistryTypes = {
   EraStakingPoints: {
     total: "Balance",
     stakers: "BTreeMap<AccountId, Balance>",
-    formerStakedEra: "EraIndex",
+    formerStakedEra: "EraIndex", // do not use this, deleted: https://github.com/PlasmNetwork/Astar/pull/480
     claimedRewards: "Balance",
   },
   EraRewardAndStake: {

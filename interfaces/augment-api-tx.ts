@@ -10,6 +10,7 @@ import type { IdentityFields, IdentityInfo, IdentityJudgement, RegistrarIndex } 
 import type { ParachainInherentData, RelayChainBlockNumber, UpwardMessage } from '@polkadot/types/interfaces/parachains';
 import type { AccountId, Balance, BalanceOf, Call, ChangesTrieConfiguration, H160, H256, Hash, Header, Index, KeyValue, LookupSource, Moment, OpaqueCall, Perbill, Weight } from '@polkadot/types/interfaces/runtime';
 import type { Keys } from '@polkadot/types/interfaces/session';
+import type { EraIndex } from '@polkadot/types/interfaces/staking';
 import type { Key } from '@polkadot/types/interfaces/system';
 import type { Timepoint } from '@polkadot/types/interfaces/utility';
 import type { VestingInfo } from '@polkadot/types/interfaces/vesting';
@@ -37,7 +38,7 @@ declare module '@polkadot/api/types/submittable' {
        * Any reward older than history_depth() will go to Treasury.
        * Any user can call this function.
        **/
-      claim: AugmentedSubmittable<(contractId: SmartContract | { Evm: any } | { Wasm: any } | string | Uint8Array) => SubmittableExtrinsic<ApiType>, [SmartContract]>;
+      claim: AugmentedSubmittable<(contractId: SmartContract | { Evm: any } | { Wasm: any } | string | Uint8Array, era: EraIndex | AnyNumber | Uint8Array) => SubmittableExtrinsic<ApiType>, [SmartContract, EraIndex]>;
       /**
        * add contract address to the pre-approved list.
        * contract_id should be ink! or evm contract.
@@ -88,8 +89,7 @@ declare module '@polkadot/api/types/submittable' {
        *
        * This must be called by the developer who registered the contract.
        *
-       * No unclaimed rewards must remain prior to this call (otherwise it will fail).
-       * Make sure to claim all the contract rewards prior to unregistering it.
+       * Warning: After this action contract can not be assigned again.
        **/
       unregister: AugmentedSubmittable<(contractId: SmartContract | { Evm: any } | { Wasm: any } | string | Uint8Array) => SubmittableExtrinsic<ApiType>, [SmartContract]>;
     };

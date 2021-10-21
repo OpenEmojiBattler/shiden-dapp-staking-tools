@@ -3,7 +3,7 @@
 
 import type { ApiTypes } from '@polkadot/api/types';
 import type { Vec, u16, u32 } from '@polkadot/types';
-import type { Balance, BalanceOf, BlockNumber, BlockNumberFor, Moment, PalletId, RuntimeDbWeight } from '@polkadot/types/interfaces/runtime';
+import type { Balance, BalanceOf, BlockNumber, BlockNumberFor, Moment, PalletId, Perbill, RuntimeDbWeight } from '@polkadot/types/interfaces/runtime';
 import type { RuntimeVersion } from '@polkadot/types/interfaces/state';
 import type { WeightToFeeCoefficient } from '@polkadot/types/interfaces/support';
 import type { BlockLength, BlockWeights } from '@polkadot/types/interfaces/system';
@@ -17,9 +17,13 @@ declare module '@polkadot/api/types/consts' {
        **/
       blockPerEra: BlockNumberFor & AugmentedConst<ApiType>;
       /**
+       * Number of eras of doubled claim rewards.
+       **/
+      bonusEraDuration: u32 & AugmentedConst<ApiType>;
+      /**
        * Percentage of reward paid to developer.
        **/
-      developerRewardPercentage: u32 & AugmentedConst<ApiType>;
+      developerRewardPercentage: Perbill & AugmentedConst<ApiType>;
       /**
        * Number of eras that are valid when claiming rewards.
        *

@@ -27,17 +27,17 @@ declare module '@polkadot/api/types/errors' {
        **/
       ContractIsNotValid: AugmentedError<ApiType>;
       /**
-       * Contract not registered for dapps staking.
-       **/
-      ContractNotRegistered: AugmentedError<ApiType>;
-      /**
        * Contract rewards haven't been claimed prior to unregistration
        **/
       ContractRewardsNotClaimed: AugmentedError<ApiType>;
       /**
+       * Era parameter is out of bounds
+       **/
+      EraOutOfBounds: AugmentedError<ApiType>;
+      /**
        * Can not stake with value less than minimum staking value
        **/
-      InsufficientStakingValue: AugmentedError<ApiType>;
+      InsufficientValue: AugmentedError<ApiType>;
       /**
        * Number of stakers per contract exceeded.
        **/

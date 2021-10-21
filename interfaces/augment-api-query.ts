@@ -7,7 +7,7 @@ import type { BTreeMap, Bytes, Data, Option, U256, U8aFixed, Vec, bool, u32 } fr
 import type { UncleEntryItem } from '@polkadot/types/interfaces/authorship';
 import type { AccountData, BalanceLock, ReserveData } from '@polkadot/types/interfaces/balances';
 import type { AuthorityId } from '@polkadot/types/interfaces/consensus';
-import type { EthReceipt, EthTransaction, EthTransactionStatus } from '@polkadot/types/interfaces/eth';
+import type { BlockV0, EthReceipt, EthTransaction, EthTransactionStatus } from '@polkadot/types/interfaces/eth';
 import type { RegistrarInfo, Registration } from '@polkadot/types/interfaces/identity';
 import type { AbridgedHostConfiguration, CandidateInfo, MessageQueueChain, MessagingStateSnapshot, OutboundHrmpMessage, ParaId, PersistedValidationData, RelayChainBlockNumber, UpwardMessage } from '@polkadot/types/interfaces/parachains';
 import type { AccountId, Balance, BalanceOf, BlockNumber, H160, H256, Hash, KeyTypeId, Moment, OpaqueCall, Releases, Slot, ValidatorId, Weight } from '@polkadot/types/interfaces/runtime';
@@ -30,14 +30,6 @@ declare module '@polkadot/api/types/storage' {
        * Stores amount staked and stakers for a contract per era
        **/
       contractEraStake: AugmentedQuery<ApiType, (arg1: SmartContract | { Evm: any } | { Wasm: any } | string | Uint8Array, arg2: EraIndex | AnyNumber | Uint8Array) => Observable<Option<EraStakingPoints>>, [SmartContract, EraIndex]> & QueryableStorageEntry<ApiType, [SmartContract, EraIndex]>;
-      /**
-       * Marks an Era when a contract is last claimed
-       **/
-      contractLastClaimed: AugmentedQuery<ApiType, (arg: SmartContract | { Evm: any } | { Wasm: any } | string | Uint8Array) => Observable<Option<EraIndex>>, [SmartContract]> & QueryableStorageEntry<ApiType, [SmartContract]>;
-      /**
-       * Marks an Era when a contract is last (un)staked
-       **/
-      contractLastStaked: AugmentedQuery<ApiType, (arg: SmartContract | { Evm: any } | { Wasm: any } | string | Uint8Array) => Observable<Option<EraIndex>>, [SmartContract]> & QueryableStorageEntry<ApiType, [SmartContract]>;
       /**
        * The current era index.
        **/
@@ -70,10 +62,6 @@ declare module '@polkadot/api/types/storage' {
        * Registered developer accounts points to coresponding contract
        **/
       registeredDevelopers: AugmentedQuery<ApiType, (arg: AccountId | string | Uint8Array) => Observable<Option<SmartContract>>, [AccountId]> & QueryableStorageEntry<ApiType, [AccountId]>;
-      /**
-       * Reward counter for individual stakers and the developer
-       **/
-      rewardsClaimed: AugmentedQuery<ApiType, (arg1: SmartContract | { Evm: any } | { Wasm: any } | string | Uint8Array, arg2: AccountId | string | Uint8Array) => Observable<BalanceOf>, [SmartContract, AccountId]> & QueryableStorageEntry<ApiType, [SmartContract, AccountId]>;
     };
   }
 }
