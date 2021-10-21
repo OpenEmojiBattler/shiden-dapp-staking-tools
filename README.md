@@ -35,6 +35,5 @@ _Dirty hack. This should be fixed._
 ```
 2. Run `yarn generate:meta`
 3. Edit `./interfaces/augment-api*`
-   - Delete non dapp staking related code on `./interfaces/augment-api-*`
    - Remove `./interfaces/augment-api-rpc.ts`
    - Delete the rpc line on `./interfaces/augment-api.ts`

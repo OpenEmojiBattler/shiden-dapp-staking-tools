@@ -1,6 +1,3 @@
-import "../interfaces/augment-api";
-import "../interfaces/augment-types";
-
 import { ApiPromise, WsProvider } from "@polkadot/api";
 import { formatBalance } from "@polkadot/util";
 
@@ -17,7 +14,6 @@ export const getApi = () => {
       Keys: "AccountId",
       Address: "MultiAddress",
       LookupSource: "MultiAddress",
-      BlockV0: "u8", // FIXME: not correct, but we don't use this, just for supressing warning
     },
   });
 };
