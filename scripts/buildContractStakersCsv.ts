@@ -1,11 +1,7 @@
 import { writeFileSync } from "fs";
 import { encodeAddress } from "@polkadot/util-crypto";
 
-import {
-  readEraRecordAndContractEraRecordFiles,
-  calcContractStakerRewards,
-  calcContractStakeAndReward,
-} from "../common/eraRecord";
+import { readEraRecordAndContractEraRecordFiles } from "../common/eraRecord";
 import {
   balanceToSdnNumber,
   getContractAddress,
@@ -33,16 +29,13 @@ const main = () => {
       );
 
       if (staker) {
-        const reward = calcContractStakerRewards(
-          calcContractStakeAndReward(record).stakersReward,
-          record.contractEraRecord.stakers
-        ).find((x) => x.address === address)!.reward;
-
         stakeAndRewardArray.push(
-          `${balanceToSdnNumber(staker.stake)},${balanceToSdnNumber(reward)}`
+          `${balanceToSdnNumber(staker.stake)},${balanceToSdnNumber(
+            staker.reward
+          )}`
         );
 
-        totalReward += reward;
+        totalReward += staker.reward;
       } else {
         // not staked in this era
         stakeAndRewardArray.push(",");
