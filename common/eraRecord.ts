@@ -15,7 +15,8 @@ export interface EraRecord {
 export interface ContractEraRecord {
   contract: string;
   era: number;
-  stakers: { address: string; stake: bigint }[];
+  developerReward: bigint;
+  stakers: { address: string; stake: bigint; reward: bigint }[];
 }
 
 export interface EraRecordAndContractEraRecord {
@@ -88,12 +89,19 @@ export const readContractEraRecordFile = (
   const j = JSON.parse(
     readFileSync(buildContractEraRecordFileName(contract, era), "utf8")
   );
+
   return {
     contract: j.contract,
     era: j.era,
-    stakers: j.stakers.map((s: { address: string; stake: string }) => ({
-      address: s.address,
-      stake: BigInt(s.stake),
+    developerReward: BigInt(j.developerReward),
+    stakers: (j.stakers as {
+      address: string;
+      stake: string;
+      reward: string;
+    }[]).map((staker) => ({
+      address: staker.address,
+      stake: BigInt(staker.stake),
+      reward: BigInt(staker.reward),
     })),
   };
 };

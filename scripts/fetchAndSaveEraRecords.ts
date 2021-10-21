@@ -1,4 +1,4 @@
-import { getApi } from "../common/utils";
+import { getApi, getEventRecordsAt } from "../common/utils";
 import { EraRecord, writeEraRecordFile } from "../common/eraRecord";
 
 import type { ApiPromise } from "@polkadot/api";
@@ -98,9 +98,7 @@ const checkAndGetEraByBlockNumber = async (
   api: ApiPromise,
   blockNumber: number
 ) => {
-  const blockHash = await api.rpc.chain.getBlockHash(blockNumber);
-  const atApi = await api.at(blockHash);
-  const eventRecords = await atApi.query.system.events();
+  const eventRecords = await getEventRecordsAt(api, blockNumber);
 
   const eras = eventRecords
     .filter(

@@ -5,6 +5,8 @@ import {
   EraRecordAndContractEraRecord,
 } from "./eraRecord";
 
+const placeholderBigint = 0n;
+
 describe("calcContractStakeAndReward", () => {
   test("case 1", () => {
     const record: EraRecordAndContractEraRecord = {
@@ -19,9 +21,10 @@ describe("calcContractStakeAndReward", () => {
       contractEraRecord: {
         contract: "0x0",
         era: 1,
+        developerReward: placeholderBigint,
         stakers: [
-          { address: "A", stake: 10_000n },
-          { address: "B", stake: 20_000n },
+          { address: "A", stake: 10_000n, reward: placeholderBigint },
+          { address: "B", stake: 20_000n, reward: placeholderBigint },
         ],
       },
     };
@@ -38,9 +41,9 @@ describe("calcContractStakerRewards", () => {
   test("case 1", () => {
     const stakersReward = 100n;
     const stakers: ContractEraRecord["stakers"] = [
-      { address: "A", stake: 10_000n },
-      { address: "B", stake: 20_000n },
-      { address: "C", stake: 30_000n },
+      { address: "A", stake: 10_000n, reward: placeholderBigint },
+      { address: "B", stake: 20_000n, reward: placeholderBigint },
+      { address: "C", stake: 30_000n, reward: placeholderBigint },
     ];
 
     const result = calcContractStakerRewards(stakersReward, stakers);

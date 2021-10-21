@@ -18,6 +18,15 @@ export const getApi = () => {
   });
 };
 
+export const getEventRecordsAt = async (
+  api: ApiPromise,
+  blockNumber: number
+) => {
+  const blockHash = await api.rpc.chain.getBlockHash(blockNumber);
+  const atApi = await api.at(blockHash);
+  return atApi.query.system.events();
+};
+
 const SDN_DECIMALS = 18;
 
 export const formatSDN = (balance: bigint) =>
@@ -54,7 +63,7 @@ export const getContractAddress = (processargv: string | undefined) => {
   if (!processargv.startsWith("0x")) {
     throw new Error(`invalid contractAddress format ${processargv}`);
   }
-  return processargv;
+  return processargv.toLowerCase();
 };
 
 export const uniqArray = <T>(a: T[]): T[] => Array.from(new Set(a));
