@@ -5,6 +5,7 @@ import {
   readEraRecordFiles,
   writeContractEraRecordFile,
 } from "../common/eraRecord";
+import { claimEnabledBlockNumber } from "../common/shiden";
 
 import type { ApiPromise } from "@polkadot/api";
 import type { EraIndex } from "@polkadot/types/interfaces/staking";
@@ -112,19 +113,13 @@ const getEraStakingPoints = async (
   return eraStakingPoints;
 };
 
-const claimEnabledBlock = 123456789; // TODO: fill this
-
 const getClaimEventData = async (
   api: ApiPromise,
   contract: string,
   eraRecord: EraRecord
 ) => {
-  let blockNumber: number | null = null;
-  let extrinsicIndex: number | null = null;
-  let reward: bigint | null = null;
-
   for (
-    let block = Math.max(eraRecord.startBlock, claimEnabledBlock);
+    let block = Math.max(eraRecord.startBlock, claimEnabledBlockNumber);
     true;
     block++
   ) {
@@ -158,19 +153,17 @@ const getClaimEventData = async (
     if (events.length === 1) {
       const e = events[0];
 
-      blockNumber = block;
-      extrinsicIndex = e.extrinsicIndex;
-      reward = e.reward;
-
-      break;
+      return {
+        blockNumber: block,
+        extrinsicIndex: e.extrinsicIndex,
+        reward: e.reward,
+      };
     }
 
     if (events.length > 1) {
       throw new Error(`invalid events len: ${events.length}`);
     }
   }
-
-  return { blockNumber, extrinsicIndex, reward };
 };
 
 const decodeContractClaimedEvent = (data: any[]) => {

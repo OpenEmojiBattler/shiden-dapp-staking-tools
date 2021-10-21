@@ -1,4 +1,8 @@
 import { getApi, getEventRecordsAt } from "../common/utils";
+import {
+  firstForceEraBlockNumber,
+  secondEraBlockNumber,
+} from "../common/shiden";
 import { EraRecord, writeEraRecordFile } from "../common/eraRecord";
 
 import type { ApiPromise } from "@polkadot/api";
@@ -17,9 +21,6 @@ const MILLISECS_PER_BLOCK = 12000;
 const MINUTES = 60000 / MILLISECS_PER_BLOCK;
 const HOURS = MINUTES * 60;
 const DAYS = HOURS * 24; // 7200 blocks = 1 era
-
-const firstForceEraBlockNumber = 499296;
-const secondEraBlockNumber = 504001;
 
 const getEraRecords = async (api: ApiPromise) => {
   const eraBlockArray = await getEraBlockArray(api);
