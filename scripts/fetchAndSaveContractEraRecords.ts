@@ -20,6 +20,8 @@ const main = async () => {
       eraRecord
     );
     writeContractEraRecordFile(contractEraRecord);
+
+    console.log(eraRecord.era);
   }
 };
 

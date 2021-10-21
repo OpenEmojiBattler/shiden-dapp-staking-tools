@@ -54,6 +54,8 @@ const getEraRecords = async (api: ApiPromise) => {
       reward: rewardAndStake.rewards.toBigInt(),
       stake: rewardAndStake.staked.toBigInt(),
     });
+
+    console.log(era);
   }
 
   return eraRecords;
