@@ -49,22 +49,16 @@ const getEraStakingPoints = async (
   contract: string,
   eraRecord: EraRecord
 ) => {
-  const eraEndBlockApi = await api.at(
-    await api.rpc.chain.getBlockHash(eraRecord.endBlock)
-  );
-  if (
-    (await eraEndBlockApi.query.dappsStaking.currentEra()).toNumber() !==
-    eraRecord.era
-  ) {
-    throw new Error("different era block");
-  }
-
   const eraStakingPoints = (
-    await eraEndBlockApi.query.dappsStaking.contractEraStake(
+    await api.query.dappsStaking.contractEraStake(
       { Evm: contract },
       eraRecord.era
     )
   ).unwrap();
+
+  if (eraStakingPoints.claimedRewards.isZero()) {
+    throw new Error(`not claimed era: ${eraRecord.era}`);
+  }
 
   if (
     !eraStakingPoints.total.toBn().eq(
