@@ -17,11 +17,6 @@ const main = async () => {
   }
 };
 
-const MILLISECS_PER_BLOCK = 12000;
-const MINUTES = 60000 / MILLISECS_PER_BLOCK;
-const HOURS = MINUTES * 60;
-const DAYS = HOURS * 24; // 7200 blocks = 1 era
-
 const getEraRecords = async (api: ApiPromise) => {
   const eraBlockArray = await getEraBlockArray(api);
 
@@ -76,7 +71,9 @@ const getEraBlockArray = async (api: ApiPromise) => {
     },
   ];
 
-  for (let i = secondEraBlockNumber; i <= currentBlockNumber; i += DAYS) {
+  const eraBlocks = api.consts.dappsStaking.blockPerEra.toNumber();
+
+  for (let i = secondEraBlockNumber; i <= currentBlockNumber; i += eraBlocks) {
     eraBlockArray.push({
       era: await checkAndGetEraByBlockNumber(api, i),
       startBlock: i,
