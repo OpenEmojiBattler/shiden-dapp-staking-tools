@@ -4,6 +4,7 @@ import {
   ContractEraRecord,
   readEraRecordFiles,
   writeContractEraRecordFile,
+  existsContractEraRecordFile,
 } from "../common/eraRecord";
 import { claimEnabledBlockNumber } from "../common/shiden";
 
@@ -14,10 +15,18 @@ import type { EraStakingPoints, SmartContract } from "../interfaces";
 
 const main = async () => {
   const contractAddress = getContractAddress(process.argv[2]);
+  const isOverwrite = process.argv[3] === "overwrite";
 
   const api = await getApi();
 
   for (const eraRecord of readEraRecordFiles()) {
+    if (
+      !isOverwrite &&
+      existsContractEraRecordFile(contractAddress, eraRecord.era)
+    ) {
+      continue;
+    }
+
     const contractEraRecord = await getContractEraRecord(
       api,
       contractAddress,

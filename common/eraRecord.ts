@@ -1,4 +1,4 @@
-import { writeFileSync, readFileSync, readdirSync } from "fs";
+import { writeFileSync, readFileSync, readdirSync, existsSync } from "fs";
 
 (BigInt.prototype as any).toJSON = function () {
   return this.toString();
@@ -125,6 +125,9 @@ export const readContractEraRecordFiles = (contract: string) => {
 
   return contractEraRecords;
 };
+
+export const existsContractEraRecordFile = (contract: string, era: number) =>
+  existsSync(buildContractEraRecordFileName(contract, era));
 
 export const readEraRecordAndContractEraRecordFiles = (
   contract: string
