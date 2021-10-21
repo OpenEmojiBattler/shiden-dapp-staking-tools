@@ -10,7 +10,7 @@ import { claimEnabledBlockNumber } from "../common/shiden";
 import type { ApiPromise } from "@polkadot/api";
 import type { EraIndex } from "@polkadot/types/interfaces/staking";
 import type { Balance, AccountId } from "@polkadot/types/interfaces/runtime";
-import type { SmartContract } from "../interfaces";
+import type { EraStakingPoints, SmartContract } from "../interfaces";
 
 const main = async () => {
   const contractAddress = getContractAddress(process.argv[2]);
@@ -58,21 +58,10 @@ const getContractEraRecord = async (
     rewards
   );
 
-  if (stakerRewards.length !== eraStakingPoints.stakers.size) {
-    throw new Error(
-      "stakerRewards and eraStakingPoints.stakers have different len"
-    );
-  }
-
-  const stakers: ContractEraRecord["stakers"] = [];
-  for (const [accountId, balance] of eraStakingPoints.stakers) {
-    const address = accountId.toString();
-    const r = stakerRewards.find((r) => r.address === address);
-    if (!r) {
-      throw new Error("stakerRewards not found");
-    }
-    stakers.push({ address, stake: balance.toBigInt(), reward: r.reward });
-  }
+  const stakers = buildContractEraRecordStakers(
+    eraStakingPoints.stakers,
+    stakerRewards
+  );
 
   return {
     contract,
@@ -232,6 +221,34 @@ const divideRewards = async (
   }
 
   return { developerReward, stakerRewards };
+};
+
+const buildContractEraRecordStakers = (
+  stakers: EraStakingPoints["stakers"],
+  stakerRewards: { address: string; reward: bigint }[]
+) => {
+  if (stakerRewards.length !== stakers.size) {
+    throw new Error(
+      "stakerRewards and eraStakingPoints.stakers have different len"
+    );
+  }
+
+  const recordStakers: ContractEraRecord["stakers"] = [];
+
+  for (const [accountId, balance] of stakers) {
+    const address = accountId.toString();
+    const r = stakerRewards.find((r) => r.address === address);
+    if (!r) {
+      throw new Error("stakerRewards not found");
+    }
+    recordStakers.push({
+      address,
+      stake: balance.toBigInt(),
+      reward: r.reward,
+    });
+  }
+
+  return recordStakers;
 };
 
 main().catch(console.error).finally(process.exit);
