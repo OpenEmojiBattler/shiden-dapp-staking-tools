@@ -57,7 +57,7 @@ const main = () => {
   }
 
   writeFileSync(
-    `./dist/address-${contractAddress}.csv`,
+    `./dist/contract-stakers-${contractAddress}.csv`,
     `${csvLines.join("\n")}\n`
   );
 };
