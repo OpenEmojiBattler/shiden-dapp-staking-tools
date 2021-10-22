@@ -1,9 +1,13 @@
 import { writeFileSync } from "fs";
 import { encodeAddress } from "@polkadot/util-crypto";
 
-import { readEraRecordAndContractEraRecordFiles } from "../common/eraRecord";
+import {
+  readEraRecordAndContractEraRecordFiles,
+  EraRecordAndContractEraRecord,
+} from "../common/eraRecord";
 import {
   balanceToSdnNumber,
+  formatSDN,
   getContractAddress,
   uniqArray,
 } from "../common/utils";
@@ -13,6 +17,14 @@ const main = () => {
 
   const records = readEraRecordAndContractEraRecordFiles(contractAddress);
 
+  buildStakers(contractAddress, records);
+  buildDeveloper(contractAddress, records);
+};
+
+const buildStakers = (
+  contract: string,
+  records: EraRecordAndContractEraRecord[]
+) => {
   const csvLines: string[] = [];
 
   const addresses = uniqArray(
@@ -50,9 +62,33 @@ const main = () => {
   }
 
   writeFileSync(
-    `./dist/contract-stakers-${contractAddress}.csv`,
+    `./dist/contract-stakers-${contract}.csv`,
     `${csvLines.join("\n")}\n`
   );
+};
+
+const buildDeveloper = (
+  contract: string,
+  records: EraRecordAndContractEraRecord[]
+) => {
+  const eraData: string[] = [];
+  let totalReward = 0n;
+
+  for (const record of records) {
+    const staked = record.contractEraRecord.stakers
+      .map(({ stake }) => stake)
+      .reduce((a, b) => a + b);
+    const stakedShare = (100n * staked) / record.eraRecord.stake;
+    const reward = record.contractEraRecord.developerReward;
+
+    eraData.push(`${formatSDN(staked)},${stakedShare}%,${formatSDN(reward)}`);
+
+    totalReward += reward;
+  }
+
+  const csv = `${eraData.join(",")},${formatSDN(totalReward)}`;
+
+  writeFileSync(`./dist/contract-developer-${contract}.csv`, `${csv}\n`);
 };
 
 main();
