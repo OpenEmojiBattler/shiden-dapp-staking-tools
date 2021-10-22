@@ -45,21 +45,7 @@ const getContractEraRecord = async (
 ): Promise<ContractEraRecord> => {
   const eraStakingPoints = await getEraStakingPoints(api, contract, eraRecord);
 
-  const {
-    blockNumber: claimBlockNumber,
-    extrinsicIndex: claimExtrinsicBlockIndex,
-    reward: contractReward,
-  } = await getClaimEventData(api, contract, eraRecord);
-
-  const rewards = await getClaimRewardEventData(
-    api,
-    claimBlockNumber,
-    claimExtrinsicBlockIndex
-  );
-
-  if (contractReward !== rewards.map((r) => r.reward).reduce((a, b) => a + b)) {
-    throw new Error("reward unmatch");
-  }
+  const rewards = await getClaimRewardEventData(api, contract, eraRecord);
 
   const { developerReward, stakerRewards } = await divideRewards(
     api,
@@ -111,7 +97,7 @@ const getEraStakingPoints = async (
   return eraStakingPoints;
 };
 
-const getClaimEventData = async (
+const getClaimRewardEventData = async (
   api: ApiPromise,
   contract: string,
   eraRecord: EraRecord
@@ -128,78 +114,38 @@ const getClaimEventData = async (
         if (
           phase.isApplyExtrinsic &&
           event.section === "dappsStaking" &&
-          event.method === "ContractClaimed"
+          event.method === "Reward"
         ) {
-          const {
-            contract: eventContract,
-            era: eventEra,
-          } = decodeContractClaimedEvent(event.data);
+          const decoded = decodeRewardEvent(event.data);
 
-          if (contract === eventContract && eventEra === eraRecord.era) {
+          if (decoded.contract === contract && decoded.era === eraRecord.era) {
             return true;
           }
         }
+
         return false;
       })
-      .map(({ phase, event }) => {
-        const exIndex = phase.asApplyExtrinsic.toNumber();
-        const { reward } = decodeContractClaimedEvent(event.data);
-
-        return { extrinsicIndex: exIndex, reward };
+      .map(({ event }) => {
+        const { address, reward } = decodeRewardEvent(event.data);
+        return { address, reward };
       });
 
-    if (events.length === 1) {
-      const e = events[0];
-
-      return {
-        blockNumber: block,
-        extrinsicIndex: e.extrinsicIndex,
-        reward: e.reward,
-      };
-    }
-
-    if (events.length > 1) {
-      throw new Error(`invalid events len: ${events.length}`);
+    if (events.length > 0) {
+      return events;
     }
   }
-};
-
-const decodeContractClaimedEvent = (data: any[]) => {
-  if (data.length !== 3) {
-    throw new Error(`invalid ContractClaimed data: ${data}`);
-  }
-  return {
-    contract: (data[0] as SmartContract).asEvm.toHex(),
-    era: (data[1] as EraIndex).toNumber(),
-    reward: (data[2] as Balance).toBigInt(),
-  };
-};
-
-const getClaimRewardEventData = async (
-  api: ApiPromise,
-  blockNumber: number,
-  extrinsicIndex: number
-) => {
-  const eventRecords = await getEventRecordsAt(api, blockNumber);
-
-  return eventRecords
-    .filter(
-      ({ phase, event }) =>
-        phase.isApplyExtrinsic &&
-        phase.asApplyExtrinsic.eqn(extrinsicIndex) &&
-        event.section === "dappsStaking" &&
-        event.method === "Reward"
-    )
-    .map(({ event }) => decodeRewardEvent(event.data));
 };
 
 const decodeRewardEvent = (data: any[]) => {
-  if (data.length !== 2) {
+  if (data.length !== 4) {
     throw new Error(`invalid Reward data: ${data}`);
   }
+
   return {
     address: (data[0] as AccountId).toString(),
-    reward: (data[1] as Balance).toBigInt(),
+    contract: (data[1] as SmartContract).asEvm.toHex(),
+    era: (data[2] as EraIndex).toNumber(),
+    reward: (data[3] as Balance).toBigInt(),
   };
 };
 
