@@ -141,10 +141,6 @@ declare module '@polkadot/api/types/errors' {
        **/
       ContractIsNotValid: AugmentedError<ApiType>;
       /**
-       * Contract rewards haven't been claimed prior to unregistration
-       **/
-      ContractRewardsNotClaimed: AugmentedError<ApiType>;
-      /**
        * Era parameter is out of bounds
        **/
       EraOutOfBounds: AugmentedError<ApiType>;
@@ -157,10 +153,6 @@ declare module '@polkadot/api/types/errors' {
        **/
       MaxNumberOfStakersExceeded: AugmentedError<ApiType>;
       /**
-       * There are no funds to reward the contract. Or already claimed in that era
-       **/
-      NothingToClaim: AugmentedError<ApiType>;
-      /**
        * Targets must be operated contracts
        **/
       NotOperatedContract: AugmentedError<ApiType>;
@@ -168,6 +160,10 @@ declare module '@polkadot/api/types/errors' {
        * Smart contract not owned by the account id.
        **/
       NotOwnedContract: AugmentedError<ApiType>;
+      /**
+       * Contract hasn't been staked on in this era.
+       **/
+      NotStaked: AugmentedError<ApiType>;
       /**
        * Contract isn't staked.
        **/
@@ -181,17 +177,9 @@ declare module '@polkadot/api/types/errors' {
        **/
       StakingWithNoValue: AugmentedError<ApiType>;
       /**
-       * Unexpected state error, used to abort transaction. Used for situations that 'should never happen'.
-       **/
-      UnexpectedState: AugmentedError<ApiType>;
-      /**
        * Report issue on github if this is ever emitted
        **/
       UnknownEraReward: AugmentedError<ApiType>;
-      /**
-       * Report issue on github if this is ever emitted
-       **/
-      UnknownStartStakingData: AugmentedError<ApiType>;
       /**
        * Unstaking a contract with zero value
        **/
