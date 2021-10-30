@@ -102,7 +102,10 @@ const buildDeveloper = (
   contract: string,
   records: EraRecordAndContractEraRecord[]
 ) => {
-  const eraData: string[] = [];
+  const csvLines: string[] = [];
+
+  csvLines.push(",staked,staked share,reward");
+
   let totalReward = 0n;
 
   for (const record of records) {
@@ -112,14 +115,21 @@ const buildDeveloper = (
     const stakedShare = (100n * staked) / record.eraRecord.stake;
     const reward = record.contractEraRecord.developerReward;
 
-    eraData.push(`${formatSDN(staked)},${stakedShare}%,${formatSDN(reward)}`);
+    csvLines.push(
+      `era ${record.era},${formatSDN(staked)},${stakedShare}%,${formatSDN(
+        reward
+      )}`
+    );
 
     totalReward += reward;
   }
 
-  const csv = `${eraData.join(",")},${formatSDN(totalReward)}`;
+  csvLines.push(`total,,,${formatSDN(totalReward)}`);
 
-  writeFileSync(`./dist/contract-developer-${contract}.csv`, `${csv}\n`);
+  writeFileSync(
+    `./dist/contract-developer-${contract}.csv`,
+    `${csvLines.join("\n")}\n`
+  );
 };
 
 main();
