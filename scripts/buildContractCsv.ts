@@ -28,6 +28,38 @@ const buildStakers = (
   const csvLines: string[] = [];
 
   csvLines.push(...buildStakersHeaderLines(records));
+  csvLines.push(...buildStakersBodyLines(records));
+
+  writeFileSync(
+    `./dist/contract-stakers-${contract}.csv`,
+    `${csvLines.join("\n")}\n`
+  );
+};
+
+const buildStakersHeaderLines = (records: EraRecordAndContractEraRecord[]) => {
+  const csvHeader0Line: string[] = [];
+  csvHeader0Line.push("");
+  csvHeader0Line.push("");
+  for (const record of records) {
+    csvHeader0Line.push(`era ${record.era}`);
+    csvHeader0Line.push("");
+  }
+  csvHeader0Line.push("");
+
+  const csvHeader1Line: string[] = [];
+  csvHeader1Line.push("address (shiden format)");
+  csvHeader1Line.push("address (substrate format)");
+  for (const _r of records) {
+    csvHeader1Line.push("stake");
+    csvHeader1Line.push("reward");
+  }
+  csvHeader1Line.push("total reward");
+
+  return [csvHeader0Line.join(","), csvHeader1Line.join(",")];
+};
+
+const buildStakersBodyLines = (records: EraRecordAndContractEraRecord[]) => {
+  const csvLines: string[] = [];
 
   const addresses = uniqArray(
     records.flatMap((r) => r.contractEraRecord.stakers.map((s) => s.address))
@@ -63,32 +95,7 @@ const buildStakers = (
     );
   }
 
-  writeFileSync(
-    `./dist/contract-stakers-${contract}.csv`,
-    `${csvLines.join("\n")}\n`
-  );
-};
-
-const buildStakersHeaderLines = (records: EraRecordAndContractEraRecord[]) => {
-  const csvHeader0Line: string[] = [];
-  csvHeader0Line.push("");
-  csvHeader0Line.push("");
-  for (const record of records) {
-    csvHeader0Line.push(`era ${record.era}`);
-    csvHeader0Line.push("");
-  }
-  csvHeader0Line.push("");
-
-  const csvHeader1Line: string[] = [];
-  csvHeader1Line.push("address (shiden format)");
-  csvHeader1Line.push("address (substrate format)");
-  for (const _r of records) {
-    csvHeader1Line.push("stake");
-    csvHeader1Line.push("reward");
-  }
-  csvHeader1Line.push("total reward");
-
-  return [csvHeader0Line.join(","), csvHeader1Line.join(",")];
+  return csvLines;
 };
 
 const buildDeveloper = (
