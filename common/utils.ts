@@ -57,7 +57,7 @@ export const balanceToSdnNumber = (balance: bigint) => {
   return Number(`${prefix}.${postfix}`);
 };
 
-export const getContractAddress = (processargv: string | undefined) => {
+export const getContractAddressArg = (processargv: string | undefined) => {
   if (!processargv) {
     throw new Error("contractAddress none");
   }
@@ -65,6 +65,17 @@ export const getContractAddress = (processargv: string | undefined) => {
     throw new Error(`invalid contractAddress format ${processargv}`);
   }
   return processargv.toLowerCase();
+};
+
+export const getEraArg = (processargv: string | undefined) => {
+  if (!processargv) {
+    throw new Error("undefined arg");
+  }
+  const era = Number(processargv);
+  if (Number.isNaN(era) || era === 0) {
+    throw new Error("invalid era number");
+  }
+  return era;
 };
 
 export const uniqArray = <T>(a: T[]): T[] => Array.from(new Set(a));

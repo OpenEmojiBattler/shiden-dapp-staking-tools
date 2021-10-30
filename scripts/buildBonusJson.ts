@@ -1,18 +1,17 @@
-import { writeFileSync } from "fs";
-
 import {
   readEraRecordAndContractEraRecordFiles,
   getUniqAddressesFromEraRecordAndContractEraRecords,
 } from "../common/eraRecord";
-import { getContractAddress } from "../common/utils";
+import { getContractAddressArg, getEraArg } from "../common/utils";
+import { writeBonusFile } from "../common/bonus";
 
 import type { EraRecordAndContractEraRecord } from "../common/eraRecord";
 
 const main = () => {
-  const contract = getContractAddress(process.argv[2]);
+  const contract = getContractAddressArg(process.argv[2]);
 
-  const startEra = getEra(process.argv[3]);
-  const endEra = getEra(process.argv[4]);
+  const startEra = getEraArg(process.argv[3]);
+  const endEra = getEraArg(process.argv[4]);
   if (startEra >= endEra) {
     throw new Error("invalid era args");
   }
@@ -26,21 +25,10 @@ const main = () => {
 
   const { totalBonus, beneficiaries } = sumBonus(targetRecords);
 
-  writeFileSync(
-    `./bonuses/${contract}-era-${startEra}-${endEra}.json`,
-    `${JSON.stringify({ total: totalBonus, beneficiaries }, null, 2)}\n`
-  );
-};
-
-const getEra = (processargv: string | undefined) => {
-  if (!processargv) {
-    throw new Error("undefined arg");
-  }
-  const era = Number(processargv);
-  if (Number.isNaN(era) || era === 0) {
-    throw new Error("invalid era number");
-  }
-  return era;
+  writeBonusFile(contract, startEra, endEra, {
+    total: totalBonus,
+    beneficiaries,
+  });
 };
 
 const sumBonus = (records: EraRecordAndContractEraRecord[]) => {

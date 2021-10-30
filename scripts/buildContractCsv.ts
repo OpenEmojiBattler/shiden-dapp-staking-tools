@@ -9,11 +9,11 @@ import {
 import {
   balanceToSdnNumber,
   formatSDN,
-  getContractAddress,
+  getContractAddressArg,
 } from "../common/utils";
 
 const main = () => {
-  const contractAddress = getContractAddress(process.argv[2]);
+  const contractAddress = getContractAddressArg(process.argv[2]);
 
   const records = readEraRecordAndContractEraRecordFiles(contractAddress);
 

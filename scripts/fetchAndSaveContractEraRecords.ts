@@ -1,4 +1,4 @@
-import { getApi, getContractAddress, getEventRecordsAt } from "../common/utils";
+import { getApi, getContractAddressArg, getEventRecordsAt } from "../common/utils";
 import {
   EraRecord,
   ContractEraRecord,
@@ -14,7 +14,7 @@ import type { Balance, AccountId } from "@polkadot/types/interfaces/runtime";
 import type { EraStakingPoints, SmartContract } from "../interfaces";
 
 const main = async () => {
-  const contractAddress = getContractAddress(process.argv[2]);
+  const contractAddress = getContractAddressArg(process.argv[2]);
   const isOverwrite = process.argv[3] === "overwrite";
 
   const api = await getApi();
