@@ -2,10 +2,11 @@ import { ApiPromise, WsProvider } from "@polkadot/api";
 import { formatBalance } from "@polkadot/util";
 
 import * as definitions from "../interfaces/definitions";
+import { archiveNodeEndpoint } from "./shiden";
 
 export const getApi = () => {
   return ApiPromise.create({
-    provider: new WsProvider("wss://shiden.api.onfinality.io/public-ws"), // archive node
+    provider: new WsProvider(archiveNodeEndpoint),
     types: {
       ...Object.values(definitions).reduce(
         (res, { types }): object => ({ ...res, ...types }),
