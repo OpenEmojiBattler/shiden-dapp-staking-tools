@@ -1,4 +1,4 @@
-import { writeFileSync } from "fs";
+import { writeFileSync, mkdirSync } from "fs";
 import { encodeAddress } from "@polkadot/util-crypto";
 
 import {
@@ -16,6 +16,8 @@ const main = () => {
   const contractAddress = getContractAddress(process.argv[2]);
 
   const records = readEraRecordAndContractEraRecordFiles(contractAddress);
+
+  mkdirSync("./dist", { recursive: true });
 
   buildStakers(contractAddress, records);
   buildDeveloper(contractAddress, records);
