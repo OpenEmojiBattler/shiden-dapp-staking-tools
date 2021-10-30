@@ -1,5 +1,7 @@
 import { writeFileSync, readFileSync, readdirSync, existsSync } from "fs";
 
+import { uniqArray } from "./utils";
+
 (BigInt.prototype as any).toJSON = function () {
   return this.toString();
 };
@@ -179,3 +181,10 @@ export const calcContractStakerRewards = (
 
 const calcContractStake = (stakers: ContractEraRecord["stakers"]) =>
   stakers.map(({ stake }) => stake).reduce((a, b) => a + b);
+
+export const getUniqAddressesFromEraRecordAndContractEraRecords = (
+  records: EraRecordAndContractEraRecord[]
+) =>
+  uniqArray(
+    records.flatMap((r) => r.contractEraRecord.stakers.map((s) => s.address))
+  ).sort();

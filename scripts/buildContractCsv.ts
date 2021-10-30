@@ -4,12 +4,12 @@ import { encodeAddress } from "@polkadot/util-crypto";
 import {
   readEraRecordAndContractEraRecordFiles,
   EraRecordAndContractEraRecord,
+  getUniqAddressesFromEraRecordAndContractEraRecords,
 } from "../common/eraRecord";
 import {
   balanceToSdnNumber,
   formatSDN,
   getContractAddress,
-  uniqArray,
 } from "../common/utils";
 
 const main = () => {
@@ -63,11 +63,9 @@ const buildStakersHeaderLines = (records: EraRecordAndContractEraRecord[]) => {
 const buildStakersBodyLines = (records: EraRecordAndContractEraRecord[]) => {
   const csvLines: string[] = [];
 
-  const addresses = uniqArray(
-    records.flatMap((r) => r.contractEraRecord.stakers.map((s) => s.address))
-  ).sort();
-
-  for (const address of addresses) {
+  for (const address of getUniqAddressesFromEraRecordAndContractEraRecords(
+    records
+  )) {
     let totalReward = 0n;
     const stakeAndRewardArray: string[] = [];
 
