@@ -1,5 +1,8 @@
 import { writeFileSync, readFileSync } from "fs";
 
+import { getUniqAddressesFromEraRecordAndContractEraRecords } from "../common/eraRecord";
+import type { EraRecordAndContractEraRecord } from "../common/eraRecord";
+
 export interface Bonus {
   total: bigint;
   beneficiaries: { address: string; value: bigint }[];
@@ -38,4 +41,32 @@ export const readBonusFile = (
       value: string;
     }[]).map((b) => ({ address: b.address, value: BigInt(b.value) })),
   };
+};
+
+export const sumBonus = (records: EraRecordAndContractEraRecord[]): Bonus => {
+  const beneficiaries: { address: string; value: bigint }[] = [];
+  let totalBonus = 0n;
+
+  for (const address of getUniqAddressesFromEraRecordAndContractEraRecords(
+    records
+  )) {
+    let addressBonus = 0n;
+
+    for (const record of records) {
+      const staker = record.contractEraRecord.stakers.find(
+        (s) => s.address === address
+      );
+
+      if (!staker) {
+        continue;
+      }
+
+      addressBonus += staker.reward;
+    }
+
+    beneficiaries.push({ address, value: addressBonus });
+    totalBonus += addressBonus;
+  }
+
+  return { total: totalBonus, beneficiaries };
 };

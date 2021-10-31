@@ -1,9 +1,6 @@
-import {
-  readEraRecordAndContractEraRecordFiles,
-  getUniqAddressesFromEraRecordAndContractEraRecords,
-} from "../common/eraRecord";
+import { readEraRecordAndContractEraRecordFiles } from "../common/eraRecord";
 import { getContractAddressArg, getEraArg } from "../common/utils";
-import { Bonus, writeBonusFile } from "../common/bonus";
+import { writeBonusFile, sumBonus } from "../common/bonus";
 
 import type { EraRecordAndContractEraRecord } from "../common/eraRecord";
 
@@ -24,34 +21,6 @@ const main = () => {
   }
 
   writeBonusFile(contract, startEra, endEra, sumBonus(targetRecords));
-};
-
-const sumBonus = (records: EraRecordAndContractEraRecord[]): Bonus => {
-  const beneficiaries: { address: string; value: bigint }[] = [];
-  let totalBonus = 0n;
-
-  for (const address of getUniqAddressesFromEraRecordAndContractEraRecords(
-    records
-  )) {
-    let addressBonus = 0n;
-
-    for (const record of records) {
-      const staker = record.contractEraRecord.stakers.find(
-        (s) => s.address === address
-      );
-
-      if (!staker) {
-        continue;
-      }
-
-      addressBonus += staker.reward;
-    }
-
-    beneficiaries.push({ address, value: addressBonus });
-    totalBonus += addressBonus;
-  }
-
-  return { total: totalBonus, beneficiaries };
 };
 
 main();
