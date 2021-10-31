@@ -20,7 +20,12 @@ const main = () => {
     }
   }
 
-  writeBonusFile(contract, startEra, endEra, sumBonus(targetRecords));
+  writeBonusFile(
+    contract,
+    startEra,
+    endEra,
+    sumBonus(targetRecords.map((r) => r.contractEraRecord))
+  );
 };
 
 main();

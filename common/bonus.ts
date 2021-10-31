@@ -1,7 +1,11 @@
 import { writeFileSync, readFileSync } from "fs";
 
-import { getUniqAddressesFromEraRecordAndContractEraRecords } from "../common/eraRecord";
+import {
+  ContractEraRecord,
+  getUniqAddressesFromEraRecordAndContractEraRecords,
+} from "../common/eraRecord";
 import type { EraRecordAndContractEraRecord } from "../common/eraRecord";
+import { uniqArray } from "./utils";
 
 export interface Bonus {
   total: bigint;
@@ -43,19 +47,19 @@ export const readBonusFile = (
   };
 };
 
-export const sumBonus = (records: EraRecordAndContractEraRecord[]): Bonus => {
+export const sumBonus = (records: ContractEraRecord[]): Bonus => {
   const beneficiaries: { address: string; value: bigint }[] = [];
   let totalBonus = 0n;
 
-  for (const address of getUniqAddressesFromEraRecordAndContractEraRecords(
-    records
-  )) {
+  const addresses = uniqArray(
+    records.flatMap((r) => r.stakers.map(({ address }) => address))
+  ).sort();
+
+  for (const address of addresses) {
     let addressBonus = 0n;
 
     for (const record of records) {
-      const staker = record.contractEraRecord.stakers.find(
-        (s) => s.address === address
-      );
+      const staker = record.stakers.find((s) => s.address === address);
 
       if (!staker) {
         continue;
