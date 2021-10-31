@@ -3,7 +3,7 @@ import {
   getUniqAddressesFromEraRecordAndContractEraRecords,
 } from "../common/eraRecord";
 import { getContractAddressArg, getEraArg } from "../common/utils";
-import { writeBonusFile } from "../common/bonus";
+import { Bonus, writeBonusFile } from "../common/bonus";
 
 import type { EraRecordAndContractEraRecord } from "../common/eraRecord";
 
@@ -23,15 +23,10 @@ const main = () => {
     }
   }
 
-  const { totalBonus, beneficiaries } = sumBonus(targetRecords);
-
-  writeBonusFile(contract, startEra, endEra, {
-    total: totalBonus,
-    beneficiaries,
-  });
+  writeBonusFile(contract, startEra, endEra, sumBonus(targetRecords));
 };
 
-const sumBonus = (records: EraRecordAndContractEraRecord[]) => {
+const sumBonus = (records: EraRecordAndContractEraRecord[]): Bonus => {
   const beneficiaries: { address: string; value: bigint }[] = [];
   let totalBonus = 0n;
 
@@ -56,7 +51,7 @@ const sumBonus = (records: EraRecordAndContractEraRecord[]) => {
     totalBonus += addressBonus;
   }
 
-  return { totalBonus, beneficiaries };
+  return { total: totalBonus, beneficiaries };
 };
 
 main();
