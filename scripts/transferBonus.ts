@@ -1,12 +1,15 @@
 import { Keyring } from "@polkadot/keyring";
 import { BN } from "@polkadot/util";
-import { ApiPromise } from "@polkadot/api";
+import { cryptoWaitReady } from "@polkadot/util-crypto";
 
 import { getApi, getContractAddressArg, getEraArg } from "../common/utils";
 import { readBonusFile } from "../common/bonus";
 
+import type { ApiPromise } from "@polkadot/api";
+
 const main = async () => {
-  const sender = getKeyringPair(process.argv[2]);
+  const sender = await getKeyringPair(process.argv[2]);
+  console.log(`sender: ${sender.address}`);
 
   const contract = getContractAddressArg(process.argv[3]);
   const startEra = getEraArg(process.argv[4]);
@@ -29,12 +32,14 @@ const main = async () => {
   console.log(txHash.toString());
 };
 
-const getKeyringPair = (processargv: string | undefined) => {
+const getKeyringPair = async (processargv: string | undefined) => {
   if (!processargv) {
     throw new Error("invalid secret");
   }
+  await cryptoWaitReady();
+  const keyring = new Keyring({ type: "sr25519" });
 
-  return new Keyring().addFromUri(processargv);
+  return keyring.addFromUri(processargv);
 };
 
 const checkSenderBalance = async (
@@ -47,7 +52,7 @@ const checkSenderBalance = async (
   } = await api.query.system.account(senderAddress);
 
   if (senderFree.lt(new BN(totalBonus.toString()))) {
-    throw new Error("sender balance low");
+    throw new Error(`sender balance low: ${senderFree.toString()}`);
   }
 };
 
