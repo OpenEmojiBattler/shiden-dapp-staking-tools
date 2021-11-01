@@ -2,7 +2,12 @@ import { Keyring } from "@polkadot/keyring";
 import { BN } from "@polkadot/util";
 import { cryptoWaitReady } from "@polkadot/util-crypto";
 
-import { getApi, getContractAddressArg, getEraArg } from "../common/utils";
+import {
+  getApi,
+  getContractAddressArg,
+  getEraArg,
+  uniqArray,
+} from "../common/utils";
 import { readBonusFile } from "../common/bonus";
 
 import type { ApiPromise } from "@polkadot/api";
@@ -20,6 +25,13 @@ const main = async () => {
   const api = await getApi();
 
   await checkSenderBalance(api, sender.address, bonus.total);
+
+  if (
+    bonus.beneficiaries.length !==
+    uniqArray(bonus.beneficiaries.map(({ address }) => address)).length
+  ) {
+    throw new Error("duplicate address");
+  }
 
   const transfers = bonus.beneficiaries.map(({ address, value }) =>
     api.tx.balances.transfer(address, value)
