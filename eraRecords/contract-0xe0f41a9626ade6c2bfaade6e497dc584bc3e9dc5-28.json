@@ -1,0 +1,2562 @@
+{
+  "contract": "0xe0f41a9626ade6c2bfaade6e497dc584bc3e9dc5",
+  "era": 28,
+  "developerReward": "1054984486832640000000",
+  "stakers": [
+    {
+      "address": "VwLiPuRiYarBMFWBmzB7KU3Ku5x9GvqNSt4LQgNP2Dat3Qz",
+      "stake": "500000000000000000000",
+      "reward": "134799324074432035"
+    },
+    {
+      "address": "VwhChd6gzaqAyC5NaNzmvwqXFiirkA5a8jyQ1KUxaoWBfN7",
+      "stake": "428000000000000000000",
+      "reward": "115388400755076584"
+    },
+    {
+      "address": "VxKQJYPqPQhuF4haU4M2BGYy434f2KWo2Ak4Z2PjUhtrChH",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "VxQZ21QghfTuASUcmV8tqdHikHntXFpW7F4M918N8td6Vcn",
+      "stake": "800000000000000000000",
+      "reward": "215679182265212964"
+    },
+    {
+      "address": "VxRpiTuDwf5Qq4KCn8p51DPtDhZ8g6fikh2vxWAnTNYaLHw",
+      "stake": "4445000000000000000000",
+      "reward": "1198368219676429227"
+    },
+    {
+      "address": "Vz7GTmytTEyJPAsiQYDvaP3WE9uA3b5Hi3iHrdY6yB85cQf",
+      "stake": "101000000000000000000",
+      "reward": "27229413351272147"
+    },
+    {
+      "address": "VzKkA956wvwEsUFRzjMppYPpj62iNd6pBruaVLnuNREUbvu",
+      "stake": "196000000000000000000",
+      "reward": "52841271738108148"
+    },
+    {
+      "address": "VzWPDqHSH69CEBU9isRqHsQGTUFkmUNgDHRD6k4YmWjxvWR",
+      "stake": "101000000000000000000",
+      "reward": "27229413351272147"
+    },
+    {
+      "address": "VzWzJtZffe4h6gVGecPmmXh58xegmEdQrtzWo68iuPvUrmF",
+      "stake": "2365000000000000000000",
+      "reward": "637601765545407761"
+    },
+    {
+      "address": "Vzp5mdKvN6h3ZzbcGrLTKWMXLtAZVc3UFd3oUQrzMsXatq5",
+      "stake": "101000000000000000000",
+      "reward": "27229413351272147"
+    },
+    {
+      "address": "W18kBko6vQjGBzGJiM1sosmAM1rQxbgXomXVDhCh5he4hdm",
+      "stake": "207000000000000000000",
+      "reward": "55806833130594699"
+    },
+    {
+      "address": "W1AVikaRe2CwrPwG3nDYRCegRgQ6VFXKA23v12h7mXCJsZu",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "W1C55M6cqKEe6HKiDWQVtG23QNHTf8xzhSfVAXsznqUGgKw",
+      "stake": "1200000000000000000000",
+      "reward": "323518905270880301"
+    },
+    {
+      "address": "W1CrpAoDYA3KvmEv27DeeujMEK4nRRNbqU4CRB1PmfHGW2n",
+      "stake": "250000000000000000000",
+      "reward": "67399530164155164"
+    },
+    {
+      "address": "W2iovCCEN4b1zg8DhoYTpH9CPb53twdLadL4CbF6xzRsycf",
+      "stake": "400000000000000000000",
+      "reward": "107839459259545628"
+    },
+    {
+      "address": "W2qMamqtN4M6PCKt7KSKdRfyA42mBi6NnxedMxWr68qMRjb",
+      "stake": "134200000000000000000",
+      "reward": "36180165483681972"
+    },
+    {
+      "address": "W3L7Xa9QAKiwP246Q4FhqjzcqD3nM95MThoos4wUYwfrevG",
+      "stake": "101000000000000000000",
+      "reward": "27229413351272147"
+    },
+    {
+      "address": "W5d8eZGSm9MZt9m9QRuzvJrDrrHGPpGiNScToEgPbnTDXD5",
+      "stake": "120000000000000000000",
+      "reward": "32351890527088030"
+    },
+    {
+      "address": "W5rUBDfdzQLanK8d5R1joG9vB276KhaXuM78t74KHvRMVSd",
+      "stake": "2000000000000000000000",
+      "reward": "539198087536093265"
+    },
+    {
+      "address": "W5y9pPYDESKnCAvcSwpUaSMUiZQzA4v32FKzUgACWaorMeW",
+      "stake": "900000000000000000000",
+      "reward": "242639047080099372"
+    },
+    {
+      "address": "W6BEMXo74KgvMetkHSFoqbPrd53khrMHuFMtRfkPpvdFV5m",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "W6HpbHmASd3YKAzfAPosJd3fA1h2arT3YEgRsi46KZXZ28Q",
+      "stake": "200000000000000000000",
+      "reward": "53919729629772814"
+    },
+    {
+      "address": "W6TgwhHvtuESB5hRJSHYaeoH1iUHtrm5NvimuJjMXztzxEz",
+      "stake": "935554793929647736580",
+      "reward": "252224636127460739"
+    },
+    {
+      "address": "W7yacJz2FxyBL5n3tMKUFB96EsbRmfApHACM1Qu8MU5Cr57",
+      "stake": "366000000000000000000",
+      "reward": "98673226545700236"
+    },
+    {
+      "address": "W8PNq6oCAj6iAWodHyUm4eny9P4oocPZAK7xKH9VSmCjn1Y",
+      "stake": "5000000000000000000000",
+      "reward": "1347995614459415725"
+    },
+    {
+      "address": "W8WRiw6xJKPsaYM1xpzvVmpYgcC65HySmWLJt4F7QMor58Z",
+      "stake": "309000000000000000000",
+      "reward": "83306058764374293"
+    },
+    {
+      "address": "W8aG72c4Mn2CSykCXyomSAkodku37PnA7XsYbUxf1ZYza9B",
+      "stake": "172798297891633818073",
+      "reward": "46586268715677425"
+    },
+    {
+      "address": "W8bdkEwwh2DZis7snCgq1CmJZuij3KF2Xr57wR8T8iqGQwn",
+      "stake": "610000000000000000000",
+      "reward": "164455465491540962"
+    },
+    {
+      "address": "W8diUPj3mEvPvhSNS2bHUJSPhCTD69nCg9p479VaZhYJYtt",
+      "stake": "256052840396273264777",
+      "reward": "69031591165285258"
+    },
+    {
+      "address": "WAXb2uB2BhTfC3SMKGQg6XMtqEfBgLXA1eq1AUpv8Z2KVuR",
+      "stake": "660000000000000000000",
+      "reward": "177935266025923311"
+    },
+    {
+      "address": "WAZvfUQ1xLVr97QkPYKLQJGHT6ETAoGss5xmyUccwbdKMnk",
+      "stake": "1000000000000000000000",
+      "reward": "269598911894985779"
+    },
+    {
+      "address": "WAhAHhdvYFHkMXXuXpnNxfJo1MvFWwWrYaYEn8g2tdYxSAZ",
+      "stake": "122000000000000000000",
+      "reward": "32890987599859509"
+    },
+    {
+      "address": "WAzFSr3ZTJJETXvDMxEfKQ5JFXas27DVWGQhQPFjQnvKdzJ",
+      "stake": "150000000000000000000",
+      "reward": "40439665349268756"
+    },
+    {
+      "address": "WBhPRFGp4kz3qUeLvwffk7TJDQLTTfXT2JVFeAGYZzQhJyi",
+      "stake": "200000000000000000000",
+      "reward": "53919729629772814"
+    },
+    {
+      "address": "WD5wTBcEKdDEcepN7HzmiMBHk77GmYuJqp6VRPtw8q55Kda",
+      "stake": "499000000000000000000",
+      "reward": "134529775538046296"
+    },
+    {
+      "address": "WDScFWrMSpDF6NvFNLZ3j4uiCNK9kPpm2iV6deGkSRSyEnE",
+      "stake": "719000000000000000000",
+      "reward": "193841530880020733"
+    },
+    {
+      "address": "WDZ37UhQDVaa4WLPvY9cWVLorvWw1uFqaowMKaybN9MrWoU",
+      "stake": "199513998634708765347",
+      "reward": "53788647807283859"
+    },
+    {
+      "address": "WDavWY74g9Ta6cFvxp3dhyuy6zsbyqELmCTcBcopMoCbMWL",
+      "stake": "139000000000000000000",
+      "reward": "37474103956782205"
+    },
+    {
+      "address": "WDq9WKwrHx2gCpyAuJ7egpteS5MEuKv8X7c58EDXxnjwDN6",
+      "stake": "123554613761471274891",
+      "reward": "33310080187253775"
+    },
+    {
+      "address": "WEKRuy5yiLZ3m9puBWtHVZ8yjo4S2byyo4T3nmqLZiEKnQh",
+      "stake": "106000000000000000000",
+      "reward": "28577419779322552"
+    },
+    {
+      "address": "WFS3Tns219zcJDdVp97EPQzuptAGpfy3aiBjY7NagWCe2iR",
+      "stake": "227500000000000000000",
+      "reward": "61333633110989192"
+    },
+    {
+      "address": "WFpJ7fbhiZQRBUR7RkskmhoPBw25yvcMXGiZAyej8CUXigt",
+      "stake": "299000000000000000000",
+      "reward": "80610045908273482"
+    },
+    {
+      "address": "WFqn7ByJbSziGrd7XHGto7h2pESX9K5Xjh8FFCUuZjANN28",
+      "stake": "101000000000000000000",
+      "reward": "27229413351272147"
+    },
+    {
+      "address": "WGJ83P8fhw9xcay7SBPT1258P6ty8Yj27qLSgFL96HBt4H1",
+      "stake": "370000000000000000000",
+      "reward": "99751684437364902"
+    },
+    {
+      "address": "WGQ6hA5G51mcBXBd7XGWEBTLDtBZcRLpa5w8xtYh1AD1kJ3",
+      "stake": "5000000000000000000000",
+      "reward": "1347995614459415725"
+    },
+    {
+      "address": "WGQHscu9CjkWvtusUL9XFUVTKBbzUrK9E3oS3hogWZRgGij",
+      "stake": "880000000000000000000",
+      "reward": "237247021367897748"
+    },
+    {
+      "address": "WGZHjJUwWfRG7Lk4thA1xNSyaXZGBZrWHKUhHCzYRaYgvNd",
+      "stake": "598489537180143246785",
+      "reward": "161352228623522751"
+    },
+    {
+      "address": "WGaXPqibyrHdnoApB9NN8NpHnQddhNpKBXrpasRjGwa5ZaP",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "WGgd3RFP85kFQi3EPmEAdQts5YUgbgedPVL1WdoyBDxhfC7",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "WHh8yGird1P1QgiCw6kmMbRpb5dTeyZy3LTwz2qVztKFLW4",
+      "stake": "200000000000000000000",
+      "reward": "53919729629772814"
+    },
+    {
+      "address": "WJHFJStY3AkJmzdB9kTMXxMBJeowZheXvZ6amWaHZNGqvma",
+      "stake": "1539000000000000000000",
+      "reward": "414913002603557028"
+    },
+    {
+      "address": "WJZVAfYbQAkxXjPJWVB7Xs29Q7zSGay2uHCA17SD8qpKE4f",
+      "stake": "645500000000000000000",
+      "reward": "174026021009964964"
+    },
+    {
+      "address": "WJzrLWz5hpsGxX4Rd4mTwW5w1n6kA7uiHmN137hKBns5Xiy",
+      "stake": "10000000000000000000000",
+      "reward": "2695991492664953159"
+    },
+    {
+      "address": "WKRMzwxRxSUy31iFgccPGDc3co6hJ9bPEEu936AcPHLhtmN",
+      "stake": "107000000000000000000",
+      "reward": "28846968315708292"
+    },
+    {
+      "address": "WM6BK55omxAYMSF2LfhAzsRVscSxPAfXMbTfdhtY3fFdCpW",
+      "stake": "801775400000000000000",
+      "reward": "216157881476113275"
+    },
+    {
+      "address": "WMHDDs7sCuPUos4BJTmqgKWZVbq7jExPPasStiuCoyQuznf",
+      "stake": "1220330197245323500052",
+      "reward": "328999813426097574"
+    },
+    {
+      "address": "WML8DWgCqDw69JKTiPdEkQdXYBurYHGwWw6WyRCP5mBv4sj",
+      "stake": "345000000000000000000",
+      "reward": "93011652297112873"
+    },
+    {
+      "address": "WMLnY3nfMK227t63xposQ5jSMPV2ikxkiwUKFDPVwJa3Qhg",
+      "stake": "3170283661067113545104",
+      "reward": "854705704360088206"
+    },
+    {
+      "address": "WN7PiNm5sYDZW2mG1kqn4VUCz24Up2nmWYjzsuzfCsRucta",
+      "stake": "513000000000000000000",
+      "reward": "138304246285811773"
+    },
+    {
+      "address": "WN7RUHeXgQ5kEmGpGvv9p7fr2Y5Fcg8YjfBLXnUdd2QnpbH",
+      "stake": "501000000000000000000",
+      "reward": "135069136356939483"
+    },
+    {
+      "address": "WPXMhoLPM4SevCWVFWhBG9UCeyz45uVEeTgSp3bztpE3sNp",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "WPeA2FtadbzCrzaudYB8xFeFNND48bmJgTE78SNvZLTJjmV",
+      "stake": "432000000000000000000",
+      "reward": "116466594900619542"
+    },
+    {
+      "address": "WQhBWNE1b5FdmvtPDQiCaeYZwMg97mzB2iPJTBjTgCmqiQm",
+      "stake": "500000000000000000000",
+      "reward": "134799324074432035"
+    },
+    {
+      "address": "WSN4QUVEQtWBeMdJ6Jp2qDxswLbJt9SNXhAccPnbsL8ddrz",
+      "stake": "102000000000000000000",
+      "reward": "27498961887657886"
+    },
+    {
+      "address": "WT4F6szAiyp9T1LvvKrYZMgatjF4T1ZFe7DNh9uXMawo5Rr",
+      "stake": "200000000000000000000",
+      "reward": "53919729629772814"
+    },
+    {
+      "address": "WT8ddSuPP1iq8gRfQcacHfCsf4itVWWpbM51eY7s5VR3A7b",
+      "stake": "229842213263373936151",
+      "reward": "61965041326358527"
+    },
+    {
+      "address": "WTH1YDqn69hUKE1VRBG5GZrykovaB6yA6gLBj1LEcKKKy5h",
+      "stake": "348000000000000000000",
+      "reward": "93820297906270092"
+    },
+    {
+      "address": "WUojMqV3Mip9Fk9i76SU6byNGYoAPohVLvuf9qZ8NJtf5uY",
+      "stake": "11170000000000000000000",
+      "reward": "3011422359367531025"
+    },
+    {
+      "address": "WUszzZrmymsASemJqEAQEYHAwubsj5DdPC7Cw1sh659m6aa",
+      "stake": "750000000000000000000",
+      "reward": "202199117984708907"
+    },
+    {
+      "address": "WUuxDYtvrsacwT5V38s8RTKZKpW75wh5sMuZ86m4MtyHQxJ",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "WVJT4sSz1gc3idbJnWupbDA5aCNvevu9vLyMB7X12kVNBNU",
+      "stake": "500812558532429643897",
+      "reward": "135018497101571516"
+    },
+    {
+      "address": "WVLofULBAjwP71EZciX5iUkzR9cLT4wvo3AfuKvtNz22wY8",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "WVTVhQ8CLEaE3MiKNPqtPm11vNFW4Et4dt7QN3MoyewFZVW",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "WVpYzGbWJXPcAV2AfnJH4g7t9UrYGo68S1vHLuFm4cyHM7s",
+      "stake": "101000000000000000000",
+      "reward": "27229413351272147"
+    },
+    {
+      "address": "WVrLEF2Diopv7vS7vvd9q1WZeFA7jymE6AhZi3Y7ELCx1Lx",
+      "stake": "1000000000000000000000",
+      "reward": "269598911894985779"
+    },
+    {
+      "address": "WVtJeF7t7PTmfjC5LzikL7cgCcPNDGsvkqQWZFYNTJfN8us",
+      "stake": "104000000000000000000",
+      "reward": "28038058960429365"
+    },
+    {
+      "address": "WYGHp7PTSJtM3Gdwdc9WsurWX3YGHbuGDXrpoyCj31M7Gdw",
+      "stake": "311000000000000000000",
+      "reward": "83845155837145772"
+    },
+    {
+      "address": "WYfVnuxMM8ziiZG6JBGRyRty1wc8YLhj5aiVauKCXWW43je",
+      "stake": "252519580406775722547",
+      "reward": "68078940173675384"
+    },
+    {
+      "address": "WaJPC4HBghfsda3dYnrfhFkVe9338gy4cnNstQaKZ3sWkZx",
+      "stake": "278700000000000000000",
+      "reward": "75137050136707453"
+    },
+    {
+      "address": "Wb9CgYZuQ8fhFhDig6Bp9dueRQnSv4jQocwTJQcYa2yNVGy",
+      "stake": "139850000000000000000",
+      "reward": "37703299336546596"
+    },
+    {
+      "address": "Wcoidaetejx1SnusSBUiywLBhagVvRHFYekudf6i46iJ3Du",
+      "stake": "400000000000000000000",
+      "reward": "107839459259545628"
+    },
+    {
+      "address": "Wcq2NkQj5HKLDcRYeRvcnD1dP5VmYemjv57DzFES1fDRzqU",
+      "stake": "304653852261708503157",
+      "reward": "82134234745624938"
+    },
+    {
+      "address": "WdC1RrvrfDop1pqiDKAXRknPczYAxj6H1xccsShVdf1eK6H",
+      "stake": "301764357647809349532",
+      "reward": "81355392448220742"
+    },
+    {
+      "address": "WdeX2T2btzgUe1Lk5qzyExEhDmWFP5QaT32WCR51qw9MJcV",
+      "stake": "877000000000000000000",
+      "reward": "236438375758740530"
+    },
+    {
+      "address": "Wdwbi6FHXTWLkYtfxoEvn1JVK6N8U64LgYNq4cMXgBgJQfR",
+      "stake": "33478000000000000000000",
+      "reward": "9025640206207640870"
+    },
+    {
+      "address": "WfidPcqUSBo8BbGRXtRGZYdJ7RaQGXjPyfzAj2sNbTXHcUz",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "Wfu6YjjWyxu4YR7mB9DS7Dv8mTBUTKLtcwHEcLwnqTV6qLU",
+      "stake": "658000000000000000000",
+      "reward": "177396168953151832"
+    },
+    {
+      "address": "Wg1dtAopSqECxxxkZjCDBUDE65WLcMKt9DWGvGvWaMXVzMS",
+      "stake": "200000000000000000000",
+      "reward": "53919729629772814"
+    },
+    {
+      "address": "Wi1NgyhePQEYXaKf698NZGcshFTVN3YedGjeyDVwP1X717v",
+      "stake": "750000000000000000000",
+      "reward": "202199117984708907"
+    },
+    {
+      "address": "Wi3TW1tnzvsCx7ZGEcdV1YRnEMACBYQV5Mckb4nMgYQ7JMT",
+      "stake": "500000000000000000000",
+      "reward": "134799324074432035"
+    },
+    {
+      "address": "WiBkxapYfBSE6feDL7LY9iEz9SD7tL2qVWHNUVuVch8jDCg",
+      "stake": "546000000000000000000",
+      "reward": "147200930463271427"
+    },
+    {
+      "address": "WibQYMKd3xyYqyB2YrrtQbDwqHVSbvqwx1y3o2MaZi1e9m1",
+      "stake": "30533270688803252641915",
+      "reward": "8231743807668586034"
+    },
+    {
+      "address": "Wkt6B8VB3YQo8Cet3bupq5rcKRPNHHFGim9eJ1VA8PeVyrN",
+      "stake": "5000000000000000000000",
+      "reward": "1347995614459415725"
+    },
+    {
+      "address": "WkyrEHBsooVJ7hH1ftcJjJpaph37nf4CCLzxNagcTMr9QGX",
+      "stake": "101000000000000000000",
+      "reward": "27229413351272147"
+    },
+    {
+      "address": "WmT6FmJQXDVgXeKx1MudNodZKk3BbzhCMzYJNLfw76sdsSq",
+      "stake": "353000000000000000000",
+      "reward": "95168304334320497"
+    },
+    {
+      "address": "WnrZbM2ZxNADpBvNGxVxX4pMEuHF1VSVJKkMWtiGAWNSRHG",
+      "stake": "107000000000000000000",
+      "reward": "28846968315708292"
+    },
+    {
+      "address": "WocaEgng1eVGs9Wzgdi4M9Kmn5K9ErwyrkrNyLHj4WTGycK",
+      "stake": "5350000000000000000000",
+      "reward": "1442355273184579004"
+    },
+    {
+      "address": "WovVWFt1dkNjEjvLF2hYKoLXzQsSPhSA2xDAH2YP5f6HoHo",
+      "stake": "808000000000000000000",
+      "reward": "217836098048542297"
+    },
+    {
+      "address": "Wp2aziLwjhBrHi7roZdSpPupLE6Qq14XXvuyALBs7jtveDW",
+      "stake": "365000000000000000000",
+      "reward": "98403678009314496"
+    },
+    {
+      "address": "WpK7kJwUnkBhHwig5g34vrjpnBx8XmDGvjnAqeD1FjfDCUm",
+      "stake": "110000000000000000000000",
+      "reward": "29655906419314484749"
+    },
+    {
+      "address": "WqksWkKbpEoApcosMW7cWN12d3QUYgK8v23dLtr41DUUtti",
+      "stake": "190000000000000000000",
+      "reward": "51223716773672003"
+    },
+    {
+      "address": "WrGRYy4tGxBpM8CnZQeo1xGPa1XupN34NCQoV9WVH8AJj2H",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "WrqV7M1eHnPx8pyAaLie5eUmNjizrrRAQVmkdNu9d2KQupE",
+      "stake": "130000000000000000000",
+      "reward": "35047639637067133"
+    },
+    {
+      "address": "Ws2jMnBpVD7wAuVmWfiWPeR2U7mHDvNP5G51KR6ZN2PeQgr",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "Wty7YAoEr2YNKrA8FBwwuR4N6t4DJ5bZ5v8BnrKGPMLToP9",
+      "stake": "260000000000000000000",
+      "reward": "70095543020255975"
+    },
+    {
+      "address": "WuMtbkuZyBF1c5rxrLJXZiHgf2ExydiYM8Jaecrt7ZJKhkh",
+      "stake": "353000000000000000000",
+      "reward": "95168304334320497"
+    },
+    {
+      "address": "WuSTANhkhikbhfsifpeTW3dHvb4UotErkCCs7sLxxGfg57z",
+      "stake": "200000000000000000000",
+      "reward": "53919729629772814"
+    },
+    {
+      "address": "WuWgcTrcCRf9zqBXQTfnvhmX9yjFDGJ2iBScaaNcBpbjiN9",
+      "stake": "2095235665123622882864",
+      "reward": "564873508738260933"
+    },
+    {
+      "address": "WwMJuRi5Ecxj2BqWoeD5LKcim92wi4jz5K8zTBCQ5DD3nD6",
+      "stake": "47640055697952517549573",
+      "reward": "12843718473990224097"
+    },
+    {
+      "address": "WxC2XbdKXT7o2N5vaR5XGrULQiyjFz2NuHTSekdePv7u5Y1",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "WzMccMGVC1wdSPZzsKw6qNMY3h5szisAcM2tazJg6iUDNVd",
+      "stake": "1062000000000000000000",
+      "reward": "286314086104362127"
+    },
+    {
+      "address": "WzTyFUWdKH7VxNMind77eGij8xhumzpmRUvZScN6JBbmenC",
+      "stake": "150000000000000000000",
+      "reward": "40439665349268756"
+    },
+    {
+      "address": "WzfNw8PaDaAvMB2pufXHggNuM987pCHwbmWyPGGMLeckwmZ",
+      "stake": "200000000000000000000",
+      "reward": "53919729629772814"
+    },
+    {
+      "address": "WznQUARPGiFyrYAyeCghRJs22WnAr6jqS9nSw7bvLdznv7f",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "WzttMPTXm1G4BydrA4MEQcasBeJyegfBd199zmZnjtfL9iS",
+      "stake": "110000000000000000000",
+      "reward": "29655877670987219"
+    },
+    {
+      "address": "X2j5G3Ezecs5ULGpYmBiUNHYt8VaLn7nCJzj4ttqx1bSDcu",
+      "stake": "1149500000000000000000",
+      "reward": "309904066722183373"
+    },
+    {
+      "address": "X4znYEA2KNApRZnaU1cAg5pjotyMMf71nY1xNw4hqj37tAC",
+      "stake": "4500000000000000000000",
+      "reward": "1213196026638861982"
+    },
+    {
+      "address": "X564dpaTWa8xzvw7GMS7UqH65hzSvCiwv4hhd3MEzith5Fw",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "X5MmzPKCe11CZk7pcxjHwYdEeWSH5B9Fmk4sub4vDUrqjo7",
+      "stake": "10000000000000000000000",
+      "reward": "2695991492664953159"
+    },
+    {
+      "address": "X5cinGHZfYq9bcNKLYJKFZD6kcE5v631DppKCVFn4t8FgvR",
+      "stake": "305000000000000000000",
+      "reward": "82227600872709627"
+    },
+    {
+      "address": "X5ydd8g22xYtWPD8YBtQmFnRG7Txy1zVJcTUmTDRESXrJWp",
+      "stake": "362771486334908107120",
+      "reward": "97802864344063308"
+    },
+    {
+      "address": "X64UjmjPYNaSALDcTbyKNoaBaicAfvkDnjdFGaTq7Rmiw3F",
+      "stake": "1459260329230419686895",
+      "reward": "393415319969246615"
+    },
+    {
+      "address": "X7ddSSVV1hvgivSgJBjrB9Pf8WMLk3w5FafHA5jTJz6eaoy",
+      "stake": "2487000000000000000000",
+      "reward": "670493016891388979"
+    },
+    {
+      "address": "X7gJXaZsUWxCiv8DzGBFx2XQMfNBnKtLk7w3ErJxL7zyBkE",
+      "stake": "101000000000000000000",
+      "reward": "27229413351272147"
+    },
+    {
+      "address": "X7jBuEL1Sb1rnCXwJxfwAKMtWQ4LP6mssBuPyyNDA3upR7T",
+      "stake": "630000000000000000000",
+      "reward": "169847227457620877"
+    },
+    {
+      "address": "X7kRprJY1VBMGwu5ggAuHvMLupqfg9kcCLznEKZe4ef5vQN",
+      "stake": "400000000000000000000",
+      "reward": "107839459259545628"
+    },
+    {
+      "address": "X7oM2jYJWBzutTKAAiZ6Mby3igxUErYoT7xH9MKLcaBX9gr",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "X7oyKLG9wavM7TyY2UsvuRN9wTNsQqJVYLtvcfjAMPXss91",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "X8AegVsbNtufBE86byGQ15CZBDXfNCsspryyEhLLErUQ7su",
+      "stake": "199000000000000000000",
+      "reward": "53650181093387075"
+    },
+    {
+      "address": "X8YNPQA4aexmUZ4Y2uLvMqZuHzkGZTmPdfDQuap6E6cbNjf",
+      "stake": "117000000000000000000",
+      "reward": "31542981171809103"
+    },
+    {
+      "address": "XAFnSMz6pge33AVHhgFucAk2ughooRUUjwLBCgmU3au9j5W",
+      "stake": "599000000000000000000",
+      "reward": "161489640352932703"
+    },
+    {
+      "address": "XAkF5N9bW4wQaQ4fNChenpxYQ9S1msWhRY8uyuQTYJwvELU",
+      "stake": "500000000000000000000",
+      "reward": "134799324074432035"
+    },
+    {
+      "address": "XBAX6f9LjFPk81tvJHmuEWdhaNRmACNGnGTsXu8YC9AQ36J",
+      "stake": "300000000000000000000",
+      "reward": "80879594444659221"
+    },
+    {
+      "address": "XBGsbVavfwW2tFJr3U7gv4zhmApRY15QWurxMUfLVPZT8jd",
+      "stake": "183000000000000000000",
+      "reward": "49336613272850118"
+    },
+    {
+      "address": "XCrqLN67JCv8K2T3NKrfMdpGuZUoouEEmnWaBQgau4ZFTaB",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "XD82paKQAEccwsuKyeLTTXKTSPURKAwY3Fnnd8CiDWFVCvA",
+      "stake": "250000000000000000000",
+      "reward": "67399530164155164"
+    },
+    {
+      "address": "XDfeUTNNh5Fc7FdJuxtxk3TeX8tY4FV34oDjMadHcKrNfxD",
+      "stake": "102387672519738414445",
+      "reward": "27603405351854317"
+    },
+    {
+      "address": "XDta38NptLknGXymLAFkMRd3o9YFF1XhywWoLLpD9o9wthK",
+      "stake": "1543500000000000000000",
+      "reward": "416126234763414564"
+    },
+    {
+      "address": "XDtgV1yo3sZ9NRoBCjoUWxeqqFqNPkGu7TepfTN7LTMTqcH",
+      "stake": "123552945368236836695",
+      "reward": "33309552695010359"
+    },
+    {
+      "address": "XE22LgiHkoMCCyK9zsEdmkZJk7wkFQ5EnxvmvhPAfT4tKcr",
+      "stake": "247000000000000000000",
+      "reward": "66590884554997945"
+    },
+    {
+      "address": "XFRs9assLoywYNUFGY521WzERMgUdqhmTLodm7fXxkzusB5",
+      "stake": "2900000000000000000000",
+      "reward": "781837398362314345"
+    },
+    {
+      "address": "XFTewv8puYuzce9RBzJ7dMnDxorng7iju9fBjBst3TtsQVL",
+      "stake": "995000000000000000000",
+      "reward": "268250905466935373"
+    },
+    {
+      "address": "XG6wsub8ZwML7473PU5VgVasvW238qWHCPVqAdp4rAC2ppB",
+      "stake": "989340703234679460976",
+      "reward": "266725397898975375"
+    },
+    {
+      "address": "XJbBxfdZ5SR8FSjkR3xRoXqTE9LyYEDRVLYwTDwNaYF1PDC",
+      "stake": "399000000000000000000",
+      "reward": "107569910723159889"
+    },
+    {
+      "address": "XJeJw9E6qxwPNfUYV97582tD24kgFk41LhREM9AD2EGrhDQ",
+      "stake": "50000000000000000000000",
+      "reward": "13479957463324765795"
+    },
+    {
+      "address": "XJwWSGiZnFDirGfvqek7Km4E4Pv16Q7UF8fQbF4vowWUvHe",
+      "stake": "123554615705418570282",
+      "reward": "33310080187253775"
+    },
+    {
+      "address": "XLh4uLcpFVx7KHgdoUnSgCEZjuQQe8ZBpowuk5FcBjaf7oo",
+      "stake": "240000000000000000000",
+      "reward": "64703781054176060"
+    },
+    {
+      "address": "XLkr1WaSZ6u4DoMXqCy5VmsKQDRTHZsimwYSzfPo5a3NmPv",
+      "stake": "300000000000000000000",
+      "reward": "80879594444659221"
+    },
+    {
+      "address": "XM6eXHALGTgJ5ygBJk6sH69AhmAGK8VA5LF3SL5Q9VThbhK",
+      "stake": "1000000000000000000000",
+      "reward": "269598911894985779"
+    },
+    {
+      "address": "XMUC5yszne1avDW5wBPsi8pTRLb8TGfnRcBjKsBxVrFaU8q",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "XMcWqqtHm9G2Bgq5bTvpP3w79uhh8ajmsqm2PtE8ZRQbQY7",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "XPZhrU63FAMCuBD9KQu4jSM1VyS7oGh3RykzhFiGiMvJdoF",
+      "stake": "140413256304291598864",
+      "reward": "37855217102650497"
+    },
+    {
+      "address": "XPw1jgFTHRrnu8EM4Jz2fDWzkS8D7RJbWSFErq1jbXg2dRA",
+      "stake": "500000000000000000000",
+      "reward": "134799324074432035"
+    },
+    {
+      "address": "XQ9d55Rrgh4QrTTTRD8X4eVZq727Ck2N5dyS9gaNZjWka2R",
+      "stake": "2000000000000000000000",
+      "reward": "539198087536093265"
+    },
+    {
+      "address": "XV6DGtyaVhMRZyNt94zFpUJBioPJqaWDJSJSU3APoCifqag",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "XVHwXUSu8k33193Tj1frnwutiXWdMFyYTVWEkeKYsdhVrNj",
+      "stake": "600000000000000000000",
+      "reward": "161759452635440150"
+    },
+    {
+      "address": "XXhoeAgo8DDg4sxgPfs7k31qRHzxNSPR8vTPhaSsbiqUz1r",
+      "stake": "370000000000000000000",
+      "reward": "99751684437364902"
+    },
+    {
+      "address": "XXz3JWNFQkcHTX75WLo4iyxNRX7RT8ALFoYTnMmRuPCSiiL",
+      "stake": "931000000000000000000",
+      "reward": "250996634184787546"
+    },
+    {
+      "address": "XavV8frc3nkbx7BAg8QiVrxDHkdR3PjpR3hcf8v46CcqcBD",
+      "stake": "369986653468326039277",
+      "reward": "99747991991660988"
+    },
+    {
+      "address": "XdHpfHKvajPwdKoZM22zgc5CVhWsHWk7mNHPxfLQUHptKXJ",
+      "stake": "650000000000000000000",
+      "reward": "175239253169822500"
+    },
+    {
+      "address": "XdSZHPoaahEuADUvQ6WPXDZeaVLPgCLp2gRXstAWNkqy9Bb",
+      "stake": "150000000000000000000",
+      "reward": "40439665349268756"
+    },
+    {
+      "address": "XdUBBGKCLSSSLnLoVxjMhpHxz6dcb4ztdf8Xfmtika4vsg3",
+      "stake": "2000000000000000000000",
+      "reward": "539198087536093265"
+    },
+    {
+      "address": "XdgqaFC4XMy5b615fUy3EgPifPGVaL3ikosHzXEhaP7soEB",
+      "stake": "343000000000000000000",
+      "reward": "92472291478219686"
+    },
+    {
+      "address": "Xf95MFvUQh7R4uVPJhdKrmpbYAVJvN5qvG4KTRoeyfxXsz9",
+      "stake": "935000000000000000000",
+      "reward": "252075092076452212"
+    },
+    {
+      "address": "XgWHpxQjSoEyrhnXchSoHa9WaVVWkMMpAypn73Tp9DFm48p",
+      "stake": "235000000000000000000",
+      "reward": "63355774626125654"
+    },
+    {
+      "address": "Xhu7ZndWaxvPqeidFPcjVTBZ2wUfj5oscHBSxceudJia9PF",
+      "stake": "300000000000000000000",
+      "reward": "80879594444659221"
+    },
+    {
+      "address": "Xi2x1JfB91FKoJmHJ6xescTPdxZkd18xffahj8fC2HKQhMb",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "XiRPEbvQt22GpbX3aJVMrE2XPjnsH8cvnQfLGuRSTufT7E2",
+      "stake": "844511147135365003799",
+      "reward": "227679367056812536"
+    },
+    {
+      "address": "XiXfcZxNzmxV7C1fADuvympAWFbc4N7JG9K7fagrjxBu3An",
+      "stake": "403000000000000000000",
+      "reward": "108648368614824555"
+    },
+    {
+      "address": "XiePHvby6DSBKyDWpnDeCc53Bt2iutJ2CYod5uaw38S9PJC",
+      "stake": "413647312026560815471",
+      "reward": "111518717657374460"
+    },
+    {
+      "address": "XjerrB5tv2MRvihvkffkgPuGRqFrrxhXuYBvgNemSq2pZSZ",
+      "stake": "500000000000000000000",
+      "reward": "134799324074432035"
+    },
+    {
+      "address": "XkeX2NQdpgTbJdH6GibtLqStfTYuw1p4YZK6Vkb1yeD2tD9",
+      "stake": "600000000000000000000",
+      "reward": "161759452635440150"
+    },
+    {
+      "address": "XkfZFKGStduyabr5izjyZaBNBTUGeGzK7ULuf1siLbnsxZk",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "XkhJrZFoJAfzCHoJ9eiEWAW58Y3ehS9QNZ9vyMfXBcjwviS",
+      "stake": "125000000000000000000",
+      "reward": "33699633209016728"
+    },
+    {
+      "address": "Xm6VzvybDCmXYPaG12eFkSut1pjhMYWJ8wbJVFzr1he27du",
+      "stake": "300000000000000000000",
+      "reward": "80879594444659221"
+    },
+    {
+      "address": "XoD5jqnN6okaNQVegnEMHArW92b1SKszepsfpEcovcJi9yo",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "Xr5zYNHq4JQNMsyFPHNwbKdejBtg9cHJdm9smTkDqm3JW1Y",
+      "stake": "234000000000000000000",
+      "reward": "63085962343618207"
+    },
+    {
+      "address": "XrEK7dQjHjqGo3EidpaciM7b9zf4q4A3qMc593cbAw7hsPD",
+      "stake": "101000000000000000000",
+      "reward": "27229413351272147"
+    },
+    {
+      "address": "XtT8aQNCYCJDw53T3xt2WBh3ZYWY74AgrJfJkH493zN6YEg",
+      "stake": "7678310000000000000000",
+      "reward": "2070065767927565641"
+    },
+    {
+      "address": "XtfizqFDPAePsgARguZ1ZhQWQLntZrPG3dmJMnJFGFxzaQh",
+      "stake": "2000000000000000000000",
+      "reward": "539198087536093265"
+    },
+    {
+      "address": "XvDiyaPvBFgyH9rQKd1RsBuA9zDFTqWzBxjXSYU1wuAB6Gf",
+      "stake": "466000000000000000000",
+      "reward": "125633091360586643"
+    },
+    {
+      "address": "XvhK28DMqEcuJFkzY8pRdLUYoyfdrYW2majsiLV14zJbC14",
+      "stake": "300000000000000000000",
+      "reward": "80879594444659221"
+    },
+    {
+      "address": "XwEBvxjPJqR1v8KjoT3N5ftYPphHsr3eUTmYaSFBgcpfQiT",
+      "stake": "600000000000000000000",
+      "reward": "161759452635440150"
+    },
+    {
+      "address": "XwvgcKUhGppo738CKB2ZLaJYDsPeWdiaTT2CLjSe4YsmPp7",
+      "stake": "3000000000000000000000",
+      "reward": "808797263177200752"
+    },
+    {
+      "address": "XyY6AibvdpEnxbfTB3ATWUNEm1VVQ6Az7wmJ1ExGf6NhDn3",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "XypZKQUqbk546eXDFUSrHzMoVaAGwwKMurL72HkirtrNVYH",
+      "stake": "12187588300000000000000",
+      "reward": "3285763426530829521"
+    },
+    {
+      "address": "Xz96J37Esge2tA2ocuahdr5eX1LmvH5e4tf7ryfyYqLp2N7",
+      "stake": "246615338501652532717",
+      "reward": "66487232329166638"
+    },
+    {
+      "address": "Y29tk9mr3m39gn97JJ1a9WxmmUcfik4KKYasbPFqQTcND9Y",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "Y2GFSspKYBnRs8NRDSXdTLXG9Ke7mCvGEr6BcWb71xGmCLp",
+      "stake": "998328756436347164476",
+      "reward": "269148433519108241"
+    },
+    {
+      "address": "Y2R4br5XAwFV7kqJfFJe62veaQQMjp6BC4QTwK2RLVDAiEk",
+      "stake": "500000000000000000000",
+      "reward": "134799324074432035"
+    },
+    {
+      "address": "Y2h8x1ewsLSVNGNhGmtfuNMiTJsF1kDsKWQcE2kWQXNbm6k",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "Y33yVVNtbfJuQivvasQiadhoEPDvL7poXKXoBpJHFQo7TPp",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "Y5bFf1hGPwyYpDPd5698hQqFKPz2heM88uzoE9TGq2V2Lb7",
+      "stake": "240000000000000000000",
+      "reward": "64703781054176060"
+    },
+    {
+      "address": "Y5c57mg3vHT4oz9po8Vwh8oTUkr7rkdJ2WMhxmCAMyYjS37",
+      "stake": "10861000000000000000000",
+      "reward": "2928116300603156732"
+    },
+    {
+      "address": "Y7EfQ1qwHyj94ssJQRYsa2YMLswPcPJejs8FJXzAsBvdLoH",
+      "stake": "110000000000000000000",
+      "reward": "29655877670987219"
+    },
+    {
+      "address": "Y7pnzQckNeHN8qHVK17eVVSFqAAq82ZdjSmsv9Su3ydLtcK",
+      "stake": "135000000000000000000",
+      "reward": "36395646065117539"
+    },
+    {
+      "address": "Y83hJY29UByj9GnVvYvnAo5awG6rTurCZodSgK8cSz9ozMn",
+      "stake": "800000000000000000000",
+      "reward": "215679182265212964"
+    },
+    {
+      "address": "Y9gdgx8Wv11sUk4ZyCVRydgxSAbsjoNx2d4ABYxF4Fhqu5u",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "Y9ojHVZWvjj3weMQ5EDWmJd7EEEA7NWytpZQav2PhDsoGM9",
+      "stake": "200000000000000000000",
+      "reward": "53919729629772814"
+    },
+    {
+      "address": "Y9zSV6xLh5STP71HLRgvDEu7oR3rTaSd4aiS5NEkP8Xg99N",
+      "stake": "670000000000000000000",
+      "reward": "180631278882024123"
+    },
+    {
+      "address": "YB4MAU39fLfSzsUogHjWTKmzNEA4ax31WzxYRiABnYomoyF",
+      "stake": "140000000000000000000",
+      "reward": "37743652493167945"
+    },
+    {
+      "address": "YCiik3VxgDJsV35kPqWkzfucJjcGT4U26F2ey3q21Q7KrVX",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "YFD6PfBxGXk1i9VeAaMJ1J5XXMFsN5S5Z6n2w6CUEj8KToU",
+      "stake": "200000000000000000000",
+      "reward": "53919729629772814"
+    },
+    {
+      "address": "YFdf6su5NTZpZJpJJ1TLDML2n2m6uVzpoWwm8iWVJjtoo6d",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "YFonwVDBzGU11HNyMiyrRtGK6FiWf7zYy3zv3gLSaUKoYHj",
+      "stake": "210000000000000000000",
+      "reward": "56615742485873626"
+    },
+    {
+      "address": "YFpHSY2NxzqPPoqG9LwaDUBMYCAfSg5LF6b1kFU8axubZPp",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "YGACcpR78JeZ7H13w13FkjB1hZj9X21dUkDTN9Qk6xmvjbz",
+      "stake": "190000000000000000000",
+      "reward": "51223716773672003"
+    },
+    {
+      "address": "YGB77429jqajwGGoGqhePdqbk46dMuuVfBRufeSiWPKXNeK",
+      "stake": "302000000000000000000",
+      "reward": "81418691517430700"
+    },
+    {
+      "address": "YHsLzw27i4vMRMLigTeZ2gquxQp8orVuYKNDBoF5KY8q5Vb",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "YJEAKXmUVK6yMHq9yPfQGX744cEXLN47oMasM75Pudyb7EH",
+      "stake": "495000000000000000000",
+      "reward": "133451317646381629"
+    },
+    {
+      "address": "YJtEqwbmHCHw6MqojnLEdvUvdR2ufajDkLfQTvRsUexwUZo",
+      "stake": "178171295303089246665",
+      "reward": "48034762416098640"
+    },
+    {
+      "address": "YJwGZ4paswvQBRKz1GHaURKmjaw1DtDPHxLVgSjJ1xciYTV",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "YM3pvkjyJRnUfdHNmJyXMmcsq7uTszY9AtijAGxyPBaNnZX",
+      "stake": "200000000000000000000",
+      "reward": "53919729629772814"
+    },
+    {
+      "address": "YMU4rSR2NKCpgFToZ3R9SxsqWgxVXwS1QgjX721d1tkjndA",
+      "stake": "1000000000000000000000",
+      "reward": "269598911894985779"
+    },
+    {
+      "address": "YPL4p2z7xW3FG5HRnrEDwzGE1g14P3ftKczg6QPFJRzjVDT",
+      "stake": "2000000000000000000000",
+      "reward": "539198087536093265"
+    },
+    {
+      "address": "YPjSdjyzVyuwW9tbyAaThyUG2ZJ7gVUvJg5iLkzyWHXTgBk",
+      "stake": "800000000000000000000",
+      "reward": "215679182265212964"
+    },
+    {
+      "address": "YPyvuMSs8YCWhvBgVaYuczavHBmxdKXDNywkhq7mmRZoYeN",
+      "stake": "326000000000000000000",
+      "reward": "87889175121296989"
+    },
+    {
+      "address": "YQAGUe3cLDSQxSEFwxSbjar1Q1t9gZjD5rokgcxKqVtHxu2",
+      "stake": "6027588021958747273491",
+      "reward": "1625032430732693324"
+    },
+    {
+      "address": "YRfSXQ7bWPQmCHRQMGTGD9GJzgQ6y6TJ64YqbQKp4dqmKHP",
+      "stake": "247110930058805338887",
+      "reward": "66620687866750967"
+    },
+    {
+      "address": "YS8PGt3bTkdLFxjNrTk8cuFZAgUMypzANGvD74jfDYFZYpw",
+      "stake": "1000000000000000000000",
+      "reward": "269598911894985779"
+    },
+    {
+      "address": "YUHtMw9DiZbcmiC42Fb4dBDmu5WNgnbUaodNZwksLesH59E",
+      "stake": "522000000000000000000",
+      "reward": "140730710605526845"
+    },
+    {
+      "address": "YUPD1SRCBdaHqy1Eawpw4oCL2o3doY58yBWdBJDi1n5Cxde",
+      "stake": "19000000000000000000000",
+      "reward": "5122383809688798831"
+    },
+    {
+      "address": "YUQLb9wfDT4kCG9Uz342qi8PDpjmPyqoTT7nrciwNmggk35",
+      "stake": "6400000000000000000000",
+      "reward": "1725434513106190548"
+    },
+    {
+      "address": "YUxuD95yPmmPvvsY5Tf4QfP4ii7CjF4noPgBityrD7U6p3A",
+      "stake": "2000000000000000000000",
+      "reward": "539198087536093265"
+    },
+    {
+      "address": "YV7Dr87xudJGnCp9DLnxPTn6vHergndvBcCjJWfUPQt2bf6",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "YV7YgwTD7aP6Vmn1eo8tEPiVawBPYLqfxVdAmmZBB94A86m",
+      "stake": "210000000000000000000",
+      "reward": "56615742485873626"
+    },
+    {
+      "address": "YWo5dQwNFpCJJSRfC6n9bn8T45ggmu3WsbbJqwEffXecQwA",
+      "stake": "120000000000000000000",
+      "reward": "32351890527088030"
+    },
+    {
+      "address": "YXwhSRcmjy8ZkdAcP1RxptZjPuX3grXxpKW9LJa6XXAYZSd",
+      "stake": "1000000000000000000000",
+      "reward": "269598911894985779"
+    },
+    {
+      "address": "YY2W1Ui6tswQ9vMo1uWfyQ3oTkRb9uam5CoJzGY8Y2NLd7n",
+      "stake": "253000000000000000000",
+      "reward": "68208439519434090"
+    },
+    {
+      "address": "YaXp7eLNzjKJAM97MCkAMWzozktUHuhngKpHSD61U86uAJU",
+      "stake": "1300000000000000000000",
+      "reward": "350478770085766708"
+    },
+    {
+      "address": "YbgKTavafdNoZYraVL79xH8uRZK8CgC9sBAxALjDhVLWvd3",
+      "stake": "105000000000000000000",
+      "reward": "28307871242936813"
+    },
+    {
+      "address": "YcU6b2JCdc2g5TyBPK6ruYy4SL7MxMgQMRtN8vmaXPne9Qf",
+      "stake": "1596488383609538826185",
+      "reward": "430411779699615343"
+    },
+    {
+      "address": "Yd7Li7MnP1eUUCKBKachFWwwDCuZ1dwbhWAxTfWAcMC3jKN",
+      "stake": "129000000000000000000",
+      "reward": "34778091100681394"
+    },
+    {
+      "address": "Yd8AtFYYL4aqwNm4stEoipYsDgVDNE69tExkrCkxpzwUFXJ",
+      "stake": "132055137150861558314",
+      "reward": "35601770238775978"
+    },
+    {
+      "address": "YewJjiAQ4m8P9vHwGDUxuzwK8b8QsCq6LHG8UKVtcxkXHrg",
+      "stake": "142000000000000000000",
+      "reward": "38283013312061132"
+    },
+    {
+      "address": "YewsBqRB8g9F9RcCLktuyvcQFT1xLoK16G4Nf1j822mtxD8",
+      "stake": "627282917962161160428",
+      "reward": "169114804477637316"
+    },
+    {
+      "address": "YfrMMuTzfgqD4dbp1ARCdSTnXQhkfWbDDmnjxpSjNAQ86JP",
+      "stake": "264000000000000000000",
+      "reward": "71174000911920641"
+    },
+    {
+      "address": "YfsSP5qPHsvGKqGqtwjEQ36qi3Je1g8cnPNWYahS96PYcPa",
+      "stake": "2000000000000000000000",
+      "reward": "539198087536093265"
+    },
+    {
+      "address": "Ygr8Yfg2R6XgeuUp7eVu48Fix5NmYE9TDJUoK1wkhrrAv6D",
+      "stake": "3000000000000000000000",
+      "reward": "808797263177200752"
+    },
+    {
+      "address": "YhKRnF1xSz7dGbm7GdVBRV5iC6gu9Nr9YXQPY2JHopGCrj2",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "YhPgzAXsmQMmJQDFBWwKNxQ5BvcpJXEEGonEu3Kt8wMs7Bp",
+      "stake": "7322000000000000000000",
+      "reward": "1974004946717384730"
+    },
+    {
+      "address": "YhtVEFNTav855ogVuYsjTij6j2J4Rry5fTE6e6u22LbFVM1",
+      "stake": "200000000000000000000",
+      "reward": "53919729629772814"
+    },
+    {
+      "address": "Yhxdy9p3AdnRvrGZRwrSyg41Sf4Hd9yf8obZTdpUK8F2B58",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "YjugF52jT2iFe96kuXNjUKac76iyYi71ZNQX2WaZHkczGLf",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "YkkYigJ8m8Wzktrvj5yMdip27NBKMnJrAMW3QtpApQBsCLp",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "Ym2WEHZLWKz6YgQBcDiMYtQKruXM6L4PGdjyEoVsx5Xe3n4",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "Ym2X166BmPGa2fYSu1bkBXoZJXx6UQ1ZnQnyJmXaahq9faW",
+      "stake": "309520475285292945027",
+      "reward": "83446371701123034"
+    },
+    {
+      "address": "Ymj7e9Jn3t5yGR89Xot6p1BVsAZAarrWXTKQmzVwF2wvuuw",
+      "stake": "540000000000000000000",
+      "reward": "145583375498835281"
+    },
+    {
+      "address": "Yo2qDT6SKNZkqRYBoKsrNQjUkhvaSVLoBYFDgJbTypGXi4p",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "Yo8RhLTHyNUMmsGYNegCfstVfBnCXiFd8qg8JEmyPtS8Pm2",
+      "stake": "50200000000000000000000",
+      "reward": "13533877192954538609"
+    },
+    {
+      "address": "YoGy8prq4HAjebm5ZQrh9cKVb3NZTg8renhu5s2A8FiZ8ry",
+      "stake": "396429054101768620441",
+      "reward": "106876785915310844"
+    },
+    {
+      "address": "YocgAWEnT2Z6JxmVkVSkCjF41EP6t6653nCCuhqGGRExCjf",
+      "stake": "10450000000000000000000",
+      "reward": "2817311016205002845"
+    },
+    {
+      "address": "YqXtkm5NzymJKJvH9qinVaFuiT2FyysM8dfQ5m1dPmEUh8Q",
+      "stake": "1990000000000000000000",
+      "reward": "536502074679992454"
+    },
+    {
+      "address": "Yqkoys953w7g8ZxqFyjmpfcJcACDXx2XN7XUKua8WbC4NKW",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "YqnVq4SPvYioyZRgkQs1GkKYwGLsgmZfngRVf3ugtoqAdbX",
+      "stake": "204000000000000000000",
+      "reward": "54998187521437480"
+    },
+    {
+      "address": "YqrTrNzyjP1gbw31DrpdHiLsxqCxTYbCNruQrR6FCXNxFeD",
+      "stake": "215000000000000000000",
+      "reward": "57963748913924031"
+    },
+    {
+      "address": "Yr7ZxQJX6Ho4qBFywoA5hvFSxpBtLQv5T4LnLpzy3MffKJa",
+      "stake": "2250000000000000000000",
+      "reward": "606597881446370137"
+    },
+    {
+      "address": "Yt3aLHKh2vVqo1TUMEUVzqrx6wWzwZQfoGNXk2Mh8VcjvcK",
+      "stake": "1394000000000000000000",
+      "reward": "375821079936216970"
+    },
+    {
+      "address": "YvmU3XnGLXVqxDUpoJ6AWa4gme4BGDWbyLuQ1RFrQBYX5bG",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "Yw4xc6BWdtAJR2TnhW4Qj8rP7nar3bpLfVacBg3cmkfmcv7",
+      "stake": "106000000000000000000",
+      "reward": "28577419779322552"
+    },
+    {
+      "address": "Yw6zXcfMazuumMiYGjj6x3VUioKaSDfiNT6ybzRky6f8WAj",
+      "stake": "1000000000000000000000",
+      "reward": "269598911894985779"
+    },
+    {
+      "address": "YwQjRoA4QDAN47HwthiQe2xwu99yheSgznYEjSWiym2Riw6",
+      "stake": "300000000000000000000",
+      "reward": "80879594444659221"
+    },
+    {
+      "address": "YwVMeo7mGtPfPPQCTNzuAUaknyBJgoRYGnXcMHsysYUV881",
+      "stake": "1400000000000000000000",
+      "reward": "377438634900653115"
+    },
+    {
+      "address": "YwYfMjWkfX8ybj5tJyxXYXdgQRzK1VfqAECEQJgHzMFJNq2",
+      "stake": "394000000000000000000",
+      "reward": "106221904295109483"
+    },
+    {
+      "address": "YwaHNuhkREQGRqNBeMTMrMqmHLRck8EAmRrGu1VLEa6Jcf7",
+      "stake": "2300000000000000000000",
+      "reward": "620077945726874195"
+    },
+    {
+      "address": "Ywdi8f25WikpJxB85QN3S2ZMVz7BLEttzidtqcbzYzvJUDf",
+      "stake": "1100000000000000000000",
+      "reward": "296559040455993894"
+    },
+    {
+      "address": "YyQctcBnn34526pQ8j4SrspkKfK1pctTDYSS9dXG8te1kEd",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "YyQqyZkVEyPnGg4tbWeTeCWDkCR17nYsvQHEuLF2aSLorQm",
+      "stake": "150000000000000000000",
+      "reward": "40439665349268756"
+    },
+    {
+      "address": "YyrvDTrJ6Gj5zA8ZYasCCiqQZuR35ekUMyaxVbQCvdyGXFy",
+      "stake": "200000000000000000000",
+      "reward": "53919729629772814"
+    },
+    {
+      "address": "Yz17mqvSgx17WD2GEsMk9snfViQMKxXhmz2pPbiDDx2zE2q",
+      "stake": "200000000000000000000",
+      "reward": "53919729629772814"
+    },
+    {
+      "address": "YzDKqpsp7R1scMm1F4GRndhyuwF46p5QSHY7RUrnP7BsU9V",
+      "stake": "520000000000000000000",
+      "reward": "140191349786633658"
+    },
+    {
+      "address": "Z1fHUw3G38sDiuJ8mGBGoiCJwyV5Qg2zdrNxzV49Drhf2ft",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "Z27Tnw9q5rRW8khqzmtywSS3yZ6FuPkA53ycB6kyesxJzki",
+      "stake": "224000000000000000000",
+      "reward": "60389949487517395"
+    },
+    {
+      "address": "Z2EfmyJ13Yw9ASuyhCzpggWsdw5sMp2spnXvVG7RWU4BhbR",
+      "stake": "43700000000000000000000",
+      "reward": "11781482815033461654"
+    },
+    {
+      "address": "Z2MExNXmUJHQJAP1BSqHoHtEKDZimcoguiBVvJsZterE3Z7",
+      "stake": "1512000000000000000000",
+      "reward": "407633873390533521"
+    },
+    {
+      "address": "Z2SCd7NiFx24GG4RCW1wPbsekXMdPagsJ5DcHa9yHDvw1B4",
+      "stake": "183000000000000000000",
+      "reward": "49336613272850118"
+    },
+    {
+      "address": "Z2c2drAyi1uRJM7mBRu1cvN6hKk5Yt5J1WZ83rthmxS3u1G",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "Z4ZbaGWmefJ7EBYqwCMUGBKn86aWSaU1tPhnm1FFYBFnTHH",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "Z581vGPJ8gJH8Db1VnYQUnWi5dWAZqeEKpWEezjd83jcuPm",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "Z5QuxNFx6QhHb49tNeScrWY9AxhzHV3dcuaoVDbeP4wh9JW",
+      "stake": "883488509039743118045",
+      "reward": "238187540037909047"
+    },
+    {
+      "address": "Z78GYgi2sFdnta58DCeD1YALorg5XxqeyaHQHhJbqwrvc7g",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "Z7F6Z51vg33bagqR8rKUWUqjwM2nuVSB8xy1gXd5gJaU3aq",
+      "stake": "230000000000000000000",
+      "reward": "62007768198075249"
+    },
+    {
+      "address": "ZA9VQLDaAJtpNpTtejWrjM5yDx6CSRcMi4tZZmqLZmpnZ7g",
+      "stake": "450000000000000000000",
+      "reward": "121319523540049686"
+    },
+    {
+      "address": "ZATcGzfaALJzFXFS6GcEpwZNuuM4M7MNFhQcDXpjLqrGqzy",
+      "stake": "127000000000000000000",
+      "reward": "34238994027909915"
+    },
+    {
+      "address": "ZCGjxEe2Dtq8TLqwrrcrVLvnkocaq7BZUSLDkpYvmtD61L2",
+      "stake": "1235000000000000000000",
+      "reward": "332954686521111433"
+    },
+    {
+      "address": "ZCKViX5oJtknWyVruus9nFFBYLHLvv6Cb6Xncfv4TBHxoQB",
+      "stake": "369000000000000000000",
+      "reward": "99481872154857454"
+    },
+    {
+      "address": "ZCXVA2VjntX25uQemptNRKxce5CKp6S1fiHyj3HNpxj5VTx",
+      "stake": "175000000000000000000",
+      "reward": "47179697489520785"
+    },
+    {
+      "address": "ZCcyzjwq4yf9PWBQtLtSS6cwUmwHSfe1aGFdTVQ1WzueJnj",
+      "stake": "252000000000000000000",
+      "reward": "67938890983048351"
+    },
+    {
+      "address": "ZF1TkgxaCV8yH6yCpPzYNdHNRL6WB5tx36RfJa3NeUPszvL",
+      "stake": "137000000000000000000",
+      "reward": "36935006884010726"
+    },
+    {
+      "address": "ZFjAyVeQ1BXhouqJBgxf96rgMHHj8KBZZkaJigywtDBxF9R",
+      "stake": "294600000000000000000",
+      "reward": "79423715852830178"
+    },
+    {
+      "address": "ZFkkXQ3Gevr7GD23qmtSwZm6G8bczaJJgHVQTQkZUVUrftQ",
+      "stake": "135000000000000000000",
+      "reward": "36395646065117539"
+    },
+    {
+      "address": "ZHzNAiWJ88Ck4QHFF5xmwTV7zuGBz9FPa3m7y22y2BCuAGe",
+      "stake": "2000000000000000000000",
+      "reward": "539198087536093265"
+    },
+    {
+      "address": "ZJE1dDsNRu8T1B2iPwxDcVUWMcReY67xV6EVtDDN6Zm8haf",
+      "stake": "440800000000000000000",
+      "reward": "118839255011506149"
+    },
+    {
+      "address": "ZJRuzbMrLg4qn7NG3D5VzaZTtLoxude8mXBhmspiWNva25c",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "ZLabrYisfNrWUyjm2CokDDZbps1J7rDASBDWgBnXf3gdiwn",
+      "stake": "188000000000000000000",
+      "reward": "50684619700900524"
+    },
+    {
+      "address": "ZM948EeGXxjfjuq7SCv4ncrE7tVnKtMUEbNmyCC7NUidMbo",
+      "stake": "600000000000000000000",
+      "reward": "161759452635440150"
+    },
+    {
+      "address": "ZMHWDXx3T1FCjP7u3cvLAhj65CKjweYZn4dJ3EHrRmP2irp",
+      "stake": "1000000000000000000000",
+      "reward": "269598911894985779"
+    },
+    {
+      "address": "ZNoEaiRKxiFsNBv8ySoQL7fnrJKbmntvbibds7VV3dm1sy4",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "ZPZJoZtaGq18wRQJMzk9bmmFE7xSrzKFaM1zMW2Q61kTQaC",
+      "stake": "1120000000000000000000",
+      "reward": "301950802422073809"
+    },
+    {
+      "address": "ZRLmsHQXsZSubffTT5VXFFu2yVnPmJPWCSxencAsDA6jSNK",
+      "stake": "105000000000000000000",
+      "reward": "28307871242936813"
+    },
+    {
+      "address": "ZRjZGRGJ6YpLAm1Chk162Q5bCCZDgS7efS5Cj7ZCotcurji",
+      "stake": "1000000000000000000000",
+      "reward": "269598911894985779"
+    },
+    {
+      "address": "ZS2Mw922xS6sEDvimixBQ4zz6g2btfv2jLfY6N22k6cQmtP",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "ZUCSdGR9BL6oUBjHVGLPagyeq3XjRFDjuTRMo2QZ3sK7pTi",
+      "stake": "123000000000000000000",
+      "reward": "33160536136245249"
+    },
+    {
+      "address": "ZWcYH1NZph5pfyQQjDL38ZwHZHzPGG4VgtbrsgevyVdqD2N",
+      "stake": "200000000000000000000",
+      "reward": "53919729629772814"
+    },
+    {
+      "address": "ZWoQe19keS1H5QbabJ5yh7A4m7cgAdTv69CrgVAiNYofUm5",
+      "stake": "136434128134818569510",
+      "reward": "36782297879541702"
+    },
+    {
+      "address": "ZWqgqX1d3EPnGF8M18TRGwikGjEKVTj2BPXfp7ZeHgxJuha",
+      "stake": "2432960000000000000000",
+      "reward": "655923944874351928"
+    },
+    {
+      "address": "ZX2pe1F18PSsPvmWhTt5kChTrGh8JwnBAEvDuVTEoFxu4y3",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "ZXTJXHZQusuHhebFbSK2fKUJAMw7vm6S46qZePp9nWSjU6j",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "ZXZzKx3WnQhnmR2MDKgeZ7NqSCw6ddUUoy4urnrzLEfERLF",
+      "stake": "1000000000000000000000",
+      "reward": "269598911894985779"
+    },
+    {
+      "address": "ZYMfVsQrKMLFWimPxGUg8brdzUNJzAoNhonPYvXPnqNAaX2",
+      "stake": "130000000000000000000",
+      "reward": "35047639637067133"
+    },
+    {
+      "address": "ZYWnAfCenUTNPb3KuKRNhasqj7DcthXXoTRrmK4cwwHJmzK",
+      "stake": "700000000000000000000",
+      "reward": "188719317450326557"
+    },
+    {
+      "address": "ZZYdbGA8zL9gJE7EcnLecuJX6E7L5hDhJht9zWF8uNqXjFM",
+      "stake": "108700000000000000000",
+      "reward": "29305359075237074"
+    },
+    {
+      "address": "Za2Hia98MV3TyYemLNXspwjqy2Azee7XuoUcBYPbFT1bBGi",
+      "stake": "693000000000000000000",
+      "reward": "186831950203382964"
+    },
+    {
+      "address": "ZbiExkW5rAM9RUUnokJKWKGV6fobLEEn99rPSXYXmGHWupu",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "Zbqi66JFjpBc62WbkwUKgrgKwFKNYvtW5jdDLKz714Aq3nH",
+      "stake": "500000000000000000000",
+      "reward": "134799324074432035"
+    },
+    {
+      "address": "ZbukCfqUATAmkB4gvYpwrthm53XMFMrcpGnSckQo1xCe754",
+      "stake": "523751734765021891061",
+      "reward": "141202816163384452"
+    },
+    {
+      "address": "ZbyTGWtsK22suH54kAw2HdA4ypV3BDsFXsFiUNmJM4CMYNv",
+      "stake": "217768137411428784053",
+      "reward": "58709886692236416"
+    },
+    {
+      "address": "ZcQusG4pfva3yWVqZdPJN5ufmMoC1wsLiwoSm1S4QXB1pCt",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "ZcRNxFfPD6qJ1g96XTG7N7yVTDgbR2XYpCALsUxEg3vZMFA",
+      "stake": "145000000000000000000",
+      "reward": "39091658921218351"
+    },
+    {
+      "address": "ZeaiixreYbFNm2C9ZTVGQ4sU6DGdQZ7Biod3R2ehs5YotWX",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "Zg4WMWSkL5bzJhFH5cth69BKGbRVz6C65tAXW1Wwqmq2oZ6",
+      "stake": "200000000000000000000",
+      "reward": "53919729629772814"
+    },
+    {
+      "address": "Zg6q2efsEhSUV64cQLiW7nUCVxHHkkreYTJiagdFsAFS7ZZ",
+      "stake": "2100000000000000000000",
+      "reward": "566157952350979672"
+    },
+    {
+      "address": "Zh3oGzpUwzr7qVRUiQaC1CSYiYoY8BTMJN248ohmoyhMEej",
+      "stake": "365000000000000000000",
+      "reward": "98403678009314496"
+    },
+    {
+      "address": "ZhAbsBd68ksxmP2XgX416YYYsHRJgSnu7XGX6UNv1jrkHfy",
+      "stake": "123000000000000000000",
+      "reward": "33160536136245249"
+    },
+    {
+      "address": "ZhooSbU6rJxEFaTakKf1BpjmfEsYMkzLjdJ9z7uT6f7dZG5",
+      "stake": "300000000000000000000",
+      "reward": "80879594444659221"
+    },
+    {
+      "address": "ZiFfR4XDfpYuYHxxhC1UE8mWjF45hvuvi7nSzYs16SNQ6Tp",
+      "stake": "150000000000000000000",
+      "reward": "40439665349268756"
+    },
+    {
+      "address": "ZjvaqxUkt8sA9ou44crSKuTbL6JejdHrc8Lr2C8nusex5i1",
+      "stake": "113336958322762769763",
+      "reward": "30555515692133752"
+    },
+    {
+      "address": "ZjyCs1iDL8XqJ98YeKHhBPpdYwXixkv8baWm6U8o31hmNnQ",
+      "stake": "120000000000000000000",
+      "reward": "32351890527088030"
+    },
+    {
+      "address": "Zk89yfa2ojrPY4SXhHqPZUAGCVvEbpAXv7aMscFo7oCCxxH",
+      "stake": "1118103338705237803956",
+      "reward": "301439662438203395"
+    },
+    {
+      "address": "ZkLpWaAMe9CHtv7iHCWujvQfVaVnrs1aFCvF66MMZZof3HP",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "ZkQoQiLJm9A3vmedeLz1kzA4xnAXE5ZHpogUrohhZMX2fNQ",
+      "stake": "2000000000000000000000",
+      "reward": "539198087536093265"
+    },
+    {
+      "address": "ZnFqR8sPPjfAV84x4wyK8MBVPUwYfsiMcwzQL1HZgLW6rJ6",
+      "stake": "262000000000000000000",
+      "reward": "70634903839149162"
+    },
+    {
+      "address": "ZnLDXzVdL592cvXZxv85bpnYfNT8ZBY9httToKaRVbgiXDo",
+      "stake": "216000000000000000000",
+      "reward": "58233297450309771"
+    },
+    {
+      "address": "Zo7HmNGU54GH1qCzeZUp87GLHCzouFKXX1AtXPJgFhhTAte",
+      "stake": "7909000000000000000000",
+      "reward": "2132259477141445142"
+    },
+    {
+      "address": "Zo8JoY7WEmJB9go6PQVscr2GMzFWE5rmWMn4bYLjQgtK6Re",
+      "stake": "1055650000000000000000",
+      "reward": "284602110028354460"
+    },
+    {
+      "address": "ZoFGEbdiw31e9cdtcJUYKHEn5fHPxwZKRADY8M5CPxegULe",
+      "stake": "105000000000000000000",
+      "reward": "28307871242936813"
+    },
+    {
+      "address": "ZoKn3RLfGmLy3QtRx6RhdjLnLT5idFAs67SpT1rRepuGhqo",
+      "stake": "476000000000000000000",
+      "reward": "128329104216687454"
+    },
+    {
+      "address": "ZqBGkx6afVV6CF8krVLVqEYH2Pc3sftR7CxAD3xbGcFkVrb",
+      "stake": "537000000000000000000",
+      "reward": "144774729889678063"
+    },
+    {
+      "address": "ZqtRPcBAauosbysmkgEeZgRYBZRcmp14C4gytnhcJf6SgCF",
+      "stake": "15000000000000000000000",
+      "reward": "4043987107124368884"
+    },
+    {
+      "address": "ZrAYXMDBjLnqDh86w3wQfYfaRYNrc7EUcdiCcvwUDGQ2YWH",
+      "stake": "500000000000000000000",
+      "reward": "134799324074432035"
+    },
+    {
+      "address": "ZsnkAgnmBZeTXKgM185oHhgX3A4epGpTgacNB4UrNcRP2By",
+      "stake": "690000000000000000000",
+      "reward": "186023304594225746"
+    },
+    {
+      "address": "Zsvnb2uDd6xmbJzpkmapXQGBsYF7P3oeZm4gqXJS1GF5ZTL",
+      "stake": "5000000000000000000000",
+      "reward": "1347995614459415725"
+    },
+    {
+      "address": "Zt32GF3XP2FENJJL6bM8eEdPPsJMAEYUenYjt6JR5rdkUMD",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "ZtN2geCMJ7uwEyHd4dJc1x19q1Pcq8WC916aZALG4SBw2Fm",
+      "stake": "4600000000000000000000",
+      "reward": "1240155891453748389"
+    },
+    {
+      "address": "ZtPsekJwTnSZoBmSkoSqLxFfwZuPYnSi4mdVcyminL1oL8g",
+      "stake": "123300000000000000000",
+      "reward": "33241506195609654"
+    },
+    {
+      "address": "ZtVwhvW7zEqMHfa5S7VMMtcu8ghQwDwBjGEW37yq1joaR4q",
+      "stake": "300000000000000000000",
+      "reward": "80879594444659221"
+    },
+    {
+      "address": "ZtpLoCTzqBcYV1BfYn6iKTficquk4R6PJTkei2vx1fCJfAP",
+      "stake": "400366099777822167819",
+      "reward": "107938100309064480"
+    },
+    {
+      "address": "ZvBMX5SfudTNPoWGwvZSnF6EHkayN2g2knpXbwEnXADZmhF",
+      "stake": "200000000000000000000",
+      "reward": "53919729629772814"
+    },
+    {
+      "address": "ZvKssGRs4VMV4cXt8zggPX5SedrRnyMhaiD4WsB37uQW8Kh",
+      "stake": "1400000000000000000000",
+      "reward": "377438634900653115"
+    },
+    {
+      "address": "ZvWgyBa6G1KW1UYCrTvKDF4WCpu19dfiMR7R2rZ52FTZjUm",
+      "stake": "2500000000000000000000",
+      "reward": "673997675356647009"
+    },
+    {
+      "address": "ZvXTvA9dQWmGuxTWbMhZM1nJ4kUwCoRhovrTsD4HNzg3Xsm",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "ZveTpvKrCRpwZosB9KQhoNPDv55pULHgTrph5hdbZ4tWVed",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "Zvu1G9oMxwGE2nS1ugt252LUgV1KZa1QeEHK2cWpkJ7jjxK",
+      "stake": "345000000000000000000",
+      "reward": "93011652297112873"
+    },
+    {
+      "address": "ZvvStxHEUjiBhwg3hVH8eRSM3TsYRDpmHVZvdGPjikQv3hh",
+      "stake": "2000000000000000000000",
+      "reward": "539198087536093265"
+    },
+    {
+      "address": "ZvzmV5tveF5PeefB64GpVmAWcPBozvEqVk8Hw718gJCR7gN",
+      "stake": "116000000000000000000",
+      "reward": "31273432635423364"
+    },
+    {
+      "address": "ZxxynwAgQyiU7oT3yK63Y59wAr5PaHAHX3hK3trEvSAmMUP",
+      "stake": "510632739971454967379",
+      "reward": "137665980671278026"
+    },
+    {
+      "address": "Zxyxbi5WYeSPcWh5VDqDfaBCXuVWCitofNHGEpwBDhzq1Fh",
+      "stake": "500000000000000000000",
+      "reward": "134799324074432035"
+    },
+    {
+      "address": "ZyPwRZRxaegeA9FWTDGMGYX7hMuZNCsYTmMEsmwpcXq2eVi",
+      "stake": "790000000000000000000",
+      "reward": "212983169409112153"
+    },
+    {
+      "address": "ZyspLXce1zmQWm3YLwsVYzwZ9wufVSibuf1VE3XDsrWNqze",
+      "stake": "1600000000000000000000",
+      "reward": "431358628276547637"
+    },
+    {
+      "address": "a1XU2U4XHDsrBQELmMr8n9sVUna24riPHgM3tvsBnKE4HJk",
+      "stake": "200000000000000000000",
+      "reward": "53919729629772814"
+    },
+    {
+      "address": "a1XZ98ioGkeGLEBs5pUy9psimfeeHr5ah829YnJ8TUSdW1F",
+      "stake": "560000000000000000000",
+      "reward": "150975401211036904"
+    },
+    {
+      "address": "a1eQinbYPNxH4RvkBRWFdzDc9VHZrv4pPwPZNaGHiNDUQmG",
+      "stake": "129000000000000000000",
+      "reward": "34778091100681394"
+    },
+    {
+      "address": "a2cs3P5hpe2L1MQhDCoDgYVFA3sd4jE755k2ZpaPkh3zdco",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "a49YXYCMcLFVXjJipr5KG9yK9TkBDdkz26ZNLuokAwLqCRw",
+      "stake": "500000000000000000000",
+      "reward": "134799324074432035"
+    },
+    {
+      "address": "a4U88eWCgA1xnwiZof6rL6Bi7nN1FdmUbreuixRzaqxSZyz",
+      "stake": "790000000000000000000",
+      "reward": "212983169409112153"
+    },
+    {
+      "address": "a4Urhwc9RhF73sKyLukgTwJbWt2SWWUEXRisrfF7uyMAt39",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "a4XX676FBaTAekrZD4RkRfqnsPGZpnFAxgbawdbawYWTEhc",
+      "stake": "1500000000000000000000",
+      "reward": "404398499715539522"
+    },
+    {
+      "address": "a4vDGoqWWJQu7uj47oUrDRbNCJf47jFbngE3BgsvCNgBQu1",
+      "stake": "1380000000000000000000",
+      "reward": "372046609188451492"
+    },
+    {
+      "address": "a4vmyKwiMdB5qU4ZQhHjcCDbU32EBgBxQEbWuN94qPep5qd",
+      "stake": "700000000000000000000",
+      "reward": "188719317450326557"
+    },
+    {
+      "address": "a51DTA4KnMVcge4SifBj7qJzHV9c7qCHZgmMvQ4XzbSK5Lf",
+      "stake": "400000000000000000000",
+      "reward": "107839459259545628"
+    },
+    {
+      "address": "a6aXBYhMQ1mNSw3RSKDJoDbqcEC771qnjQeRC3MoVWrtXDu",
+      "stake": "230000000000000000000",
+      "reward": "62007768198075249"
+    },
+    {
+      "address": "a6ajjRgNBZBAePWv76aYMtQDEfauKX97RS4DphVX2Zdt1fm",
+      "stake": "128518450548212144030",
+      "reward": "34648328008800979"
+    },
+    {
+      "address": "a7697urR1bFwkdu4979x9nP549ZbFUUrUDzu6JZuVEQAZVF",
+      "stake": "110000000000000000000",
+      "reward": "29655877670987219"
+    },
+    {
+      "address": "a7EXb7u39iYHthRU5KSDAVgf12e98VTQGw9tw3bZGDntg8T",
+      "stake": "714030000000000000000",
+      "reward": "192501700581743280"
+    },
+    {
+      "address": "a7LTef38YWEf1ru3wc67ZE9i2WMfrvHr1RcxbUH7d4B82Gv",
+      "stake": "2334000000000000000000",
+      "reward": "629244178440719587"
+    },
+    {
+      "address": "a7QwQtdV5XYuCMvwPbHPT6X8yWKmDBBjRGKMzqM5232gRo1",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "a7f4cDNW8DC6cCww2u8z3DMTrV9utiRjmCNcAi9SmiEDgtW",
+      "stake": "1236998299561023592477",
+      "reward": "333493519847761204"
+    },
+    {
+      "address": "a9keUP9pNSc1qgTqAWXX6sdZCmHJmsFxrfQsQTcHLqNcW6V",
+      "stake": "1900000000000000000000",
+      "reward": "512238222721206858"
+    },
+    {
+      "address": "aA6jbRsrikoHdqCu2cRSqrS3ZT2MEnQSof4MhFvHci8j9a7",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "aAJBPvqjFjXZLQBrHfyXZthiRLae6srN1q2MdbK9nxX3AvV",
+      "stake": "236000000000000000000",
+      "reward": "63625323162511394"
+    },
+    {
+      "address": "aAKvEVeg1hKuLTJt93qGUASdXmkeNA5GaYiDi9Fc89LQ2CT",
+      "stake": "215800000000000000000",
+      "reward": "58179493241481306"
+    },
+    {
+      "address": "aCFd7VwSC9JCe7SCy4Fz6DKmTXQVYrrFfsVUhSgirqKS9Gy",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "aEW2vHwULbjnvqs4oCu7izNDFSwZCV3wa8bLRrnaActsnYR",
+      "stake": "1400000000000000000000",
+      "reward": "377438634900653115"
+    },
+    {
+      "address": "aEiQ3jch2u1ht82NaKrzdK95ngMacBqRTRvdud76PxNHV5f",
+      "stake": "201000000000000000000",
+      "reward": "54189278166158554"
+    },
+    {
+      "address": "aF1sawsUUhUxgsjiDtRq9VphtXhx399EUo7wfS26d7wQbdy",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "aFeR3AEPamFLB4csPLCtJPgiT4rEwJTF8MRA1StFv4dPdGZ",
+      "stake": "200000000000000000000",
+      "reward": "53919729629772814"
+    },
+    {
+      "address": "aHE4WC4ETKuw3cBZ2uDe3UGyZX1QRoar6nWRXFmFn57UbiT",
+      "stake": "220000000000000000000",
+      "reward": "59311755341974437"
+    },
+    {
+      "address": "aHNY4jpxHcKWphgsCKrusanufDk7RC2VzdwyuPFn3fhZchE",
+      "stake": "5000000000000000000000",
+      "reward": "1347995614459415725"
+    },
+    {
+      "address": "aKnyGxXQY8n6tQijtjPLtgNjYPnLrWrJsHcPiUX6qAsS7bX",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "aNfw3tfY7GXMnRBgfzfHG4K3P5tfy8FCtovmRSuxLfNf2DE",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "aNzmKXSmaqDVdHHZcAeLtJb9mjdVPJUHDpkhpqpXmnZS5hM",
+      "stake": "250000000000000000000",
+      "reward": "67399530164155164"
+    },
+    {
+      "address": "aPTi6yAQqy5nAUUqsf7VYUgpDpn5VuR748ni9Y5RD762Kjb",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "aPVbcsNAQjzCJH9YARZCVR1VWiSWSAePmvZDQQ1KxGWcoGZ",
+      "stake": "784107026922628038114",
+      "reward": "211394362771942197"
+    },
+    {
+      "address": "aR5RwEqAGU9cGohYvQcf5yvPn8y2etWxpYwQ9AB8ShnhCCe",
+      "stake": "200000000000000000000",
+      "reward": "53919729629772814"
+    },
+    {
+      "address": "aRCqxDuHS1vcFsYj3C6hdCPgx5sQszmBkZ1pNoJBhgXXH3r",
+      "stake": "1249400000000000000000",
+      "reward": "336837029432655548"
+    },
+    {
+      "address": "aRzv5pRDMhDgdMLeKtUkKGDQKtYdqwtCSbzPHqm7Aku8NmT",
+      "stake": "135000000000000000000",
+      "reward": "36395646065117539"
+    },
+    {
+      "address": "aTYMAoL7CuEoaXDUUd22jPcwPPZPHjvsRUh2cPnLfirS1qk",
+      "stake": "733801769085281530269",
+      "reward": "197832273447586902"
+    },
+    {
+      "address": "aTeDvRSi1QEBH6n3nQGneCFbKY4EwzRpuCoZKJrtxeawEWx",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "aTsLDvEAA7iaJctyp5kXpCK1xqfMJWuZUF8Gig1o8p9f674",
+      "stake": "1000554606932936540953",
+      "reward": "269748455945994305"
+    },
+    {
+      "address": "aTtQxqntB2ZnfoD5dmfxg9GXoGCGAhsD3KxPnjLTjgrMTVZ",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "aUZcnK6UrqsNVeXu3G7w5TaE2aXdSYs36JeH3xTti4hBGLk",
+      "stake": "1000000000000000000000",
+      "reward": "269598911894985779"
+    },
+    {
+      "address": "aVjVRt7M8zdqLfvULEQ4Jm5XWSDLLX576UC5SNnZhGwzT3n",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "aXDpbYKhMiZ5TM7XYvfk2WhK2MWR1atWCJVsjk3WzDCo8q6",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "aXGQtTCDQqBVvCjtGb4Ab3JCzTT9jC4LByD4uDHFAZeKm74",
+      "stake": "36000000000000000000000",
+      "reward": "9705569268095382689"
+    },
+    {
+      "address": "aXJqBRLdy25jSLz1BrSb7Wkcm9tqhVLVWqNwDQZTRPz11P7",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "aXRLqMYZdCHQ8War6UnufjC4BstfwrdoEF1m17RCLeFB7Qo",
+      "stake": "120000000000000000000",
+      "reward": "32351890527088030"
+    },
+    {
+      "address": "aYncxx3frCYRZY6yZKyJbLYuGNCBZ3mB7c76v8krnUU15Xf",
+      "stake": "123000000000000000000",
+      "reward": "33160536136245249"
+    },
+    {
+      "address": "aYrL5ngNC6Uy3Yk23qYPeUh5DwQJkSED799r6EyetGtDEAx",
+      "stake": "350000000000000000000",
+      "reward": "94359658725163279"
+    },
+    {
+      "address": "aZ91enMqBrNz5WZa5nYfeCvu2qpTL4NGkFTAAZTJybMyu6j",
+      "stake": "3000000000000000000000",
+      "reward": "808797263177200752"
+    },
+    {
+      "address": "aZR37774CPYr2qnZxVFn29AcRYfxHYkDj9Xa33idPvEqyZJ",
+      "stake": "128000000000000000000",
+      "reward": "34508542564295654"
+    },
+    {
+      "address": "aba98k9daZiGbxgbNSCn2NPGLsq1iuK5s9a5bdFLbf614EB",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "ac8aX7c6hk8cAnWqzqJWSXT4VLVYjeWx3Ka7TJrQA2RBTZq",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "achoMeo3up5NdpHsR3CtuAd9nUSmNLJsbwqweVpUxLgJYB7",
+      "stake": "120000000000000000000",
+      "reward": "32351890527088030"
+    },
+    {
+      "address": "ae6MNDeNMdo8pJWNraSmUaWxAC5kcrryteY1u4adCPjeRxL",
+      "stake": "400000000000000000000",
+      "reward": "107839459259545628"
+    },
+    {
+      "address": "ae91yTEpTJMeUDnk3G1QbQDtiZCuRBygMVDn7rKKWa3ShP2",
+      "stake": "1024994992622440325037",
+      "reward": "276337625304629267"
+    },
+    {
+      "address": "aehPPnrHFd6B3jrSxtWBY2weS2wY4n3zd4qJN5RHKmnBiHk",
+      "stake": "295000000000000000000",
+      "reward": "79531588016608815"
+    },
+    {
+      "address": "agvLKsJXqgJtfLHWm5Wti4WBaBqpmDP7KoRP2LwiRJLCdC4",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "ahKk3F2ynSG9vHiaiWv6iRaxgbDLYTP3ieQcraQgcHSeTqh",
+      "stake": "286000000000000000000",
+      "reward": "77105123696893743"
+    },
+    {
+      "address": "ahSDKG2ByZPLaNhjne3XHn3yjmr4XyzNKqpjER1XvstvtKt",
+      "stake": "3200000000000000000000",
+      "reward": "862717256553095274"
+    },
+    {
+      "address": "aheVYZxYPQFN7cVxE5gz3cHFDTn27z1N7F9Yp5DWj8ww48m",
+      "stake": "1812000000000000000000",
+      "reward": "488513467835192742"
+    },
+    {
+      "address": "ajnmRExmbjGKJYpoS1jKiBVqUQN59WEPnb3dC6Jc5DDER4q",
+      "stake": "200000000000000000000",
+      "reward": "53919729629772814"
+    },
+    {
+      "address": "akK7VSyi2pnnVMsZcSKovwuuMon5trLmN6dEC2f5jJw2chq",
+      "stake": "165000000000000000000",
+      "reward": "44483684633419974"
+    },
+    {
+      "address": "anXkTLbKqQVYnxeMTcAZ48uxp8Kn32mMtoJzvv6erhvSbjA",
+      "stake": "105000000000000000000",
+      "reward": "28307871242936813"
+    },
+    {
+      "address": "ao5BfWGij3C9YwT4wScKM43C32mx1ToiaAwcww4WcKMwc9K",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "aoA4DtjNjf5pJURmYjvMsTBhGSsJnKxpqr6HFtQC4WLcgKs",
+      "stake": "550000000000000000000",
+      "reward": "148279388354936093"
+    },
+    {
+      "address": "aoBhkYcsbB7uHMyW2Y4sg5jzWTryrufsXAXmRcZCe2cnEjd",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "apawTzWUqSxvuCReiWRErjfzEk2FuVT92UsijQxy7VPESEv",
+      "stake": "147000000000000000000",
+      "reward": "39631019740111538"
+    },
+    {
+      "address": "aq3f2C3uKbu5UfnCu6sr8KwBDhd1K6ea8CdjVjsjYcmnZnM",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "aqEPz9xzEtQGMXTEjo9PpM3HbWT975xFkP88C7Qf7z4ouNg",
+      "stake": "138000000000000000000",
+      "reward": "37204555420396466"
+    },
+    {
+      "address": "aqMnapwNPeLx6Mx68Uzm1wcgTq7vxYF2cDys9nu9NgmgDSn",
+      "stake": "5436820000000000000000",
+      "reward": "1465761950247813080"
+    },
+    {
+      "address": "aqdiUbdCi8viSWBogBgLJghuKpw4g3GmrEmCUeqvUafQu2c",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "aqeZKeX61ESNoMTm4SHQq7y8kZLucJ8o3jSFe2iojdWp4qN",
+      "stake": "500000000000000000000",
+      "reward": "134799324074432035"
+    },
+    {
+      "address": "aqjvdWiQhjA8CFUz7QT3gFJmSBZYh1vhm92k9UDMZD6U3FK",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "aqt97NhgQACJsSwApn3yirJuL5fqRHDXm5WbuFTZgsrLmDg",
+      "stake": "107500000000000000000",
+      "reward": "28981742583901162"
+    },
+    {
+      "address": "asowkNifxL6a1CZPT1xVdJe8yqUaAmaqx9mnrp5y3ktChfo",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "atSArokQwyAdXdpu2oEo9AqqdBZgc8qYRuHLdt4f5UsC5aE",
+      "stake": "503000000000000000000",
+      "reward": "135608233429710962"
+    },
+    {
+      "address": "av3FBpGnMtYCQdkhYLouq1EQmUV8FnBcHw1E5MJLZQ82E5d",
+      "stake": "200000000000000000000",
+      "reward": "53919729629772814"
+    },
+    {
+      "address": "av6AYeM556wzE6ct1RKyCfTnZNXCfhWuxc93PVo7BWmXsMW",
+      "stake": "1000000000000000000000",
+      "reward": "269598911894985779"
+    },
+    {
+      "address": "avgnqQcGS4GCjkYQtTgdYcwLab1kJ8LZxJ1hfbhdRX5GQMg",
+      "stake": "200000000000000000000",
+      "reward": "53919729629772814"
+    },
+    {
+      "address": "axUsMNcQXWbf9zpPj4zDH3UZc4xy28yDHyGnUfavd7eD5qc",
+      "stake": "366000000000000000000",
+      "reward": "98673226545700236"
+    },
+    {
+      "address": "axav4h5SHghGAdMGQ4NYU6bUf9SGAxhsNt66LaUG6uvK361",
+      "stake": "450000000000000000000",
+      "reward": "121319523540049686"
+    },
+    {
+      "address": "ayUMbHi6cAuTKSKSPNwRys91PndpqUWXSXGiY9B5nRfDmhs",
+      "stake": "1066000000000000000000",
+      "reward": "287392543996026793"
+    },
+    {
+      "address": "ayfhRN7demZsEeW3Yptk2g5tDUWqfCBQYKKZRcuBSRqrnaF",
+      "stake": "200000000000000000000",
+      "reward": "53919729629772814"
+    },
+    {
+      "address": "b1asNYQwy2Abs8f9HCnEsbDjVYfeu7KQKFme95jbtgTmucm",
+      "stake": "1000000000000000000000",
+      "reward": "269598911894985779"
+    },
+    {
+      "address": "b1bQqH1HzQ9Y6q4eun2H5rqqL883Fp5kUHVxaX56FDMjCXS",
+      "stake": "146908298286466182295",
+      "reward": "39606227604670971"
+    },
+    {
+      "address": "b1nYHE2F1MN6VxpVaH58Rg5PjjmTXduP54CNqkYmqgpK7ET",
+      "stake": "99990000000000000000000",
+      "reward": "26957218913793430779"
+    },
+    {
+      "address": "b1pzCtzg6YDWpb8zRgojfHMqFRg8VJuqC76aaiumm1kHRHx",
+      "stake": "200000000000000000000",
+      "reward": "53919729629772814"
+    },
+    {
+      "address": "b28fEyUVECCqM13pKNvq54SgiAaiy9e1S3mbxUoXH5VVQ8z",
+      "stake": "200000000000000000000",
+      "reward": "53919729629772814"
+    },
+    {
+      "address": "b3hcNzmuXGQcJfH6HiCxELAbjtUQshmkDr2zpYu6wQKv8QP",
+      "stake": "255000000000000000000",
+      "reward": "68747536592205569"
+    },
+    {
+      "address": "b4RfDSNQmWmbA4NTK3k8y1AqzXEMfhzPkZj7J9kRDfgLsqx",
+      "stake": "1850000000000000000000",
+      "reward": "498758422186824509"
+    },
+    {
+      "address": "b4ZtQqAe48wHGG1JsJ8oSWF8jMagL7wLzncGZHBUhzWSE2L",
+      "stake": "180000000000000000000",
+      "reward": "48527703917571191"
+    },
+    {
+      "address": "b75k23ULgwg2Pu3GEYAvY3L9uJYeurdCC4pdQqivbfjwf2Z",
+      "stake": "1160000000000000000000",
+      "reward": "312734853846477055"
+    },
+    {
+      "address": "b7YKxJqaedHMS3KmPEUbEAeWocE1CnjFKUHxGAk1ajPEcHM",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "b8uBGf2oW1xoXv49ZuPCJQfRuLH1Sa8CFykNJ1jAvsxza42",
+      "stake": "105000000000000000000",
+      "reward": "28307871242936813"
+    },
+    {
+      "address": "b96zDAz7v5WyWKdK4PvCNtJHrCNYcjPvFxRMpsKJCnooDUx",
+      "stake": "1529710502598740858081",
+      "reward": "412408469431816341"
+    },
+    {
+      "address": "b9B51gLV1CJ7RWBN4HSqgdBwZwt8Ukd2wzBhaTdJgxs2SGQ",
+      "stake": "162900000000000000000",
+      "reward": "43917685456234262"
+    },
+    {
+      "address": "b9QJXbX3rjah9dYcnoU9sbCbw24ZRWBZYBJn5sfwRoGBA6K",
+      "stake": "123549564502114936636",
+      "reward": "33308761456645235"
+    },
+    {
+      "address": "b9aGKqgox2nBrmUknhLXXnkhD1tDjjGMYPqJ2j1zjXSr9pV",
+      "stake": "109044579524210232540",
+      "reward": "29398197710078346"
+    },
+    {
+      "address": "b9fT5KG8xskFTq2mW6BpGE8vjqV4emWsLzFW77YeZeqhRhp",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "b9mrNvzFb6tWwdxa7AwNBBeCynGKZt9LMT4gZcYFBb4RaLS",
+      "stake": "4940000000000000000000",
+      "reward": "1331819537322810856"
+    },
+    {
+      "address": "b9tRH9HWmZgvACdmCPcwbMPu8WxawaCVJkhqpCtAXNfhYtX",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "b9we8poPDktHNVtf76qHPcn4CQThg4tRCm4vvv9jLHPRiHy",
+      "stake": "458000000000000000000",
+      "reward": "123476175577257310"
+    },
+    {
+      "address": "bA5d8sGB2V57f4ki81GkBcq5GesTeT1t46CJk8rUWks5cJd",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "bBsQtRSKtdjuJ6L6iJwcm7necLEHfVEttWwUopaFBfKFrne",
+      "stake": "200000000000000000000",
+      "reward": "53919729629772814"
+    },
+    {
+      "address": "bC2ma83QSkLPxHJxvVhGggcbyaAyhqDzmmQm1UkZLovfAtB",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "bCSs21oEx6QTkEQRfbW2mGaAHLCf2Sk6kkZj7FYJ2qw5Bno",
+      "stake": "191500000000000000000",
+      "reward": "51628039578250612"
+    },
+    {
+      "address": "bCdE9oitEmUHHuSgEHJ7YsRPb31i2VE7bkfPEck2oJovnYE",
+      "stake": "1569739455169200722131",
+      "reward": "423200169493749124"
+    },
+    {
+      "address": "bEEzUR9yqHhVfF7nJZxk1PYQhTkJb6FVQg2f2axPvisi8xr",
+      "stake": "123000000000000000000",
+      "reward": "33160536136245249"
+    },
+    {
+      "address": "bEbSVkacUTzXJjcf9TMrkEbfF6HuYsx2VSirsKsXWeSDNx9",
+      "stake": "482000000000000000000",
+      "reward": "129946659181123599"
+    },
+    {
+      "address": "bEvKwgVQakqdoCHT2dncrxVc7AZtJKh6eCpLBehKfLmRXib",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "bF7rKmsYihz6d6UkPrY9p7CEpgT7ssj2s6rpSExySZbMb5h",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "bFMdD6UhLDFxmzRbMA5f4zthuE3AT1FhJ4kknm6dcThUavC",
+      "stake": "4501101019389508642518",
+      "reward": "1213493004771905370"
+    },
+    {
+      "address": "bFR6SwiaFq8g5DGVyJhj4oeJYLNzcrvHpFR6taBpkq1eQZJ",
+      "stake": "110000000000000000000",
+      "reward": "29655877670987219"
+    },
+    {
+      "address": "bGzQUyMYwTFbhofX6CjQ8oft47S2ogFhFHo9Bfttw1mRzVv",
+      "stake": "200000000000000000000",
+      "reward": "53919729629772814"
+    },
+    {
+      "address": "bHGHtTrxphYqDVGxSqrMdN6zyQoVV3egmLt5aiDfma8nyft",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "bHfbWPTvo2stTdo9ezuk7fywUgADBGLbMrG7sE3qJxtsjoK",
+      "stake": "200000000000000000000",
+      "reward": "53919729629772814"
+    },
+    {
+      "address": "bHnuuCekky37vvG2fpk53hyPt3j6gm1XjrbgUwdrzM3L1eT",
+      "stake": "500000000000000000000",
+      "reward": "134799324074432035"
+    },
+    {
+      "address": "bHsYgVwCaBEoaPUWdsafEwi4QDs4bu8awexV9XgKihsZjcv",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "bJ2zGQHiH2PPXGR2q8eCJM2n9iM8gG2ecAhdopHrYt4ziFe",
+      "stake": "1013000000000000000000",
+      "reward": "273103834106365517"
+    },
+    {
+      "address": "bKXSASCX1V4YB29zPuyAXzzUT5EJenBhDkZsak22mXy39Qm",
+      "stake": "15218889545627723471942",
+      "reward": "4102999510618204560"
+    },
+    {
+      "address": "bL6QnUXiVWrcG8uLrWEiFngwVEyBW25iM2QJa4JAq9bMJyJ",
+      "stake": "5600000000000000000000",
+      "reward": "1509755067094855876"
+    },
+    {
+      "address": "bLEBuJJEMNFQAWYovsXxkM9iebRzjn5rc2GxY6Ekz91f3uA",
+      "stake": "500000000000000000000",
+      "reward": "134799324074432035"
+    },
+    {
+      "address": "bLS4AXmmFSVnXWauycZqW8c3cZLFU71eXtTSRSfrZoQDChQ",
+      "stake": "400000000000000000000",
+      "reward": "107839459259545628"
+    },
+    {
+      "address": "bMzk8JW12iwnyQVFEF91SZmCpEMoARTsdzzydHqaaTkziZS",
+      "stake": "101000000000000000000",
+      "reward": "27229413351272147"
+    },
+    {
+      "address": "bNYDFbCSPn5hZS3ZdeCh8x1TYhq93qqzndqU6dyGxnoZ669",
+      "stake": "775104204158747656473",
+      "reward": "208967370959983709"
+    },
+    {
+      "address": "bNdDRUMBPT8YU1hDjg3YoDPvLNWLmAg8EQPB4ULEDepJTTY",
+      "stake": "10255191931472231858893",
+      "reward": "2764790987243135236"
+    },
+    {
+      "address": "bPBhdJDZWqqgn2VFh3jBbxnJA4QKNi5NS6p3ooih4ZnpYsA",
+      "stake": "199998382294395882563",
+      "reward": "53919202137529398"
+    },
+    {
+      "address": "bQjp14qUQTXuT7Wq7wdTthc2cdkHtp7NgiE18vycMhyPHxv",
+      "stake": "245000000000000000000",
+      "reward": "66051787482226466"
+    },
+    {
+      "address": "bR5wnfs4CLbq1sJhwNqGLEtto6bZ7eSnpxtuoJMLftbZU7S",
+      "stake": "126386617832737941980",
+      "reward": "34073625209598899"
+    },
+    {
+      "address": "bRkPqDaAiFgnti4NHfrGxpVSSBfAh3fxpBe3rBw1Sd9iHG2",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "bTMXt97vjoW9nEx8FRPbf6EPa9vUnwra9EjdB3FcjSgV7NY",
+      "stake": "1100000000000000000000",
+      "reward": "296559040455993894"
+    },
+    {
+      "address": "bTsu9h8wBpmNeBqieyeMjNkVnHQzbnfEKGFEgTLxWTraNfC",
+      "stake": "1000000000000000000000",
+      "reward": "269598911894985779"
+    },
+    {
+      "address": "bUFtTzuG63wnjhgKB3xANagEXanSMjrLXSUo5xwuwYiPS7r",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "bVsRszEJ6UQhq3wTyR6CoSc9EnVXpwBauP59PabbpgK5qsA",
+      "stake": "156120000000000000000",
+      "reward": "42089661086675005"
+    },
+    {
+      "address": "bW3WyTYQ5Rrvi5mLqCbL9aLY8MMy4iNCTM2H5ZPJ6QXdm8Y",
+      "stake": "100000000000000000000",
+      "reward": "26959864814886407"
+    },
+    {
+      "address": "bWuixgswMhku2BbdAMwwfHTg7171RXYeDFsubSXsW7KfKj3",
+      "stake": "332104285186157461324",
+      "reward": "89534950920755908"
+    },
+    {
+      "address": "bYcsVoybaf8hTZEEmRD78XvtGJirsuK3NYdEjj6a3JC78HU",
+      "stake": "187000000000000000000",
+      "reward": "50414807418393076"
+    },
+    {
+      "address": "bZ8Axxe1tmVW3mb2tPNtuPGBGYr1Dqdx1r4QLuJDvN1qGVN",
+      "stake": "1200000000000000000000",
+      "reward": "323518905270880301"
+    },
+    {
+      "address": "bZNB7zMdttmYVqDTDsUPrWWsi9CteX7md5KH2BayNqBPno2",
+      "stake": "137957820631484724890",
+      "reward": "37193214337163015"
+    },
+    {
+      "address": "bZVu8dNSRdzyVku8iVjNtXiE8hQP7DjzLvksyyR1y8aJuN1",
+      "stake": "352393766035467218798",
+      "reward": "95005045484983146"
+    },
+    {
+      "address": "bZdnNaAhYFE5ewerBSiqeBYuiXNPCgoSPqKsZWd6H5uEEdr",
+      "stake": "2740000000000000000000",
+      "reward": "738701456410823069"
+    },
+    {
+      "address": "bbhwxw2hLYGqXJN4RpgSoJrvcyt4Ze5GDuFTtcA18sMPcrU",
+      "stake": "210000000000000000000",
+      "reward": "56615742485873626"
+    },
+    {
+      "address": "bbvjNHmVw5mx8wDKgh2n8BZwfSyFntaptdPn2Tai1d9YCLf",
+      "stake": "1000000000000000000000",
+      "reward": "269598911894985779"
+    },
+    {
+      "address": "bc5WVhbqYRbSs4T2WUgHsKfj2eQMJdDSYnyjV635NR752rV",
+      "stake": "12667656323541542734820",
+      "reward": "3415189187121579504"
+    },
+    {
+      "address": "bcPnVn4AXMxxQCURzYLS7E8C564pKPF8K1upv5FUMhVk16c",
+      "stake": "100072857289301282859",
+      "reward": "26979382027892811"
+    },
+    {
+      "address": "beiCTs5cPPjUA78JYqNQhmSm9FP8mGsmsdLC4waFQGHjSCk",
+      "stake": "200000000000000000000",
+      "reward": "53919729629772814"
+    },
+    {
+      "address": "bgMASgs7grDHHLcNtHgd8jhJrraRuzP9hWmLJwz7HJFuBbf",
+      "stake": "750000000000000000000",
+      "reward": "202199117984708907"
+    },
+    {
+      "address": "bgsyE7ppvEGiMTp8Rb8Zt14kvj9DjoEDfSKwCwpf2q9PZEa",
+      "stake": "123553312928522186378",
+      "reward": "33309816441132067"
+    },
+    {
+      "address": "bh1wK1j613JCcRKqYXZxX4ufvDcMy5XSRSNPm4dYH5spdk1",
+      "stake": "2102415600000000000000",
+      "reward": "566809405271598828"
+    },
+    {
+      "address": "bhLkxrRDRQnjNCVz5RNFfJpGAroyPw33it28MenNQMbMcJn",
+      "stake": "4200000000000000000000",
+      "reward": "1132316168448081053"
+    },
+    {
+      "address": "bhXHQBFo8TWnRfAySYNW6Fg17N6dDRRYek8HTRZiSzp7DXD",
+      "stake": "500000000000000000000",
+      "reward": "134799324074432035"
+    }
+  ]
+}
